@@ -23485,7 +23485,7 @@ var App = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'nav',
-        { className: 'navbar navbar-inverse' },
+        { className: 'navbar navbar-inverse navbar-fixed-top' },
         _react2.default.createElement(
           'div',
           { className: 'container-fluid' },
@@ -23500,9 +23500,9 @@ var App = function (_React$Component) {
               _react2.default.createElement('span', { className: 'icon-bar' })
             ),
             _react2.default.createElement(
-              'a',
-              { className: 'navbar-brand', href: '#' },
-              'WebSiteName'
+              _reactRouterDom.Link,
+              { className: 'navbar-brand', to: '/' },
+              _react2.default.createElement('img', { id: 'navbarBrand', src: 'http://beatmix.mitchatnim.co.il/img/0239/799.png' })
             )
           ),
           _react2.default.createElement(
