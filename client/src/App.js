@@ -1,23 +1,21 @@
-import React from 'react';
-import ReactDom from 'react-dom';
-import Header from './WeatherApp/common/Header';
-import Routesss from './Routes';
-import {BrowserRouter} from 'react-router-dom';
+import React from "react";
+import ReactDom from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import Header from "./BeatMix/common/Header";
+import AppRoutes from "./AppRoutes";
 
 class App extends React.Component {
   render() {
-    console.log('connected');
+    console.log("connected");
     return (
       <BrowserRouter>
         <div>
-          <Header/>
-          <Routesss/>
+          <Header />
+          <AppRoutes />
         </div>
       </BrowserRouter>
-
     );
   }
 }
 
-ReactDom.render(
-  <App/>, document.getElementById('react-app'));
+ReactDom.render(<App />, document.getElementById("react-app"));
