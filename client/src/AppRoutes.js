@@ -10,7 +10,7 @@ import Page404 from "./BeatMix/common/404";
 import { Switch, Route } from "react-router-dom";
 
 const AppRoutes = () =>
-  <div className="container">
+  <div>
     <Switch>
       <Route name="HomePage" exact path="/" component={HomePage} />
       <Route name="AboutUs" exact path="/AboutUs" component={AboutUs} />

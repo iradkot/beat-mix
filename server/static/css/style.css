@@ -25,3 +25,21 @@
 body {
     padding-top: 120px;
 }
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+   /* height: -webkit-fill-available;  */
+    height: 900px; 
+   /* background-attachment: no-repeat center center fixed; */
+}
+
+
+/*starting animatiom*/
+.fade-enter {
+    right: 100px;
+}
+
+.fade-enter-active {
+    right: 0px;
+}
