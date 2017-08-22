@@ -23,11 +23,6 @@
   left: 50px;
 }
 
-body {
-  background-color: black;
-  padding-top: 120px;
-}
-
 .no-padding {
   padding-left: 0;
   padding-right: 0;
@@ -64,6 +59,20 @@ input[type="text"].focus {
   box-shadow: 0 0 5px 1px #969696;
 }
 
+input[type='email'] {
+  color: black;
+  font-size: 25px;
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="email"].focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
 ::-webkit-input-placeholder {
   font-size: 20px !important;
 }
@@ -76,4 +85,9 @@ input[type="text"].focus {
 ::-moz-placeholder {
   /* Firefox 19+ */
   font-size: 25px !important;
+}
+
+body {
+  background-color: black;
+  padding-top: 120px;
 }
