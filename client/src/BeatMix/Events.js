@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class Gallery extends React.Component {
+class Events extends React.Component {
   render() {
     return (
       <div>
@@ -15,4 +15,4 @@ class Gallery extends React.Component {
   }
 }
 
-export default Gallery;
+export default Events;

@@ -6,6 +6,17 @@ class FbPlugins extends React.Component {
     this.state = {};
   }
 
+  componentDidMount() {
+    if (FB.XFBML) {
+      FB.XFBML.parse(document.getElementById("fb-divs"));
+    }
+  }
+  componentDidUpdate() {
+    if (FB.XFBML) {
+      FB.XFBML.parse(document.getElementById("fb-divs"));
+    }
+  }
+
   render() {
     return (
       <div className="fb-divs">

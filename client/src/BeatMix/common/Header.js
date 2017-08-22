@@ -26,24 +26,32 @@ class Header extends React.Component {
           </div>
           <div className="collapse navbar-collapse navbar-right" id="myNavbar">
             <ul className="nav navbar-nav">
+              <li>
+                <a target="_blank" href="https://www.facebook.com/beatmixdjs">
+                  פייסבוק
+                </a>
+              </li>
+              <li>
+                <Link to="/ContactUs">צרו-קשר</Link>
+              </li>
               <li className="dropdown">
                 <a className="dropdown-toggle" data-toggle="dropdown" href="#">
                   גלריות <span className="caret" />
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link to="/AboutUs">תם ועמית</Link>
+                    <Link to="/Artists">תם ועמית</Link>
                   </li>
                   <li>
-                    <Link to="/">נוי</Link>
+                    <Link to="/Artists">נוי</Link>
                   </li>
                   <li>
-                    <Link to="/">אירועים</Link>
+                    <Link to="/Events">אירועים</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link to="/">למה דאבל דיג'ייז</Link>
+                <Link to="/WhyBeatMix">למה דאבל דיג'ייז</Link>
               </li>
               <li>
                 <Link to="/AboutUs">נבחרת הדיג'יים</Link>
