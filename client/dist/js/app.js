@@ -26561,6 +26561,18 @@ var Header = function (_React$Component) {
             "div",
             { className: "navbar-header" },
             _react2.default.createElement(
+              "button",
+              {
+                type: "button",
+                className: "navbar-toggle",
+                "data-toggle": "collapse",
+                "data-target": "#myNavbar"
+              },
+              _react2.default.createElement("span", { className: "icon-bar" }),
+              _react2.default.createElement("span", { className: "icon-bar" }),
+              _react2.default.createElement("span", { className: "icon-bar" })
+            ),
+            _react2.default.createElement(
               _reactRouterDom.Link,
               { className: "navbar-brand navbar-right", to: "/" },
               _react2.default.createElement("img", {
