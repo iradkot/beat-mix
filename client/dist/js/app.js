@@ -26561,20 +26561,8 @@ var Header = function (_React$Component) {
             "div",
             { className: "navbar-header" },
             _react2.default.createElement(
-              "button",
-              {
-                type: "button",
-                className: "navbar-toggle",
-                "data-toggle": "collapse",
-                "data-target": "#myNavbar"
-              },
-              _react2.default.createElement("span", { className: "icon-bar" }),
-              _react2.default.createElement("span", { className: "icon-bar" }),
-              _react2.default.createElement("span", { className: "icon-bar" })
-            ),
-            _react2.default.createElement(
               _reactRouterDom.Link,
-              { className: "navbar-brand", to: "/" },
+              { className: "navbar-brand navbar-right", to: "/" },
               _react2.default.createElement("img", {
                 id: "navbarBrand",
                 src: "http://beatmix.mitchatnim.co.il/img/0239/799.png"
@@ -26748,7 +26736,7 @@ var AppRoutes = function AppRoutes() {
         component: _WhyBeatMix2.default
       }),
       _react2.default.createElement(_reactRouterDom.Route, { name: "Artists", exact: true, path: "/Artists", component: _Artists2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { name: "Events", exact: true, path: "/Events", componet: _Events2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { name: "Events", exact: true, path: "/Events", component: _Events2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { name: "ContactUs", exact: true, path: "/ContactUs", component: _ContactUs2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { path: "*", component: _2.default })
     )
@@ -27930,6 +27918,8 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(21);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27953,6 +27943,25 @@ var About = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         null,
+        _react2.default.createElement("div", { className: "pageBanner col-lg-12" }),
+        _react2.default.createElement(
+          "div",
+          { className: "col-lg-6 col-lg-offset-3" },
+          _react2.default.createElement(
+            "h1",
+            null,
+            "About Us!"
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: "/" },
+            _react2.default.createElement(
+              "button",
+              { type: "button", className: "btn btn-default" },
+              "Home Page!"
+            )
+          )
+        ),
         _react2.default.createElement(
           "div",
           { className: "row text-center" },
@@ -28092,13 +28101,23 @@ var Artists = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         null,
+        _react2.default.createElement("div", { className: "pageBanner col-lg-12" }),
         _react2.default.createElement(
-          _reactRouterDom.Link,
-          { to: "/" },
+          "div",
+          { className: "col-lg-6 col-lg-offset-3" },
           _react2.default.createElement(
-            "button",
-            { type: "button", className: "btn btn-default" },
-            "Home Page!"
+            "h1",
+            null,
+            "Artists!"
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: "/" },
+            _react2.default.createElement(
+              "button",
+              { type: "button", className: "btn btn-default" },
+              "Home Page!"
+            )
           )
         )
       );
@@ -28153,13 +28172,23 @@ var WhyBeatMix = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         null,
+        _react2.default.createElement("div", { className: "pageBanner col-lg-12" }),
         _react2.default.createElement(
-          _reactRouterDom.Link,
-          { to: "/" },
+          "div",
+          { className: "col-lg-6 col-lg-offset-3" },
           _react2.default.createElement(
-            "button",
-            { type: "button", className: "btn btn-default" },
-            "Home Page!"
+            "h1",
+            null,
+            "Why Double DJ's"
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: "/" },
+            _react2.default.createElement(
+              "button",
+              { type: "button", className: "btn btn-default" },
+              "Home Page!"
+            )
           )
         )
       );
@@ -28228,6 +28257,7 @@ var ContactUs = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: "contactuspage" },
+        _react2.default.createElement("div", { className: "pageBanner col-lg-12" }),
         _react2.default.createElement(
           "div",
           { className: "googlemaps col-lg-4" },
@@ -29497,6 +29527,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var styles = {
+  color: 'white'
+};
+
 var Events = function (_React$Component) {
   _inherits(Events, _React$Component);
 
@@ -29512,13 +29546,23 @@ var Events = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         null,
+        _react2.default.createElement("div", { className: "pageBanner col-lg-12" }),
         _react2.default.createElement(
-          _reactRouterDom.Link,
-          { to: "/" },
+          "div",
+          { className: "col-lg-6 col-lg-offset-3" },
           _react2.default.createElement(
-            "button",
-            { type: "button", className: "btn btn-default" },
-            "Home Page!"
+            "h1",
+            { style: styles },
+            "Events!"
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: "/" },
+            _react2.default.createElement(
+              "button",
+              { type: "button", className: "btn btn-default" },
+              "Home Page!"
+            )
           )
         )
       );

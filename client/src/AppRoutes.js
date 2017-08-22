@@ -21,7 +21,7 @@ const AppRoutes = () =>
         component={WhyBeatMix}
       />
       <Route name="Artists" exact path="/Artists" component={Artists} />
-      <Route name="Events" exact path="/Events" componet={Events} />
+      <Route name="Events" exact path="/Events" component={Events} />
       <Route name="ContactUs" exact path="/ContactUs" component={ContactUs} />
       <Route path="*" component={Page404} />
     </Switch>
