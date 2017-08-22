@@ -1,45 +1,79 @@
 .navbar-fixed-top {
-    min-height: 120px;
+  min-height: 120px;
 }
 
 .navbar-nav > li > a {
-    font-size: 30px;
-    padding-top: 15px;
-    padding-bottom: 0px;
-    line-height: 80px;
+  font-size: 30px;
+  padding-top: 15px;
+  padding-bottom: 0px;
+  line-height: 80px;
 }
 
 @media (max-width: 767px) {
-    .navbar-nav > li > a {
+  .navbar-nav > li > a {
     line-height: 20px;
     padding-top: 10px;
-    padding-bottom: 10px;}
+    padding-bottom: 10px;
+  }
 }
 
 #navbarBrand {
-        width: 234px;
-    position: fixed;
-    left: 50px;
+  width: 234px;
+  position: fixed;
+  left: 50px;
 }
 
 body {
-    padding-top: 120px;
+  background-color: black;
+  padding-top: 120px;
 }
 
 .no-padding {
   padding-left: 0;
   padding-right: 0;
-   /* height: -webkit-fill-available;  */
-    height: 900px; 
-   /* background-attachment: no-repeat center center fixed; */
+  /* height: -webkit-fill-available;  */
+  height: 900px;
+  /* background-attachment: no-repeat center center fixed; */
 }
-
 
 /*starting animatiom*/
 .fade-enter {
-    right: 100px;
+  right: 100px;
 }
 
 .fade-enter-active {
-    right: 0px;
+  right: 0px;
+}
+
+.whiteTxt {
+  color: white;
+  font-size: 20px;
+}
+
+input[type='text'] {
+  color: black;
+  font-size: 25px;
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="text"].focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+::-webkit-input-placeholder {
+  font-size: 20px !important;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 25px !important;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 25px !important;
 }
