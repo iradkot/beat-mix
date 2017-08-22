@@ -7,7 +7,7 @@ class Header extends React.Component {
       <nav className="navbar navbar-inverse navbar-fixed-top">
         <div className="container-fluid">
           <div className="navbar-header">
-            <button
+            {/* <button
               type="button"
               className="navbar-toggle"
               data-toggle="collapse"
@@ -16,8 +16,8 @@ class Header extends React.Component {
               <span className="icon-bar" />
               <span className="icon-bar" />
               <span className="icon-bar" />
-            </button>
-            <Link className="navbar-brand" to="/">
+            </button> */}
+            <Link className="navbar-brand navbar-right" to="/">
               <img
                 id="navbarBrand"
                 src="http://beatmix.mitchatnim.co.il/img/0239/799.png"

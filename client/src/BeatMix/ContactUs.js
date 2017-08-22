@@ -13,6 +13,7 @@ class ContactUs extends React.Component {
   render() {
     return (
       <div className="contactuspage">
+        <div className="pageBanner col-lg-12" />
         <div className="googlemaps col-lg-4">
           <GoogleMap />
         </div>

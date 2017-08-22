@@ -1,4 +1,5 @@
 .navbar-fixed-top {
+  background-color: black;
   min-height: 120px;
 }
 
@@ -23,6 +24,10 @@
   left: 50px;
 }
 
+li {
+  color: white;
+}
+
 .no-padding {
   padding-left: 0;
   padding-right: 0;
@@ -38,6 +43,12 @@
 
 .fade-enter-active {
   right: 0px;
+}
+
+.pageBanner {
+  width: 100%;
+  height: 295px;
+  background-image: url("http://beatmix.mitchatnim.co.il/img/0239/825.jpg?sitetimestamp=636259130130000000");
 }
 
 .whiteTxt {
