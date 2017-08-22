@@ -46,10 +46,23 @@ app.post("/contactus/email", function(req, res) {
   res.send("Sent");
 });
 
+//handle facebook chatbot webhook
+app.get('/webhook', function (req, res) {
+  if (req.query['hub.verify_token'] === 'my_verify_token_here'){
+    res.send(req.query['hub.challenge']);
+  }
+  else{res.send('Wrong token bud')}
+});
+
+
 //* Handle browser refresh by redirecting to index html
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "./server/static/index.html"));
 });
+
+
+
+// app.listen(1337);
 
 //* Start the server
 app.listen(3000, () => {
