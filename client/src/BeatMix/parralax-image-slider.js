@@ -29,8 +29,6 @@ class BIS extends React.Component {
         // this.setState({height: height})
         let newCount = this.state.count === this.props.image_arr.length - 1 ? 0 : this.state.count + 1;
         this.setState({ count: newCount, background: this.props.image_arr[newCount] })
-        console.log(newCount);
-
     }
     render() {
         let style = {

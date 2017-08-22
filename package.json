@@ -15,10 +15,12 @@
     "nodemailer": "^4.0.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-messenger-plugin": "^1.0.3",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-slick": "^0.14.11",
     "react-transition-group": "^1.2.0",
+    "request": "^2.81.0",
     "slick-carousel": "^1.7.1",
     "validator": "^8.0.0",
     "webpack": "^3.3.0"

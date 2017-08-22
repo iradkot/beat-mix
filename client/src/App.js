@@ -6,7 +6,6 @@ import AppRoutes from "./AppRoutes";
 
 class App extends React.Component {
   render() {
-    console.log("connected");
     return (
       <BrowserRouter>
         <div>
