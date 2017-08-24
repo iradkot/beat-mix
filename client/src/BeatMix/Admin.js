@@ -13,8 +13,10 @@ class Admin extends React.Component {
       {
         cloud_name: "moshmosh",
         upload_preset: "antg22ln",
+        sources: ["local", "url", "facebook", "instagram"],
         folder: "beatmix",
-        theme: "minimal"
+        theme: "minimal",
+        show_powered_by: false
       },
       function(error, result) {}
     );
