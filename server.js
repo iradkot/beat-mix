@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const nodemailer = require("nodemailer");
+const cloudinary = require("cloudinary");
 
 const app = express();
 
@@ -15,6 +16,13 @@ app.use(
   })
 );
 
+//* cloudinary config
+cloudinary.config({
+  cloud_name: "moshmosh",
+  api_key: "548194842669224",
+  api_secret: "DPa8_cX1E7mnVxv_0Y0rpbuFZxY"
+});
+
 //* nodemailer Email
 var transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
@@ -24,6 +32,17 @@ var transporter = nodemailer.createTransport({
     user: "elevationmosh@gmail.com",
     pass: "Elevation358"
   }
+});
+
+//* cloudinary route
+app.get("/getFromCloudinary", function(req, res) {
+  cloudinary.v2.api.resources(
+    { type: "upload", prefix: "beatmix/", max_results: 100 },
+    function(error, result) {
+      console.log(result);
+      res.send(result);
+    }
+  );
 });
 
 //* email route
@@ -47,25 +66,23 @@ app.post("/contactus/email", function(req, res) {
 });
 
 //handle facebook chatbot webhook
-app.get('/webhook', function (req, res) {
-  if (req.query['hub.verify_token'] === 'my_verify_token_here'){
-    res.send(req.query['hub.challenge']);
+app.get("/webhook", function(req, res) {
+  if (req.query["hub.verify_token"] === "my_verify_token_here") {
+    res.send(req.query["hub.challenge"]);
+  } else {
+    res.send("Wrong token bud");
   }
-  else{res.send('Wrong token bud')}
 });
-
 
 //* Handle browser refresh by redirecting to index html
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "./server/static/index.html"));
 });
 
-
-
 // app.listen(1337);
 
 //* Start the server
-app.listen( process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(
     "Server is running on http://localhost:3000 or http://127.0.0.1:3000"
   );
