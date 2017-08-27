@@ -7,6 +7,7 @@ import Events from "./BeatMix/Events";
 import ContactUs from "./BeatMix/ContactUs";
 import Admin from "./BeatMix/Admin";
 import Page404 from "./BeatMix/common/404";
+import EventsGallery from "./BeatMix/image-gallery";
 
 import { Switch, Route } from "react-router-dom";
 
@@ -25,6 +26,7 @@ const AppRoutes = () =>
       <Route name="Events" exact path="/Events" component={Events} />
       <Route name="ContactUs" exact path="/ContactUs" component={ContactUs} />
       <Route name="Admin" exact path="/Admin" component={Admin} />
+      <Route name="EventsGallery" exact path="/EventsGallery" component={EventsGallery} />
       <Route path="*" component={Page404} />
     </Switch>
   </div>;
