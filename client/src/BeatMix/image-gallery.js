@@ -34,7 +34,7 @@ class Sample extends React.Component {
     render() {
         return (
             <div>
-            <Gallery photos={this.state.pictures} onClickPhoto={this.openLightbox} />
+            <Gallery photos={this.state.pictures} cols={3} onClickPhoto={this.openLightbox} />
             </div>
         );
     }

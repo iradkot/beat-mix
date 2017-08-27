@@ -30958,7 +30958,7 @@ var Sample = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_reactPhotoGallery2.default, { photos: this.state.pictures, onClickPhoto: this.openLightbox })
+                _react2.default.createElement(_reactPhotoGallery2.default, { photos: this.state.pictures, cols: 3, onClickPhoto: this.openLightbox })
             );
         }
     }]);
