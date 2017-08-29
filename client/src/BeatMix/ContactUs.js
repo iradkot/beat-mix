@@ -14,10 +14,11 @@ class ContactUs extends React.Component {
     return (
       <div className="contactuspage">
         <div className="pageBanner col-lg-12" />
-        <div className="googlemaps col-lg-4">
+        {/* <div className="col-lg-1"> */}
+        <div className="googlemaps col-lg-3 col-lg-offset-1">
           <GoogleMap />
         </div>
-        <div className="col-lg-6 col-lg-offset-1">
+        <div className="col-lg-4 col-lg-offset-2">
           <h3 className="whiteTxt">Contact Us!</h3>
           <ContactUsForm />
           <FbPlugins />

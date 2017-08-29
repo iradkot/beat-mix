@@ -62,17 +62,16 @@ class ContactUsForm extends React.Component {
             onChange={event => this.setState({ number: event.target.value })}
           />
           <label className="whiteTxt">Content:</label>
-          <input
-            type="text"
+          <textarea
             className="form-control"
             id="content"
-            placeholder="Message Us!"
+            placeholder="Message Us"
             required
             value={this.state.content}
             onChange={event => this.setState({ content: event.target.value })}
           />
           <button className="btn btn-primary btn-lg" type="submit">
-            Click Me!
+            Send
           </button>
         </div>
       </form>
