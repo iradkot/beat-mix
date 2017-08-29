@@ -40,7 +40,7 @@ class Header extends React.Component {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link to="/Artists">תם ועמית</Link>
+                    <Link to="/TamAmit">תם ועמית</Link>
                   </li>
                   <li>
                     <Link to="/Artists">נוי</Link>
