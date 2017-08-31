@@ -1,17 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
+import { IndexLinkContainer } from "react-router-bootstrap";
+
+const navbarStyle = {
+  backgroundColor: "black",
+  minHeight: "100px",
+  fontFamily: "Arimo"
+};
+
+const navbarBrandImgStyle = {
+  height: "82px",
+  width: "229px",
+  position: "fixed",
+  left: "300px"
+};
+
+const navStyle = {
+  paddingTop: "35px",
+  paddingBottom: "0px",
+  lineHeight: "80px"
+};
 
 class Header extends React.Component {
   render() {
     return (
-      <Navbar fluid collapseOnSelect inverse fixedTop>
+      <Navbar style={navbarStyle} collapseOnSelect inverse fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link className="navbar-brand navbar-right" to="/">
+            <Link to="/">
               <img
-                id="navbarBrand"
+                style={navbarBrandImgStyle}
                 src="http://beatmix.mitchatnim.co.il/img/0239/799.png"
               />
             </Link>
@@ -19,32 +38,32 @@ class Header extends React.Component {
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav pullRight>
+          <Nav style={navStyle} pullRight>
             <li role="presentation">
               <a target="_blank" href="https://www.facebook.com/beatmixdjs">
                 פייסבוק
               </a>
             </li>
-            <LinkContainer to="/ContactUs">
+            <IndexLinkContainer to="/ContactUs" activeClassName="activeNav">
               <NavItem eventKey={5}>צרו-קשר</NavItem>
-            </LinkContainer>
+            </IndexLinkContainer>
             <NavDropdown eventKey={4} title="גלריות" id="basic-nav-dropdown">
-              <LinkContainer to="/Artists">
+              <IndexLinkContainer to="/Artists" activeClassName="activeNav">
                 <MenuItem eventKey={4.1}>אמנים</MenuItem>
-              </LinkContainer>
-              <LinkContainer to="/Events">
+              </IndexLinkContainer>
+              <IndexLinkContainer to="/Events" activeClassName="activeNav">
                 <MenuItem eventKey={4.2}>אירועים</MenuItem>
-              </LinkContainer>
+              </IndexLinkContainer>
             </NavDropdown>
-            <LinkContainer to="/WhyBeatMix">
+            <IndexLinkContainer to="/WhyBeatMix" activeClassName="activeNav">
               <NavItem eventKey={3}>למה דאבל דיג'ייז</NavItem>
-            </LinkContainer>
-            <LinkContainer to="/AboutUs">
+            </IndexLinkContainer>
+            <IndexLinkContainer to="/AboutUs" activeClassName="activeNav">
               <NavItem eventKey={2}>נבחרת הדיג'יים</NavItem>
-            </LinkContainer>
-            <LinkContainer to="/">
+            </IndexLinkContainer>
+            <IndexLinkContainer to="/" activeClassName="activeNav">
               <NavItem eventKey={1}>דף הבית</NavItem>
-            </LinkContainer>
+            </IndexLinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
