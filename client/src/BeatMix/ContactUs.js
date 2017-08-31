@@ -17,11 +17,11 @@ class ContactUs extends React.Component {
         {/* <div className="col-lg-1"> */}
         <div className="googlemaps col-lg-3 col-lg-offset-1">
           <GoogleMap />
+          <FbPlugins />
         </div>
         <div className="col-lg-4 col-lg-offset-2">
           <h3 className="whiteTxt">Contact Us!</h3>
           <ContactUsForm />
-          <FbPlugins />
         </div>
       </div>
     );

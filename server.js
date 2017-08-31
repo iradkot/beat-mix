@@ -35,11 +35,11 @@ var transporter = nodemailer.createTransport({
 });
 
 //* cloudinary route
-app.get("/getFromCloudinary", function(req, res) {
+app.get("/getFromCloudinary/:folder", function(req, res) {
+  let folder = req.params.folder;
   cloudinary.v2.api.resources(
-    { type: "upload", prefix: "beatmix/", max_results: 100 },
+    { type: "upload", prefix: `${folder}/`, max_results: 100 },
     function(error, result) {
-      console.log(result);
       res.send(result);
     }
   );
