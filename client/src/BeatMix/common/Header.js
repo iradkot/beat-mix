@@ -24,8 +24,8 @@ class Header extends React.Component {
               />
             </Link>
           </div>
-          <div className="collapse navbar-collapse navbar-right" id="myNavbar">
-            <ul className="nav navbar-nav">
+          <div className="navbar-collapse collapse" id="myNavbar">
+            <ul className="nav navbar-nav navbar-right">
               <li>
                 <a target="_blank" href="https://www.facebook.com/beatmixdjs">
                   פייסבוק

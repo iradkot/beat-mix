@@ -20,7 +20,7 @@ class Events extends React.Component {
     let temp = this.state;
     let self = this;
     axios
-      .get("/getFromCloudinary")
+      .get("/getFromCloudinary/beatmix")
       .then(function(res) {
         let pictures = res.data.resources;
         let picArranged = pictures.map(

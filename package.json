@@ -25,6 +25,7 @@
     "react-transition-group": "^1.2.0",
     "slick-carousel": "^1.7.1",
     "validator": "^8.0.0",
+    "webfontloader": "^1.6.28",
     "webpack": "^3.3.0"
   },
   "devDependencies": {

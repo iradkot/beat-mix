@@ -1,5 +1,9 @@
 import React from "react";
 
+const fbCommentsStyle = {
+  backgroundColor: "white"
+};
+
 class FbPlugins extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +28,7 @@ class FbPlugins extends React.Component {
           className="fb-comments"
           data-href="https://www.facebook.com/elevationmosh"
           data-numposts="5"
+          style={fbCommentsStyle}
         />
         <div
           className="fb-like"
@@ -31,7 +36,7 @@ class FbPlugins extends React.Component {
           data-layout="button_count"
           data-action="like"
           data-size="large"
-          data-show-faces="true"
+          data-show-faces="false"
           data-share="false"
         />
         <div
