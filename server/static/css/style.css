@@ -1,34 +1,62 @@
-.navbar-fixed-top {
+/* .navbar-fixed-top {
   background-color: black;
   min-height: 120px;
-}
+} */
 
-.navbar-nav > li > a {
+/* #navbarBrand {
+  width: 234px;
+  position: fixed;
+  left: 50px;
+} */
+
+/* .navbar-nav > li > a {
   font-size: 30px;
   padding-top: 15px;
   padding-bottom: 0px;
   line-height: 80px;
+} */
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+  font-size: 25px;
+  text-align: right;
 }
 
-.googlemaps {
-  padding-top: 25px;
+.navbar-inverse .navbar-nav > .dropdown > .dropdown-menu {
+  background-color: black;
 }
-@media (max-width: 767px) {
+
+.navbar-inverse .navbar-nav > .dropdown > .dropdown-menu > li > a {
+  font-size: 25px;
+  text-align: right;
+  background-color: black;
+  color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #be1e55;
+}
+
+.navbar-inverse .navbar-nav > .dropdown > .dropdown-menu > li > a:hover {
+  color: #be1e55;
+}
+
+.activeNav > a {
+  color: #be1e55 !important;
+  border-left: 2px solid #be1e55;
+  border-right: 2px solid #be1e55;
+}
+
+/* @media (max-width: 767px) {
   .navbar-nav > li > a {
     line-height: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
-}
+} */
 
-#navbarBrand {
-  width: 234px;
-  position: fixed;
-  left: 50px;
-}
-
-li {
-  color: white;
+.googlemaps {
+  padding-top: 25px;
 }
 
 .no-padding {
@@ -102,6 +130,7 @@ input[type="email"].focus {
 }
 
 body {
+  box-sizing: border-box;
   background-color: black;
-  padding-top: 120px;
+  padding-top: 100px;
 }

@@ -3,10 +3,16 @@ import ReactDom from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./BeatMix/common/Header";
 import AppRoutes from "./AppRoutes";
+import WebFont from "webfontloader";
+
+WebFont.load({
+  google: {
+    families: ["Oswald", "sans-serif", "Arimo"]
+  }
+});
 
 class App extends React.Component {
   render() {
-    console.log("connected");
     return (
       <BrowserRouter>
         <div>
