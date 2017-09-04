@@ -47966,6 +47966,10 @@ var _ContactUsForm2 = _interopRequireDefault(_ContactUsForm);
 
 var _reactBootstrap = __webpack_require__(372);
 
+var _FbPlugins = __webpack_require__(558);
+
+var _FbPlugins2 = _interopRequireDefault(_FbPlugins);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48005,8 +48009,9 @@ var HomePage = function (_React$Component) {
     key: "render",
     value: function render() {
       var introStyle = {
-        background: 'white',
-        height: "539px",
+        background: "url(\"https://www.walldevil.com/wallpapers/a95/abstract-backgrounds-black-cool-wallpapers-dark.jpg\") no-repear center center fixed",
+        color: "white",
+        // height: "539px",
         backgroundSize: "cover"
 
       };
@@ -48016,7 +48021,7 @@ var HomePage = function (_React$Component) {
         null,
         _react2.default.createElement(
           _reactBootstrap.Col,
-          { md: 2, className: "contact-us" },
+          { className: "padding-0 contact-us text-center", lg: 2 },
           _react2.default.createElement(
             "button",
             { type: "button", onClick: this.contactBtn },
@@ -48031,20 +48036,89 @@ var HomePage = function (_React$Component) {
         ),
         _react2.default.createElement(
           "div",
-          { className: "intro", style: introStyle },
+          { className: "intro" },
           _react2.default.createElement(
             _reactBootstrap.Grid,
-            null,
+            { fluid: true },
             _react2.default.createElement(
               _reactBootstrap.Row,
-              { className: "show-grid" },
-              _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
+              { className: "show-grid", style: introStyle },
+              _react2.default.createElement(_reactBootstrap.Col, { className: "padding-0", lg: 2 }),
               _react2.default.createElement(
                 _reactBootstrap.Col,
-                { lg: 4 },
+                { className: "padding-0", lg: 4 },
                 _react2.default.createElement(_reactBootstrap.Image, { src: "http://res.cloudinary.com/moshmosh/image/upload/v1503559665/beatmix/IMG_3471_toxlwd.jpg", responsive: true })
               ),
-              _react2.default.createElement(_reactBootstrap.Col, { lg: 6 })
+              _react2.default.createElement(
+                _reactBootstrap.Col,
+                { className: "padding-0 intro-talk", lg: 5 },
+                _react2.default.createElement(
+                  "h1",
+                  null,
+                  "  !\u05DB\u05D5\u05DC\u05DD \u05D6\u05D6\u05D9\u05DD \u05DC\u05E4\u05D9 \u05D4\u05E7\u05E6\u05D1 \u05E9\u05DC\u05E0\u05D5 - Beat Mix "
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  " \u05D0\u05E0\u05D7\u05E0\u05D5 \u05EA\u05DD \u05D0\u05DC\u05D5\u05E9 \u05D5\u05E2\u05DE\u05D9\u05EA \u05DE\u05DB\u05DC\u05D5\u05E3 - \u05D7\u05D1\u05E8\u05D9 \u05D9\u05DC\u05D3\u05D5\u05EA \u05E9\u05E0\u05D5\u05E9\u05DE\u05D9\u05DD \u05DE\u05D5\u05D6\u05D9\u05E7\u05D4 \u05DE\u05D0\u05D6 \u05E9\u05D0\u05E0\u05D7\u05E0\u05D5 \u05D6\u05D5\u05DB\u05E8\u05D9\u05DD \u05D0\u05EA \u05E2\u05E6\u05DE\u05E0\u05D5. \u05DB\u05E9\u05E0\u05E2\u05DC\u05D4 \u05E2\u05DC \u05E2\u05DE\u05D3\u05EA \u05D4-\u05D3\u05D9\u05D2'\u05D9\u05D9 \u05D1\u05D7\u05EA\u05D5\u05E0\u05D4 \u05E9\u05DC\u05DB\u05DD, \u05D4\u05D0\u05D5\u05E8\u05D7\u05D9\u05DD \u05D9\u05EA\u05E2\u05D5\u05E8\u05E8\u05D5 \u05DC\u05D7\u05D9\u05D9\u05DD \u05D5\u05D4\u05E7\u05E6\u05D1 \u05D9\u05E2\u05DC \u05D4\u05DB\u05D9 \u05D2\u05D1\u05D5\u05D4 \u05E9\u05D0\u05E4\u05E9\u05E8, \u05D1\u05D3\u05D9\u05D5\u05E7 \u05DB\u05DE\u05D5 \u05E9\u05D7\u05DC\u05DE\u05EA\u05DD \u05E9\u05D9\u05E7\u05E8\u05D4. \u05D6\u05D5 \u05D4\u05D4\u05D6\u05D3\u05DE\u05E0\u05D5\u05EA \u05E9\u05DC\u05DB\u05DD \u05DC\u05D7\u05E1\u05D5\u05DA \u05D4\u05E8\u05D1\u05D4 \u05D4\u05EA\u05DC\u05D1\u05D8\u05D5\u05D9\u05D5\u05EA \u05D6\u05DE\u05DF \u05D5\u05D2\u05DD \u05DB\u05E1\u05E3, \u05D5\u05DC\u05E9\u05E8\u05D9\u05D9\u05DF \u05D0\u05D5\u05EA\u05E0\u05D5 \u05DC\u05D0\u05D9\u05E8\u05D5\u05E2 \u05D4\u05E7\u05E8\u05D1 \u05D5\u05D1\u05D0. "
+                )
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Col,
+                { lg: 1 },
+                " "
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Row,
+              null,
+              _react2.default.createElement(
+                _reactBootstrap.Col,
+                { className: "between", lgOffset: 2, lg: 10 },
+                _react2.default.createElement(
+                  "h1",
+                  { className: "text-center" },
+                  "...\u05D3\u05DE\u05D9\u05D9\u05E0\u05D5 \u05D0\u05EA \u05D4\u05D7\u05EA\u05D5\u05E0\u05D4 \u05E9\u05DC\u05DD \u05E2\u05DD \u05D4\u05D8\u05D0\u05E6' \u05E9\u05DC \u05D1\u05D9\u05D8-\u05DE\u05D9\u05E7\u05E1"
+                )
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Row,
+              null,
+              _react2.default.createElement(_reactBootstrap.Col, { className: "padding-0", lg: 2 }),
+              _react2.default.createElement(
+                _reactBootstrap.Col,
+                { className: "padding-0", lg: 5 },
+                _react2.default.createElement(_reactBootstrap.Image, { className: "intro-image", src: "http://res.cloudinary.com/moshmosh/image/upload/v1504516544/tomAndAmitEquip_yk0ryb.jpg", responsive: true })
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Col,
+                { className: "padding-0", lg: 5 },
+                _react2.default.createElement(_reactBootstrap.Image, { className: "intro-image", src: "http://res.cloudinary.com/moshmosh/image/upload/c_scale,w_700/v1503559677/beatmix/IMG_3497_k2xykm.jpg", responsive: true })
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Row,
+              null,
+              _react2.default.createElement(_reactBootstrap.Col, { className: "padding-0", lg: 2 }),
+              _react2.default.createElement(
+                _reactBootstrap.Col,
+                { className: "text-center", lg: 10 },
+                _react2.default.createElement(_FbPlugins2.default, null)
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "footer" },
+              _react2.default.createElement(
+                _reactBootstrap.Panel,
+                { fluid: true, footer: "\u05E2\u05E7\u05D1\u05D5 \u05D0\u05D7\u05E8\u05D9\u05E0\u05D5" },
+                _react2.default.createElement(
+                  "a",
+                  { target: "_blank", href: "https://www.facebook.com/beatmixdjs" },
+                  _react2.default.createElement(_reactBootstrap.Image, { src: "http://static.wixstatic.com/media/afb6f1_2382bba6ec214135b9f6256e216bc44f.gif", style: { height: "50px" } })
+                )
+              )
             )
           )
         )
@@ -49349,7 +49423,7 @@ var Events = function (_React$Component) {
             }
           })
         ),
-        _react2.default.createElement(_reactPhotoGallery2.default, { photos: tempState, cols: 3, onClickPhoto: this.openLightbox })
+        _react2.default.createElement(_reactPhotoGallery2.default, { photos: tempState, cols: 5, onClickPhoto: this.openLightbox })
       );
     }
   }]);

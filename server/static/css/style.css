@@ -128,7 +128,7 @@ body {
   background: black;
   /* width: 277px; */
   border-radius: 2%;
-  height: 342px;
+  height: 366px;
   position: fixed;
   left: 0px;
   top: 100px;
@@ -138,3 +138,30 @@ body {
 .parraSlider {
   background-size: cover !important;
 }
+.intro-image {
+  margin-top: 18px;
+}
+.padding-0{
+  /* padding-right:0;
+  padding-left:0; */
+}
+.intro-talk {
+  text-align: right;
+}
+
+.intro {
+  color: white;
+}
+
+.intro-image:hover {
+  cursor: pointer;
+  margin-top: -5px;
+  box-shadow: 0px 0px 5px #888888;
+}
+.footer {
+  color: black;
+  text-align: center;
+}
+/* .comments {
+  text-align: center;
+} */

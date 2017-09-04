@@ -70,7 +70,7 @@ class Events extends React.Component {
                 })}
             />}
         </div>
-        <Gallery photos={tempState} cols={3} onClickPhoto={this.openLightbox} />
+        <Gallery photos={tempState} cols={5} onClickPhoto={this.openLightbox} />
       </div>
     );
   }
