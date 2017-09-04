@@ -1,34 +1,52 @@
-.navbar-fixed-top {
+/* .navbar-fixed-top {
   background-color: black;
   min-height: 120px;
-}
+} */
 
-.navbar-nav > li > a {
+/* #navbarBrand {
+  width: 234px;
+  position: fixed;
+  left: 50px;
+} */
+
+/* .navbar-nav > li > a {
   font-size: 30px;
   padding-top: 15px;
   padding-bottom: 0px;
   line-height: 80px;
+} */
+
+.navbar-inverse .navbar-nav > li > a {
+  text-align: right;
+  color : #fff;
 }
 
-.googlemaps {
-  padding-top: 25px;
+.navbar-inverse .navbar-nav > li > a:hover {
+  color : #BE1E55;
 }
-@media (max-width: 767px) {
+.activeNav > a {
+  color: #BE1E55 !important;
+  border-left: 2px solid #BE1E55;
+  border-right: 2px solid #BE1E55;
+}
+.dropdown-menu::before, 
+.dropdown-menu::after {
+    border: none;
+    content: none;
+}
+
+
+/* @media (max-width: 767px) {
   .navbar-nav > li > a {
     line-height: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
-}
+} */
 
-#navbarBrand {
-  width: 234px;
-  position: fixed;
-  left: 50px;
-}
 
-li {
-  color: white;
+.googlemaps {
+  padding-top: 25px;
 }
 
 .no-padding {
@@ -103,5 +121,20 @@ input[type="email"].focus {
 
 body {
   background-color: black;
-  padding-top: 120px;
+  padding-top: 100px;
+}
+
+.contact-us {
+  background: black;
+  /* width: 277px; */
+  border-radius: 2%;
+  height: 342px;
+  position: fixed;
+  left: 0px;
+  top: 100px;
+  border: 2px solid #BE1E55;
+}
+
+.parraSlider {
+  background-size: cover !important;
 }

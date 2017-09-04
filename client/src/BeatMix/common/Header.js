@@ -1,68 +1,73 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Navbar, Nav, NavItem, MenuItem, NavDropdown } from "react-bootstrap";
+import { IndexLinkContainer } from "react-router-bootstrap";
+
+const navbarStyle = {
+  backgroundColor: "black",
+  minHeight: "100px",
+  fontFamily: "Arimo"
+};
+
+const navbarBrandImgStyle = {
+  height: "82px",
+  width: "229px",
+  position: "fixed",
+  left: "50px"
+};
+
+const navStyle = {
+  fontSize: "25px",
+  paddingTop: "35px",
+  paddingBottom: "0px",
+  lineHeight: "80px"
+};
 
 class Header extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-inverse navbar-fixed-top">
-        <div className="container-fluid">
-          <div className="navbar-header">
-            <button
-              type="button"
-              className="navbar-toggle"
-              data-toggle="collapse"
-              data-target="#myNavbar"
-            >
-              <span className="icon-bar" />
-              <span className="icon-bar" />
-              <span className="icon-bar" />
-            </button>
-            <Link className="navbar-brand navbar-right" to="/">
+      <Navbar style={navbarStyle} fluid collapseOnSelect inverse fixedTop>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <Link to="/">
               <img
-                id="navbarBrand"
+                style={navbarBrandImgStyle}
                 src="http://beatmix.mitchatnim.co.il/img/0239/799.png"
               />
             </Link>
-          </div>
-          <div className="collapse navbar-collapse navbar-right" id="myNavbar">
-            <ul className="nav navbar-nav">
-              <li>
-                <a target="_blank" href="https://www.facebook.com/beatmixdjs">
-                  פייסבוק
-                </a>
-              </li>
-              <li>
-                <Link to="/ContactUs">צרו-קשר</Link>
-              </li>
-              <li className="dropdown">
-                <a className="dropdown-toggle" data-toggle="dropdown" href="#">
-                  גלריות <span className="caret" />
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link to="/TamAmit">תם ועמית</Link>
-                  </li>
-                  <li>
-                    <Link to="/Artists">נוי</Link>
-                  </li>
-                  <li>
-                    <Link to="/Events">אירועים</Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link to="/WhyBeatMix">למה דאבל דיג'ייז</Link>
-              </li>
-              <li>
-                <Link to="/AboutUs">נבחרת הדיג'יים</Link>
-              </li>
-              <li>
-                <Link to="/">דף הבית</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav style={navStyle} pullRight>
+            <li role="presentation">
+              <a target="_blank" href="https://www.facebook.com/beatmixdjs">
+                פייסבוק
+              </a>
+            </li>
+            <IndexLinkContainer to="/ContactUs" activeClassName="activeNav">
+              <NavItem eventKey={5}>צרו-קשר</NavItem>
+            </IndexLinkContainer>
+            <NavDropdown eventKey={4} title="גלריות" id="basic-nav-dropdown" activeClassName="activeNav">
+              <IndexLinkContainer to="/Artists" activeClassName="activeNav">
+                <MenuItem eventKey={4.1}>אמנים</MenuItem>
+              </IndexLinkContainer>
+              <IndexLinkContainer to="/Events" activeClassName="activeNav">
+                <MenuItem eventKey={4.2}>אירועים</MenuItem>
+              </IndexLinkContainer>
+            </NavDropdown>
+            <IndexLinkContainer to="/WhyBeatMix" activeClassName="activeNav">
+              <NavItem eventKey={3}>למה דאבל דיג'ייז</NavItem>
+            </IndexLinkContainer>
+            <IndexLinkContainer to="/AboutUs" activeClassName="activeNav">
+              <NavItem eventKey={2}>נבחרת הדיג'יים</NavItem>
+            </IndexLinkContainer>
+            <IndexLinkContainer to="/" activeClassName="activeNav">
+              <NavItem eventKey={1}>דף הבית</NavItem>
+            </IndexLinkContainer>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     );
   }
 }
