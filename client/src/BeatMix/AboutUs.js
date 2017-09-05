@@ -1,70 +1,69 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//style objects:0
+const djBox = {
+  textAlign: "center",
+  border: "1px solid rgb(189,30,85)"
+  // borderRadius: "5px"
+};
+const djTeam = {
+  fontFamiley: "Oswald",
+  color: "rgb(189,30,85)",
+  textAlign: "center",
+  textDecoration: "underline"
+};
+
+const djNameFont = {
+  fontFamiley: "Arimo",
+  color: "white",
+  textShadow: "-2px -4px 14px",
+  webkitTransform: "rotate(2deg)",
+  textDecoration: "underline"
+};
+const djImage = {
+  height: "100px",
+  width: "100px",
+  display: "inline-block"
+};
 class About extends React.Component {
   render() {
     return (
       <div>
-        <div className="pageBanner col-lg-12" />
-        <div className="col-lg-6 col-lg-offset-3">
-          <h1>About Us!</h1>
-          <Link to="/">
-            <button type="button" className="btn btn-default">
-              Home Page!
-            </button>
-          </Link>
-        </div>
-        <div className="row text-center">
-          <div>
-            <h1>About Us</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
-              libero, sit. Assumenda numquam consequuntur eum deleniti non
-              eligendi, quo corporis at qui consequatur ab amet deserunt
-              accusamus molestiae quidem vitae necessitatibus ad aliquid minus,
-              sapiente eius doloribus! Dicta architecto sit nemo ducimus aut
-              omnis atque velit, consectetur animi iste, laudantium doloribus
-              dolorem ullam tempore! Esse vel omnis nemo incidunt repudiandae
-              dolore voluptatibus minima assumenda commodi odio tempora aliquam
-              illo, voluptatem minus ex voluptas laboriosam doloremque
-              praesentium, dolorem et consectetur, distinctio similique. Culpa
-              accusantium deleniti qui recusandae vel, ipsam, dignissimos
-              repudiandae, soluta magni consectetur quos et optio exercitationem
-              expedita ratione! A.
-            </p>
+        <h1 style={djTeam}> נבחרת הדיג'ייז שלנו </h1>
+        <div className="container">
+          <div style={djBox} className="row aboutDj">
+            <div className="col-md-4">
+              <img
+                className="img-responsive"
+                src="https://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg"
+              />
+            </div>
+            <div className="col-md-8">
+              <div style={djNameFont} className="row djName">
+                <h1>DJ. Tom Alush</h1>
+              </div>
+              <div className="row">
+                <h4>Hiphop, Trans, Techno, Rock</h4>
+              </div>
+            </div>
           </div>
-          <div>
-            <h2>Our Team</h2>
-            <br />
-            <div className="col-md-4 col-lg-4 col-sm-4 col-xs-12">
-              <img
-                style={{ maxWidth: "200px" }}
-                className="center-block img-responsive img-circle"
-                src="/img/tesla.jpg"
-                alt=""
-              />
-              <h4>Tesla</h4>
-              <h6>Full-Stack</h6>
+          <br />
+          <br />
+          <div style={djBox} className="row aboutDj">
+            <div className="col-md-8">
+              <div style={djNameFont} className="row djName">
+                <h1>DJ. Amit Machluf</h1>
+              </div>
+              <div className="row">
+                <h4>reaggai, Fun, Trans, Techno, Rock</h4>
+              </div>
             </div>
-            <div className="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+            <div className="col-md-4">
               <img
-                style={{ maxWidth: "200px" }}
-                className="center-block img-responsive img-circle"
-                src="/img/einstein.jpeg"
-                alt=""
+                className="img-responsive"
+                src="https://res.cloudinary.com/moshmosh/image/upload/v1503559666/beatmix/IMG_3449_oqjshw.jpg"
               />
-              <h4>Einstein</h4>
-              <h6>Team Leader</h6>
-            </div>
-            <div className="col-md-4 col-lg-4 col-sm-4 col-xs-12">
-              <img
-                style={{ maxWidth: "200px" }}
-                className="center-block img-responsive img-circle"
-                src="/img/elon.png"
-                alt=""
-              />
-              <h4>Musk</h4>
-              <h6>Designer</h6>
             </div>
           </div>
         </div>

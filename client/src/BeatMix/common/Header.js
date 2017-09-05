@@ -13,10 +13,11 @@ const navbarBrandImgStyle = {
   height: "82px",
   width: "229px",
   position: "fixed",
-  left: "300px"
+  left: "50px"
 };
 
 const navStyle = {
+  fontSize: "25px",
   paddingTop: "35px",
   paddingBottom: "0px",
   lineHeight: "80px"
@@ -25,7 +26,7 @@ const navStyle = {
 class Header extends React.Component {
   render() {
     return (
-      <Navbar style={navbarStyle} collapseOnSelect inverse fixedTop>
+      <Navbar style={navbarStyle} fluid collapseOnSelect inverse fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/">
@@ -47,7 +48,12 @@ class Header extends React.Component {
             <IndexLinkContainer to="/ContactUs" activeClassName="activeNav">
               <NavItem eventKey={5}>צרו-קשר</NavItem>
             </IndexLinkContainer>
-            <NavDropdown eventKey={4} title="גלריות" id="basic-nav-dropdown">
+            <NavDropdown
+              eventKey={4}
+              title="גלריות"
+              id="basic-nav-dropdown"
+              activeClassName="activeNav"
+            >
               <IndexLinkContainer to="/Artists" activeClassName="activeNav">
                 <MenuItem eventKey={4.1}>אמנים</MenuItem>
               </IndexLinkContainer>

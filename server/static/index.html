@@ -2,17 +2,11 @@
 <html>
 
 <head>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beat Mix | </title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/style.css">
-
   <!-- Start of Async Drift Code -->
   <script>
-    ! function () {
+    !function () {
       var t;
-      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void(window.console &&
-        console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
         t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
         t.factory = function (e) {
           return function () {
@@ -24,8 +18,7 @@
         }), t.load = function (t) {
           var e, n, o, i;
           e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
-            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src =
-            "https://js.driftt.com/include/" + i + "/" + t + ".js",
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
             n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
         });
     }();
@@ -33,6 +26,12 @@
     drift.load('wa4gukmdgurh');
   </script>
   <!-- End of Async Drift Code -->
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beat Mix!</title>
+  <!-- The Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/css/style.css">
 
 </head>
 
@@ -44,16 +43,15 @@
     (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=141250676455450";
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v2.10&appId=141250676455450";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
 
   <div id="react-app"></div>
-
   <script src="https://widget.cloudinary.com/global/all.js" type="text/javascript">
+
   </script>
   <script src="/js/app.js"></script>
 </body>

@@ -17,34 +17,22 @@
 } */
 
 .navbar-inverse .navbar-nav > li > a {
+  text-align: right;
   color: #fff;
-  font-size: 25px;
-  text-align: right;
-}
-
-.navbar-inverse .navbar-nav > .dropdown > .dropdown-menu {
-  background-color: black;
-}
-
-.navbar-inverse .navbar-nav > .dropdown > .dropdown-menu > li > a {
-  font-size: 25px;
-  text-align: right;
-  background-color: black;
-  color: white;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
   color: #be1e55;
 }
-
-.navbar-inverse .navbar-nav > .dropdown > .dropdown-menu > li > a:hover {
-  color: #be1e55;
-}
-
 .activeNav > a {
   color: #be1e55 !important;
   border-left: 2px solid #be1e55;
   border-right: 2px solid #be1e55;
+}
+.dropdown-menu::before,
+.dropdown-menu::after {
+  border: none;
+  content: none;
 }
 
 /* @media (max-width: 767px) {
@@ -130,7 +118,48 @@ input[type="email"].focus {
 }
 
 body {
-  box-sizing: border-box;
   background-color: black;
   padding-top: 100px;
 }
+
+.contact-us {
+  background: black;
+  /* width: 277px; */
+  border-radius: 2%;
+  height: 366px;
+  position: fixed;
+  left: 0px;
+  top: 100px;
+  border: 2px solid #be1e55;
+}
+
+.parraSlider {
+  background-size: cover !important;
+}
+.intro-image {
+  margin-top: 18px;
+}
+.padding-0 {
+  /* padding-right:0;
+  padding-left:0; */
+}
+.intro-talk {
+  text-align: right;
+}
+
+.intro {
+  color: white;
+}
+
+.intro-image:hover {
+  cursor: pointer;
+  margin-top: -5px;
+  box-shadow: 0px 0px 5px #888888;
+}
+.footer {
+  color: black;
+  text-align: center;
+}
+/* .comments {
+  text-align: center;
+} */
