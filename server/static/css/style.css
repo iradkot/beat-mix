@@ -35,16 +35,93 @@
   content: none;
 }
 
-/* @media (max-width: 767px) {
-  .navbar-nav > li > a {
-    line-height: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-} */
+.pageBanner {
+  width: 100%;
+  height: 295px;
+  background-image: url("http://res.cloudinary.com/moshmosh/image/upload/v1504600903/beatmix/825.jpg");
+}
 
 .googlemaps {
-  padding-top: 25px;
+  border-radius: 0;
+}
+
+hr {
+  background-color: #be1e55;
+}
+
+.pageHeaders {
+  color: #be1e55;
+  font-size: 50px;
+}
+
+.whiteTxt {
+  color: white;
+  font-size: 20px;
+}
+
+.formSubmitBtn {
+  /* background-color: #be1e55; */
+  /* color: #be1e55; */
+  font-weight: bold;
+  font-size: 30px;
+  width: 100px;
+  height: 50px;
+  border-radius: 0;
+}
+
+label {
+  display: block;
+  width: x;
+  height: y;
+  text-align: right;
+}
+
+input[type='text'],
+input[type='email'],
+#content {
+  text-align: right;
+  color: black;
+  font-size: 25px;
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  border-radius: 0;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+input[type='text'],
+input[type='email'] {
+  /* width: 450px; */
+  height: 40px;
+}
+
+input[type="text"]:focus,
+input[type="text"].focus,
+input[type="email"]:focus,
+input[type="email"].focus,
+#content:focus,
+#content.focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+::-webkit-input-placeholder {
+  font-weight: bold !important;
+  color: black !important;
+  font-size: 30px !important;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-weight: bold;
+  color: black;
+  font-size: 30px !important;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-weight: bold;
+  color: black;
+  font-size: 30px !important;
 }
 
 .no-padding {
@@ -64,64 +141,6 @@
   right: 0px;
 }
 
-.pageBanner {
-  width: 100%;
-  height: 295px;
-  background-image: url("http://beatmix.mitchatnim.co.il/img/0239/825.jpg?sitetimestamp=636259130130000000");
-}
-
-.whiteTxt {
-  color: white;
-  font-size: 20px;
-}
-
-input[type='text'] {
-  color: black;
-  font-size: 25px;
-  padding: 10px;
-  border: solid 1px #dcdcdc;
-  transition: box-shadow 0.3s, border 0.3s;
-}
-
-input[type="text"]:focus,
-input[type="text"].focus {
-  border: solid 1px #707070;
-  box-shadow: 0 0 5px 1px #969696;
-}
-
-input[type='email'] {
-  color: black;
-  font-size: 25px;
-  padding: 10px;
-  border: solid 1px #dcdcdc;
-  transition: box-shadow 0.3s, border 0.3s;
-}
-
-input[type="email"]:focus,
-input[type="email"].focus {
-  border: solid 1px #707070;
-  box-shadow: 0 0 5px 1px #969696;
-}
-
-::-webkit-input-placeholder {
-  font-size: 20px !important;
-}
-
-:-moz-placeholder {
-  /* Firefox 18- */
-  font-size: 25px !important;
-}
-
-::-moz-placeholder {
-  /* Firefox 19+ */
-  font-size: 25px !important;
-}
-
-body {
-  background-color: black;
-  padding-top: 100px;
-}
-
 .contact-us {
   background: black;
   /* width: 277px; */
@@ -139,10 +158,7 @@ body {
 .intro-image {
   margin-top: 18px;
 }
-.padding-0 {
-  /* padding-right:0;
-  padding-left:0; */
-}
+
 .intro-talk {
   text-align: right;
 }
@@ -160,6 +176,9 @@ body {
   color: black;
   text-align: center;
 }
-/* .comments {
-  text-align: center;
-} */
+
+body {
+  background-color: black;
+  padding-top: 100px;
+  font-family: Arimo;
+}

@@ -5,8 +5,7 @@ import { IndexLinkContainer } from "react-router-bootstrap";
 
 const navbarStyle = {
   backgroundColor: "black",
-  minHeight: "100px",
-  fontFamily: "Arimo"
+  minHeight: "100px"
 };
 
 const navbarBrandImgStyle = {
@@ -26,7 +25,7 @@ const navStyle = {
 class Header extends React.Component {
   render() {
     return (
-      <Navbar style={navbarStyle} fluid collapseOnSelect inverse fixedTop>
+      <Navbar style={navbarStyle} collapseOnSelect inverse fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/">
@@ -46,7 +45,7 @@ class Header extends React.Component {
               </a>
             </li>
             <IndexLinkContainer to="/ContactUs" activeClassName="activeNav">
-              <NavItem eventKey={5}>צרו-קשר</NavItem>
+              <NavItem eventKey={5}>צור-קשר</NavItem>
             </IndexLinkContainer>
             <NavDropdown
               eventKey={4}
