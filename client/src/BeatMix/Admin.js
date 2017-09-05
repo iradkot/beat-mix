@@ -18,7 +18,9 @@ class Admin extends React.Component {
         theme: "minimal",
         show_powered_by: false
       },
-      function(error, result) {}
+      function(error, result) {
+        alert("Image(s) Uploaded! Thank You");
+      }
     );
   }
 
