@@ -1,4 +1,5 @@
 import React from "react";
+import { Grid, Row, Col } from "react-bootstrap";
 import Gallery from "react-photo-gallery";
 import Lightbox from "react-image-lightbox";
 
@@ -20,7 +21,7 @@ class Events extends React.Component {
     let temp = this.state;
     let self = this;
     axios
-      .get("/getFromCloudinary")
+      .get("/getFromCloudinary/beatmix")
       .then(function(res) {
         let pictures = res.data.resources;
         let picArranged = pictures.map(
@@ -46,8 +47,17 @@ class Events extends React.Component {
     const { photoIndex, isOpen } = this.state;
     const tempState = this.state.pictures;
     return (
-      <div>
-        <div className="pageBanner col-lg-12" />
+      <Grid fluid={true} className="eventsPage">
+        <Row>
+          <Col lg={12} className="pageBanner" />
+        </Row>
+        <Row>
+          <Col lg={6} lgOffset={5}>
+            <h1 className="pageHeaders text-right">אירועים</h1>
+            <hr />
+          </Col>
+          <Col lg={1} />
+        </Row>
         <div>
           {isOpen &&
             <Lightbox
@@ -70,8 +80,18 @@ class Events extends React.Component {
                 })}
             />}
         </div>
-        <Gallery photos={tempState} cols={5} onClickPhoto={this.openLightbox} />
-      </div>
+        <Row>
+          <Col lg={1} />
+          <Col lg={10}>
+            <Gallery
+              photos={tempState}
+              cols={3}
+              onClickPhoto={this.openLightbox}
+            />
+          </Col>
+          <Col lg={1} />
+        </Row>
+      </Grid>
     );
   }
 }

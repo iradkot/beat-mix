@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Grid, Row, Col } from "react-bootstrap";
 import GoogleMap from "./GoogleMap";
 import ContactUsForm from "./ContactUs-Form";
-import FbPlugins from "./FbPlugins";
 
 class ContactUs extends React.Component {
   constructor(props) {
@@ -12,18 +12,28 @@ class ContactUs extends React.Component {
 
   render() {
     return (
-      <div className="contactuspage">
-        <div className="pageBanner col-lg-12" />
-        {/* <div className="col-lg-1"> */}
-        <div className="googlemaps col-lg-3 col-lg-offset-1">
-          <GoogleMap />
-          <FbPlugins />
-        </div>
-        <div className="col-lg-4 col-lg-offset-2">
-          <h3 className="whiteTxt">Contact Us!</h3>
-          <ContactUsForm />
-        </div>
-      </div>
+      <Grid fluid={true} className="contactUsPage">
+        <Row>
+          <Col lg={12} className="pageBanner" />
+        </Row>
+        <Row>
+          <Col lg={6} lgOffset={5}>
+            <h1 className="pageHeaders text-right">צור-קשר</h1>
+            <hr />
+          </Col>
+          <Col lg={1}/>
+        </Row>
+        <Row>
+          <Col lg={1} />
+          <Col lg={4} className="googlemaps">
+            <GoogleMap />
+          </Col>
+          <Col lg={6}>
+            <ContactUsForm />
+          </Col>
+          <Col lg={1} />
+        </Row>
+      </Grid>
     );
   }
 }

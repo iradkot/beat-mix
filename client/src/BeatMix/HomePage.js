@@ -1,6 +1,7 @@
 import React from "react";
 import ParralaxImageSlider from "./parralax-image-slider";
 import ContactUsForm from "./ContactUs-Form";
+import ContactUsPopout from "./ContactUs-Popout";
 import { Grid, Row, Col, Image, Panel } from "react-bootstrap";
 import FbPlugins from "./FbPlugins";
 
@@ -38,20 +39,23 @@ class HomePage extends React.Component {
 
     return (
       <div>
-        <Col className="padding-0 contact-us text-center" lg={2}>
+        {/* <Col className="padding-0 contact-us text-center" lg={2}>
           <button type="button" onClick={this.contactBtn}>
             קבלו הצעה!
           </button>
           {this.state.getOffer ? <ContactUsForm /> : ""}
-        </Col>
+        </Col> */}
+        <div className="text-center padding-0">
+          <ContactUsPopout />
+        </div>
         <div>
           <ParralaxImageSlider height={539} image_arr={image_arr} />
         </div>
         <div className="intro">
           <Grid fluid={true}>
             <Row className="show-grid" style={introStyle}>
-              <Col className="padding-0" lg={2} />
-              <Col className="padding-0" lg={4}>
+              <Col lg={2} />
+              <Col lg={4}>
                 <Image
                   src="http://res.cloudinary.com/moshmosh/image/upload/v1503559665/beatmix/IMG_3471_toxlwd.jpg"
                   responsive
@@ -77,15 +81,15 @@ class HomePage extends React.Component {
               </Col>
             </Row>
             <Row>
-              <Col className="padding-0" lg={2} />
-              <Col className="padding-0" lg={5}>
+              <Col lg={2} />
+              <Col lg={5}>
                 <Image
                   className="intro-image"
                   src="http://res.cloudinary.com/moshmosh/image/upload/v1504516544/tomAndAmitEquip_yk0ryb.jpg"
                   responsive
                 />
               </Col>
-              <Col className="padding-0" lg={5}>
+              <Col lg={5}>
                 <Image
                   className="intro-image"
                   src="http://res.cloudinary.com/moshmosh/image/upload/c_scale,w_700/v1503559677/beatmix/IMG_3497_k2xykm.jpg"
@@ -94,7 +98,7 @@ class HomePage extends React.Component {
               </Col>
             </Row>
             <Row>
-              <Col className="padding-0" lg={2} />
+              <Col lg={2} />
               <Col className="text-center" lg={10}>
                 <FbPlugins />
               </Col>
