@@ -12,13 +12,13 @@ class BIS extends React.Component {
       background: this.props.image_arr[0]
     };
   }
-  componentDidMount() {
-    this.timer = setInterval(() => this.tick(), 5000);
-  }
+  // componentDidMount() {
+  //   this.timer = setInterval(() => this.tick(), 5000);
+  // }
 
-  componentWillUnmount() {
-    clearInterval(this.timer);
-  }
+  // componentWillUnmount() {
+  //   clearInterval(this.timer);
+  // }
 
   tick() {
     // let height = this.state.height+1000;
@@ -33,15 +33,15 @@ class BIS extends React.Component {
     });
   }
   render() {
-    let style = {
-      background: `url(${this.state.background}) no-repeat center center fixed`,
-      // backgroundSize: "cover",
-      height: this.props.height
-      // height: this.state.height
-    };
     return (
       <div>
-          <div className="parraSlider" style={style} />
+        <CSSTransitionGroup
+          transitionName="carousel"
+          transitionEnterTimeout={2000}
+          transitionLeaveTimeout={2000}>
+          <div className="parraSlider" style={{background: `url(${this.state.background}) no-repeat center center fixed`, height: this.props.height}} key={this.state.background}>
+            </div>
+        </CSSTransitionGroup>
       </div>
     );
   }

@@ -1,31 +1,26 @@
 import React from "react";
 import ParralaxImageSlider from "./parralax-image-slider";
+import { Link } from "react-router-dom";
 import ContactUsForm from "./ContactUs-Form";
 import { Grid, Row, Col, Image, Panel } from "react-bootstrap";
 import FbPlugins from "./FbPlugins";
+import { CSSTransitionGroup } from 'react-transition-group'; // ES6
+import Footer from './common/footer.js';
+import { IndexLinkContainer } from "react-router-bootstrap";
+
+
 
 var image_arr = [
   "http://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg",
   'http://res.cloudinary.com/moshmosh/image/upload/v1503559675/beatmix/IMG_3443_sg0943.jpg',
   'http://res.cloudinary.com/moshmosh/image/upload/v1503559714/beatmix/IMG_3530_mklqvr.jpg'
 ]
-
-var image_arr2 = [
-  "https://www.vintandyork.com/media/catalog/product/b/i/big_gif_firm_1.gif",
-]
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.contactBtn = this.contactBtn.bind(this);
-    this.state = {
-      getOffer: false
-    }
   }
   contactBtn() {
-    let offerBtn = !this.state.getOffer;
-    this.setState({
-      getOffer: offerBtn
-    })
   }
 
   render() {
@@ -41,9 +36,10 @@ class HomePage extends React.Component {
       <div>
         <Col className="padding-0 contact-us text-center" lg={2}>
           <button type="button" onClick={this.contactBtn}>קבלו הצעה!</button>
-          {this.state.getOffer ? <ContactUsForm /> : ""}
+          <ContactUsForm />
         </Col>
         <div>
+
           <ParralaxImageSlider height={539} image_arr={image_arr} />
         </div>
         <div className="intro">
@@ -62,20 +58,33 @@ class HomePage extends React.Component {
             </Row>
             <Row>
               <Col className="padding-0" lg={2}></Col>
-              <Col className="padding-0" lg={5}><Image className="intro-image" src="http://res.cloudinary.com/moshmosh/image/upload/v1504516544/tomAndAmitEquip_yk0ryb.jpg" responsive /></Col>
-              <Col className="padding-0" lg={5}><Image className="intro-image" src="http://res.cloudinary.com/moshmosh/image/upload/c_scale,w_700/v1503559677/beatmix/IMG_3497_k2xykm.jpg" responsive /></Col>
+              <Col className="homeImageLinks" lg={5}>
+                <IndexLinkContainer to="/ContactUs">
+                  <Row>
+                    <h1 className="intro-text">צור קשר</h1>
+                  </Row>
+                </IndexLinkContainer>
+                <Link to="/ContactUs">
+                  <Image className="intro-image" src="http://res.cloudinary.com/moshmosh/image/upload/v1504516544/tomAndAmitEquip_yk0ryb.jpg" responsive />
+                </Link>
+              </Col>
+
+              <Col className="homeImageLinks" lg={5}>
+                <IndexLinkContainer to="/Events">
+                  <Row>
+                    <h1 className="intro-text">לגלריות</h1>
+                  </Row>
+                </IndexLinkContainer>
+                <Link to="/Events">
+                  <Image className="intro-image" src="http://res.cloudinary.com/moshmosh/image/upload/c_scale,w_700/v1503559677/beatmix/IMG_3497_k2xykm.jpg" responsive />
+                </Link>
+              </Col>
             </Row>
             <Row>
               <Col className="padding-0" lg={2}></Col>
               <Col className="text-center" lg={10}><FbPlugins /></Col>
             </Row>
-            <div className="footer">
-              <Panel fluid={true} footer="עקבו אחרינו">
-                <a target="_blank" href="https://www.facebook.com/beatmixdjs">
-                  <Image src="http://static.wixstatic.com/media/afb6f1_2382bba6ec214135b9f6256e216bc44f.gif" style={{ height: "50px" }} />
-                </a>
-              </Panel>
-            </div>
+            <Footer />
           </Grid>
 
         </div>

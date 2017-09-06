@@ -133,12 +133,15 @@ body {
   left: 0px;
   top: 100px;
   border: 2px solid #BE1E55;
+  z-index: 10;
 }
 
 .parraSlider {
   background-size: cover !important;
+  z-index: -1;
 }
 .intro-image {
+  color: white !important;
   margin-top: 18px;
 }
 .padding-0{
@@ -152,15 +155,50 @@ body {
 .intro {
   color: white;
 }
-
+.intro-image {
+  transition: all 0.5s ease-in-out;
+}
 .intro-image:hover {
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
-  margin-top: -5px;
-  box-shadow: 0px 0px 5px #888888;
+  margin-top: 1px;
+  box-shadow: 0 8px 16px 0 rgb(255, 255, 255); 
 }
 .footer {
   color: black;
   text-align: center;
+}
+
+
+.carousel-enter {
+  opacity: 0.01;
+}
+
+.carousel-enter.carousel-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+
+.carousel-leave {
+  opacity: 1;
+}
+
+.carousel-leave.carousel-leave-active {
+  opacity: 0.01;
+  transition: opacity 200ms ease-in;
+}
+
+.homeImageLinks {
+  text-align: center;
+}
+
+.intro-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.footer {
+  color: white;
 }
 /* .comments {
   text-align: center;
