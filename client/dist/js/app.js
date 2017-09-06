@@ -49063,6 +49063,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(33);
 
+var _reactBootstrap = __webpack_require__(42);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -49109,31 +49111,86 @@ var About = function (_React$Component) {
   _createClass(About, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement(
-        "div",
-        null,
+      return (
+        // <div>
+        //   <h1 style={djTeam}> נבחרת הדיג'ייז שלנו </h1>
+        //   <div className="container">
+        //     <div style={djBox} className="row aboutDj">
+        //       <div className="col-md-4">
+        // <img
+        //   className="img-responsive"
+        //   src="https://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg"
+        // />
+        //       </div>
+        //       <div className="col-md-8">
+        // <div style={djNameFont} className="row djName">
+        //   <h1>DJ. Tom Alush</h1>
+        // </div>
+        //         <div className="row">
+        //           <h4>Hiphop, Trans, Techno, Rock</h4>
+        //         </div>
+        //       </div>
+        //     </div>
+        // <br />
+        // <br />
+        //     <div style={djBox} className="row aboutDj">
+        //       <div className="col-md-8">
+        // <div style={djNameFont} className="row djName">
+        //   <h1>DJ. Amit Machluf</h1>
+        // </div>
+        //         <div className="row">
+        // <h4>reaggai, Fun, Trans, Techno, Rock</h4>
+        //         </div>
+        //       </div>
+        //       <div className="col-md-4">
+        // <img
+        //   className="img-responsive"
+        //   src="https://res.cloudinary.com/moshmosh/image/upload/v1503559666/beatmix/IMG_3449_oqjshw.jpg"
+        // />
+        //       </div>
+        //     </div>
+        //   </div>
+        // </div>
+
         _react2.default.createElement(
-          "h1",
-          { style: djTeam },
-          " \u05E0\u05D1\u05D7\u05E8\u05EA \u05D4\u05D3\u05D9\u05D2'\u05D9\u05D9\u05D6 \u05E9\u05DC\u05E0\u05D5 "
-        ),
-        _react2.default.createElement(
-          "div",
-          { className: "container" },
+          _reactBootstrap.Grid,
+          { fluid: true, className: "aboutusPage" },
           _react2.default.createElement(
-            "div",
-            { style: djBox, className: "row aboutDj" },
+            _reactBootstrap.Row,
+            null,
+            _react2.default.createElement(_reactBootstrap.Col, { lg: 12, className: "pageBanner" })
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            null,
             _react2.default.createElement(
-              "div",
-              { className: "col-md-4" },
+              _reactBootstrap.Col,
+              { lg: 6, lgOffset: 5 },
+              _react2.default.createElement(
+                "h1",
+                { className: "pageHeaders text-right" },
+                "\u05E0\u05D1\u05D7\u05E8\u05EA \u05D4\u05D3\u05D9\u05D2'\u05D9\u05D9\u05DD"
+              ),
+              _react2.default.createElement("hr", null),
+              ">"
+            ),
+            _react2.default.createElement(_reactBootstrap.Col, { lg: 1 })
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            { style: djBox, className: "row aboutDj" },
+            _react2.default.createElement(_reactBootstrap.Col, { lg: 1 }),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 3 },
               _react2.default.createElement("img", {
                 className: "img-responsive",
                 src: "https://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg"
               })
             ),
             _react2.default.createElement(
-              "div",
-              { className: "col-md-8" },
+              _reactBootstrap.Col,
+              { lg: 7 },
               _react2.default.createElement(
                 "div",
                 { style: djNameFont, className: "row djName" },
@@ -49141,27 +49198,25 @@ var About = function (_React$Component) {
                   "h1",
                   null,
                   "DJ. Tom Alush"
-                )
-              ),
-              _react2.default.createElement(
-                "div",
-                { className: "row" },
+                ),
                 _react2.default.createElement(
                   "h4",
                   null,
                   "Hiphop, Trans, Techno, Rock"
                 )
               )
-            )
+            ),
+            _react2.default.createElement(_reactBootstrap.Col, { lg: 1 })
           ),
           _react2.default.createElement("br", null),
           _react2.default.createElement("br", null),
           _react2.default.createElement(
-            "div",
+            _reactBootstrap.Row,
             { style: djBox, className: "row aboutDj" },
+            _react2.default.createElement(_reactBootstrap.Col, { lg: 1 }),
             _react2.default.createElement(
-              "div",
-              { className: "col-md-8" },
+              _reactBootstrap.Col,
+              { lg: 7 },
               _react2.default.createElement(
                 "div",
                 { style: djNameFont, className: "row djName" },
@@ -49169,11 +49224,7 @@ var About = function (_React$Component) {
                   "h1",
                   null,
                   "DJ. Amit Machluf"
-                )
-              ),
-              _react2.default.createElement(
-                "div",
-                { className: "row" },
+                ),
                 _react2.default.createElement(
                   "h4",
                   null,
@@ -49182,13 +49233,14 @@ var About = function (_React$Component) {
               )
             ),
             _react2.default.createElement(
-              "div",
-              { className: "col-md-4" },
+              _reactBootstrap.Col,
+              { lg: 3 },
               _react2.default.createElement("img", {
                 className: "img-responsive",
                 src: "https://res.cloudinary.com/moshmosh/image/upload/v1503559666/beatmix/IMG_3449_oqjshw.jpg"
               })
-            )
+            ),
+            _react2.default.createElement(_reactBootstrap.Col, { lg: 1 })
           )
         )
       );
@@ -49502,7 +49554,7 @@ var Events = function (_React$Component) {
         _react2.default.createElement(
           _reactBootstrap.Row,
           null,
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, smHidden: true, xsHidden: true }),
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, sm: 1, xs: 1 }),
           _react2.default.createElement(
             _reactBootstrap.Col,
             { lg: 10, md: 10, sm: 12, xs: 12 },
@@ -49512,7 +49564,7 @@ var Events = function (_React$Component) {
               onClickPhoto: this.openLightbox
             })
           ),
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, smHidden: true, xsHidden: true })
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, sm: 1, xs: 1 })
         )
       );
     }
