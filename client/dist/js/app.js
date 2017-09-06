@@ -48123,13 +48123,11 @@ var _parralaxImageSlider = __webpack_require__(510);
 
 var _parralaxImageSlider2 = _interopRequireDefault(_parralaxImageSlider);
 
+var _reactRouterDom = __webpack_require__(33);
+
 var _ContactUsForm = __webpack_require__(142);
 
 var _ContactUsForm2 = _interopRequireDefault(_ContactUsForm);
-
-var _ContactUsPopout = __webpack_require__(535);
-
-var _ContactUsPopout2 = _interopRequireDefault(_ContactUsPopout);
 
 var _reactBootstrap = __webpack_require__(36);
 
@@ -48137,17 +48135,24 @@ var _FbPlugins = __webpack_require__(536);
 
 var _FbPlugins2 = _interopRequireDefault(_FbPlugins);
 
+var _reactTransitionGroup = __webpack_require__(563);
+
+var _footer = __webpack_require__(564);
+
+var _footer2 = _interopRequireDefault(_footer);
+
+var _reactRouterBootstrap = __webpack_require__(506);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // ES6
+
 
 var image_arr = ["http://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg", "http://res.cloudinary.com/moshmosh/image/upload/v1503559675/beatmix/IMG_3443_sg0943.jpg", "http://res.cloudinary.com/moshmosh/image/upload/v1503559714/beatmix/IMG_3530_mklqvr.jpg"];
-
-var image_arr2 = ["https://www.vintandyork.com/media/catalog/product/b/i/big_gif_firm_1.gif"];
 
 var HomePage = function (_React$Component) {
   _inherits(HomePage, _React$Component);
@@ -48158,20 +48163,12 @@ var HomePage = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).call(this, props));
 
     _this.contactBtn = _this.contactBtn.bind(_this);
-    _this.state = {
-      getOffer: false
-    };
     return _this;
   }
 
   _createClass(HomePage, [{
     key: "contactBtn",
-    value: function contactBtn() {
-      var offerBtn = !this.state.getOffer;
-      this.setState({
-        getOffer: offerBtn
-      });
-    }
+    value: function contactBtn() {}
   }, {
     key: "render",
     value: function render() {
@@ -48186,9 +48183,14 @@ var HomePage = function (_React$Component) {
         "div",
         null,
         _react2.default.createElement(
-          "div",
-          { className: "text-center padding-0" },
-          _react2.default.createElement(_ContactUsPopout2.default, null)
+          _reactBootstrap.Col,
+          { className: "padding-0 contact-us text-center", lg: 2 },
+          _react2.default.createElement(
+            "button",
+            { type: "button", onClick: this.contactBtn },
+            "\u05E7\u05D1\u05DC\u05D5 \u05D4\u05E6\u05E2\u05D4!"
+          ),
+          _react2.default.createElement(_ContactUsForm2.default, null)
         ),
         _react2.default.createElement(
           "div",
@@ -48204,10 +48206,10 @@ var HomePage = function (_React$Component) {
             _react2.default.createElement(
               _reactBootstrap.Row,
               { className: "show-grid", style: introStyle },
-              _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
+              _react2.default.createElement(_reactBootstrap.Col, { className: "padding-0", lg: 2 }),
               _react2.default.createElement(
                 _reactBootstrap.Col,
-                { lg: 4 },
+                { className: "padding-0", lg: 4 },
                 _react2.default.createElement(_reactBootstrap.Image, {
                   src: "http://res.cloudinary.com/moshmosh/image/upload/v1503559665/beatmix/IMG_3471_toxlwd.jpg",
                   responsive: true
@@ -48251,52 +48253,71 @@ var HomePage = function (_React$Component) {
             _react2.default.createElement(
               _reactBootstrap.Row,
               null,
-              _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
+              _react2.default.createElement(_reactBootstrap.Col, { className: "padding-0", lg: 2 }),
               _react2.default.createElement(
                 _reactBootstrap.Col,
-                { lg: 5 },
-                _react2.default.createElement(_reactBootstrap.Image, {
-                  className: "intro-image",
-                  src: "http://res.cloudinary.com/moshmosh/image/upload/v1504516544/tomAndAmitEquip_yk0ryb.jpg",
-                  responsive: true
-                })
+                { className: "homeImageLinks", lg: 5 },
+                _react2.default.createElement(
+                  _reactRouterBootstrap.IndexLinkContainer,
+                  { to: "/ContactUs" },
+                  _react2.default.createElement(
+                    _reactBootstrap.Row,
+                    null,
+                    _react2.default.createElement(
+                      "h1",
+                      { className: "intro-text" },
+                      "\u05E6\u05D5\u05E8 \u05E7\u05E9\u05E8"
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  _reactRouterDom.Link,
+                  { to: "/ContactUs" },
+                  _react2.default.createElement(_reactBootstrap.Image, {
+                    className: "intro-image",
+                    src: "http://res.cloudinary.com/moshmosh/image/upload/v1504516544/tomAndAmitEquip_yk0ryb.jpg",
+                    responsive: true
+                  })
+                )
               ),
               _react2.default.createElement(
                 _reactBootstrap.Col,
-                { lg: 5 },
-                _react2.default.createElement(_reactBootstrap.Image, {
-                  className: "intro-image",
-                  src: "http://res.cloudinary.com/moshmosh/image/upload/c_scale,w_700/v1503559677/beatmix/IMG_3497_k2xykm.jpg",
-                  responsive: true
-                })
+                { className: "homeImageLinks", lg: 5 },
+                _react2.default.createElement(
+                  _reactRouterBootstrap.IndexLinkContainer,
+                  { to: "/Events" },
+                  _react2.default.createElement(
+                    _reactBootstrap.Row,
+                    null,
+                    _react2.default.createElement(
+                      "h1",
+                      { className: "intro-text" },
+                      "\u05DC\u05D2\u05DC\u05E8\u05D9\u05D5\u05EA"
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  _reactRouterDom.Link,
+                  { to: "/Events" },
+                  _react2.default.createElement(_reactBootstrap.Image, {
+                    className: "intro-image",
+                    src: "http://res.cloudinary.com/moshmosh/image/upload/c_scale,w_700/v1503559677/beatmix/IMG_3497_k2xykm.jpg",
+                    responsive: true
+                  })
+                )
               )
             ),
             _react2.default.createElement(
               _reactBootstrap.Row,
               null,
-              _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
+              _react2.default.createElement(_reactBootstrap.Col, { className: "padding-0", lg: 2 }),
               _react2.default.createElement(
                 _reactBootstrap.Col,
                 { className: "text-center", lg: 10 },
                 _react2.default.createElement(_FbPlugins2.default, null)
               )
             ),
-            _react2.default.createElement(
-              "div",
-              { className: "footer" },
-              _react2.default.createElement(
-                _reactBootstrap.Panel,
-                { fluid: true, footer: "\u05E2\u05E7\u05D1\u05D5 \u05D0\u05D7\u05E8\u05D9\u05E0\u05D5" },
-                _react2.default.createElement(
-                  "a",
-                  { target: "_blank", href: "https://www.facebook.com/beatmixdjs" },
-                  _react2.default.createElement(_reactBootstrap.Image, {
-                    src: "http://static.wixstatic.com/media/afb6f1_2382bba6ec214135b9f6256e216bc44f.gif",
-                    style: { height: "50px" }
-                  })
-                )
-              )
-            )
+            _react2.default.createElement(_footer2.default, null)
           )
         )
       );
@@ -50065,84 +50086,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 535 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _ContactUsForm = __webpack_require__(142);
-
-var _ContactUsForm2 = _interopRequireDefault(_ContactUsForm);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var ContactUsPopout = function (_React$Component) {
-  _inherits(ContactUsPopout, _React$Component);
-
-  function ContactUsPopout(props) {
-    _classCallCheck(this, ContactUsPopout);
-
-    var _this = _possibleConstructorReturn(this, (ContactUsPopout.__proto__ || Object.getPrototypeOf(ContactUsPopout)).call(this, props));
-
-    _this.contactBtn = _this.contactBtn.bind(_this);
-    _this.state = {
-      class: "hide"
-    };
-    return _this;
-  }
-
-  _createClass(ContactUsPopout, [{
-    key: "contactBtn",
-    value: function contactBtn() {
-      if (this.state.class === "hide") {
-        this.setState({ class: "show" });
-      } else {
-        this.setState({ class: "hide" });
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        { className: "contact-us" },
-        _react2.default.createElement(
-          "button",
-          { type: "button", onClick: this.contactBtn },
-          "\u05E7\u05D1\u05DC\u05D5 \u05D4\u05E6\u05E2\u05D4!"
-        ),
-        _react2.default.createElement(
-          "div",
-          { className: this.state.class },
-          _react2.default.createElement(_ContactUsForm2.default, null)
-        )
-      );
-    }
-  }]);
-
-  return ContactUsPopout;
-}(_react2.default.Component);
-
-exports.default = ContactUsPopout;
-
-/***/ }),
+/* 535 */,
 /* 536 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -50326,31 +50270,36 @@ var About = function (_React$Component) {
         ),
         _react2.default.createElement(
           _reactBootstrap.Row,
-          { style: djBox, className: "row aboutDj" },
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 1 }),
+          null,
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
           _react2.default.createElement(
             _reactBootstrap.Col,
-            { lg: 3 },
-            _react2.default.createElement("img", {
-              className: "img-responsive",
-              src: "https://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg"
-            })
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { lg: 7 },
+            { lg: 9, style: djBox, className: "aboutDj" },
             _react2.default.createElement(
-              "div",
-              { style: djNameFont, className: "row djName" },
+              _reactBootstrap.Col,
+              { lg: 4 },
+              _react2.default.createElement(_reactBootstrap.Image, {
+                responsive: true,
+                rounded: true,
+                src: "https://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg"
+              })
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 8 },
               _react2.default.createElement(
-                "h1",
-                null,
-                "DJ. Tom Alush"
-              ),
-              _react2.default.createElement(
-                "h4",
-                null,
-                "Hiphop, Trans, Techno, Rock"
+                "div",
+                { style: djNameFont, className: "djName" },
+                _react2.default.createElement(
+                  "h1",
+                  null,
+                  "DJ. Tom Alush"
+                ),
+                _react2.default.createElement(
+                  "h4",
+                  null,
+                  "Hiphop, Trans, Techno, Rock"
+                )
               )
             )
           ),
@@ -50360,33 +50309,38 @@ var About = function (_React$Component) {
         _react2.default.createElement("br", null),
         _react2.default.createElement(
           _reactBootstrap.Row,
-          { style: djBox, className: "row aboutDj" },
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 1 }),
+          null,
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
           _react2.default.createElement(
             _reactBootstrap.Col,
-            { lg: 7 },
+            { lg: 9, style: djBox, className: "aboutDj" },
             _react2.default.createElement(
-              "div",
-              { style: djNameFont, className: "row djName" },
+              _reactBootstrap.Col,
+              { lg: 8 },
               _react2.default.createElement(
-                "h1",
-                null,
-                "DJ. Amit Machluf"
-              ),
-              _react2.default.createElement(
-                "h4",
-                null,
-                "reaggai, Fun, Trans, Techno, Rock"
+                "div",
+                { style: djNameFont, className: "djName" },
+                _react2.default.createElement(
+                  "h1",
+                  null,
+                  "DJ. Amit Machluf"
+                ),
+                _react2.default.createElement(
+                  "h4",
+                  null,
+                  "Reaggai, Fun, Trans, Techno, Rock"
+                )
               )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 4 },
+              _react2.default.createElement(_reactBootstrap.Image, {
+                responsive: true,
+                rounded: true,
+                src: "https://res.cloudinary.com/moshmosh/image/upload/v1503559666/beatmix/IMG_3449_oqjshw.jpg"
+              })
             )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { lg: 3 },
-            _react2.default.createElement("img", {
-              className: "img-responsive",
-              src: "https://res.cloudinary.com/moshmosh/image/upload/v1503559666/beatmix/IMG_3449_oqjshw.jpg"
-            })
           ),
           _react2.default.createElement(_reactBootstrap.Col, { lg: 1 })
         )
@@ -50442,7 +50396,11 @@ var WhyBeatMix = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         _reactBootstrap.Grid,
-        { fluid: true, className: "whyPage", style: { textAlign: "right", color: "white" } },
+        {
+          fluid: true,
+          className: "whyPage",
+          style: { textAlign: "right", color: "white" }
+        },
         _react2.default.createElement(
           _reactBootstrap.Row,
           null,
@@ -50478,7 +50436,8 @@ var WhyBeatMix = function (_React$Component) {
             _react2.default.createElement(
               "h4",
               null,
-              "\u05DB\u05D0\u05E9\u05E8 2 \u05D4\u05D3\u05D9'\u05D2'\u05D9\u05D9\u05DD \u05E9\u05DC\u05E0\u05D5 \u05E2\u05DC \u05DE\u05E9\u05EA\u05D5\u05DC\u05DC\u05D9\u05DD \u05E2\u05DC \u05D4\u05E2\u05DE\u05D3\u05D4 \u05D0\u05D9\u05DF \u05D0\u05D5\u05E8\u05D7 \u05E9\u05D9\u05D5\u05DB\u05DC \u05DC\u05D4\u05E9\u05D0\u05E8 \u05D0\u05D3\u05D9\u05E9 \u05DC\u05D8\u05D9\u05E8\u05D5\u05E3 "
+              "\u05DB\u05D0\u05E9\u05E8 2 \u05D4\u05D3\u05D9'\u05D2'\u05D9\u05D9\u05DD \u05E9\u05DC\u05E0\u05D5 \u05E2\u05DC \u05DE\u05E9\u05EA\u05D5\u05DC\u05DC\u05D9\u05DD \u05E2\u05DC \u05D4\u05E2\u05DE\u05D3\u05D4 \u05D0\u05D9\u05DF \u05D0\u05D5\u05E8\u05D7 \u05E9\u05D9\u05D5\u05DB\u05DC \u05DC\u05D4\u05E9\u05D0\u05E8 \u05D0\u05D3\u05D9\u05E9 \u05DC\u05D8\u05D9\u05E8\u05D5\u05E3",
+              " "
             )
           ),
           _react2.default.createElement(
@@ -50625,8 +50584,8 @@ var Artists = function (_React$Component) {
         _react2.default.createElement(
           _reactBootstrap.Row,
           null,
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 1 }),
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 4 }),
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 3 }),
           _react2.default.createElement(_reactBootstrap.Col, { lg: 6 }),
           _react2.default.createElement(_reactBootstrap.Col, { lg: 1 })
         )
@@ -50777,10 +50736,10 @@ var Events = function (_React$Component) {
         _react2.default.createElement(
           _reactBootstrap.Row,
           null,
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, sm: 1, xs: 1 }),
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 2, md: 2, sm: 1, xs: 1 }),
           _react2.default.createElement(
             _reactBootstrap.Col,
-            { lg: 10, md: 10, sm: 12, xs: 12 },
+            { lg: 9, md: 9, sm: 10, xs: 10 },
             _react2.default.createElement(_reactPhotoGallery2.default, {
               photos: tempState,
               cols: 3,
@@ -53584,6 +53543,200 @@ function Da(a){for(var b=a.f.length,c=0;c<b;c++){var d=a.f[c].split(":"),e=d[0].
 g,0<d.length&&(d=za[d[0]])&&(a.c[e]=d))}a.c[e]||(d=za[e])&&(a.c[e]=d);for(d=0;d<f.length;d+=1)a.a.push(new G(e,f[d]))}};function Ea(a,b){this.c=a;this.a=b}var Fa={Arimo:!0,Cousine:!0,Tinos:!0};Ea.prototype.load=function(a){var b=new B,c=this.c,d=new ta(this.a.api,this.a.text),e=this.a.families;va(d,e);var f=new ya(e);Da(f);z(c,wa(d),C(b));E(b,function(){a(f.a,f.c,Fa)})};function Ga(a,b){this.c=a;this.a=b}Ga.prototype.load=function(a){var b=this.a.id,c=this.c.o;b?A(this.c,(this.a.api||"https://use.typekit.net")+"/"+b+".js",function(b){if(b)a([]);else if(c.Typekit&&c.Typekit.config&&c.Typekit.config.fn){b=c.Typekit.config.fn;for(var e=[],f=0;f<b.length;f+=2)for(var g=b[f],m=b[f+1],h=0;h<m.length;h++)e.push(new G(g,m[h]));try{c.Typekit.load({events:!1,classes:!1,async:!0})}catch(l){}a(e)}},2E3):a([])};function Ha(a,b){this.c=a;this.f=b;this.a=[]}Ha.prototype.load=function(a){var b=this.f.id,c=this.c.o,d=this;b?(c.__webfontfontdeckmodule__||(c.__webfontfontdeckmodule__={}),c.__webfontfontdeckmodule__[b]=function(b,c){for(var g=0,m=c.fonts.length;g<m;++g){var h=c.fonts[g];d.a.push(new G(h.name,ga("font-weight:"+h.weight+";font-style:"+h.style)))}a(d.a)},A(this.c,(this.f.api||"https://f.fontdeck.com/s/css/js/")+ea(this.c)+"/"+b+".js",function(b){b&&a([])})):a([])};var Y=new oa(window);Y.a.c.custom=function(a,b){return new sa(b,a)};Y.a.c.fontdeck=function(a,b){return new Ha(b,a)};Y.a.c.monotype=function(a,b){return new ra(b,a)};Y.a.c.typekit=function(a,b){return new Ga(b,a)};Y.a.c.google=function(a,b){return new Ea(b,a)};var Z={load:p(Y.load,Y)}; true?!(__WEBPACK_AMD_DEFINE_RESULT__ = function(){return Z}.call(exports, __webpack_require__, exports, module),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):"undefined"!==typeof module&&module.exports?module.exports=Z:(window.WebFont=Z,window.WebFontConfig&&Y.load(window.WebFontConfig));}());
 
+
+/***/ }),
+/* 563 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _CSSTransitionGroup = __webpack_require__(511);
+
+var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
+
+var _TransitionGroup = __webpack_require__(512);
+
+var _TransitionGroup2 = _interopRequireDefault(_TransitionGroup);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = {
+  TransitionGroup: _TransitionGroup2.default,
+  CSSTransitionGroup: _CSSTransitionGroup2.default
+};
+
+/***/ }),
+/* 564 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(33);
+
+var _reactBootstrap = __webpack_require__(36);
+
+var _FbPlugins = __webpack_require__(536);
+
+var _FbPlugins2 = _interopRequireDefault(_FbPlugins);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Footer = function (_React$Component) {
+  _inherits(Footer, _React$Component);
+
+  function Footer(props) {
+    _classCallCheck(this, Footer);
+
+    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
+  }
+
+  _createClass(Footer, [{
+    key: "render",
+    value: function render() {
+      var style = {
+        border: "2px solid white",
+        borderRadius: "13px",
+        height: "71px",
+        textAlign: "center"
+      };
+      return _react2.default.createElement(
+        "div",
+        { className: "footer", style: style },
+        _react2.default.createElement(
+          _reactBootstrap.Grid,
+          null,
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 1 },
+              _react2.default.createElement(_reactBootstrap.Image, {
+                src: "https://res.cloudinary.com/moshmosh/image/upload/v1504511510/beatmix/PRO_FACE.png",
+                responsive: true
+              })
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 1 },
+              "4"
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 2 },
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                "\u05E9\u05DE\u05E2\u05D5 \u05D0\u05D5\u05EA\u05E0\u05D5 \u05D1\u05E1\u05D0\u05D5\u05E0\u05D3 \u05E7\u05DC\u05D0\u05D5\u05D3"
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(_reactBootstrap.Image, {
+                  style: { height: "45px" },
+                  src: "https://cdn.worldvectorlogo.com/logos/soundcloud.svg",
+                  responsive: true
+                })
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 1 },
+              _react2.default.createElement("div", {
+                className: "fb-follow",
+                "data-href": "https://www.facebook.com/elevationmosh/",
+                "data-layout": "button",
+                "data-size": "large",
+                "data-show-faces": "true"
+              })
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 1 },
+              _react2.default.createElement("div", {
+                className: "fb-like",
+                "data-href": "https://www.facebook.com/elevationmosh/",
+                "data-layout": "button_count",
+                "data-action": "like",
+                "data-size": "large",
+                "data-show-faces": "true",
+                "data-share": "false"
+              })
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 1 },
+              "8"
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 1 },
+              "6"
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 1 },
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                "\u05D3\u05E3 \u05D4\u05E4\u05D9\u05D9\u05E1\u05D1\u05D5\u05E7 \u05E9\u05DC\u05E0\u05D5"
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(_reactBootstrap.Image, {
+                  style: { height: "45px" },
+                  src: "https://facebookbrand.com/wp-content/themes/fb-branding/prj-fb-branding/assets/images/fb-art.png",
+                  responsive: true
+                })
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 1 },
+              "10"
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 1 },
+              "11"
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 1 },
+              _react2.default.createElement(_reactBootstrap.Image, {
+                src: "https://res.cloudinary.com/moshmosh/image/upload/v1504511510/beatmix/PRO_FACE.png",
+                responsive: true
+              })
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Footer;
+}(_react2.default.Component);
+
+exports.default = Footer;
 
 /***/ })
 /******/ ]);

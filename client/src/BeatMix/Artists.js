@@ -17,8 +17,8 @@ class Artists extends React.Component {
           <Col lg={1} />
         </Row>
         <Row>
-          <Col lg={1} />
-          <Col lg={4} />
+          <Col lg={2} />
+          <Col lg={3} />
           <Col lg={6} />
           <Col lg={1} />
         </Row>
