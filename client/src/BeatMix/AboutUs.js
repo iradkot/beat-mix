@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Grid, Row, Col } from "react-bootstrap";
 
 //style objects:0
 const djBox = {
@@ -29,45 +30,92 @@ const djImage = {
 class About extends React.Component {
   render() {
     return (
-      <div>
-        <h1 style={djTeam}> נבחרת הדיג'ייז שלנו </h1>
-        <div className="container">
-          <div style={djBox} className="row aboutDj">
-            <div className="col-md-4">
-              <img
-                className="img-responsive"
-                src="https://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg"
-              />
+      // <div>
+      //   <h1 style={djTeam}> נבחרת הדיג'ייז שלנו </h1>
+      //   <div className="container">
+      //     <div style={djBox} className="row aboutDj">
+      //       <div className="col-md-4">
+      // <img
+      //   className="img-responsive"
+      //   src="https://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg"
+      // />
+      //       </div>
+      //       <div className="col-md-8">
+      // <div style={djNameFont} className="row djName">
+      //   <h1>DJ. Tom Alush</h1>
+      // </div>
+      //         <div className="row">
+      //           <h4>Hiphop, Trans, Techno, Rock</h4>
+      //         </div>
+      //       </div>
+      //     </div>
+      // <br />
+      // <br />
+      //     <div style={djBox} className="row aboutDj">
+      //       <div className="col-md-8">
+      // <div style={djNameFont} className="row djName">
+      //   <h1>DJ. Amit Machluf</h1>
+      // </div>
+      //         <div className="row">
+      // <h4>reaggai, Fun, Trans, Techno, Rock</h4>
+      //         </div>
+      //       </div>
+      //       <div className="col-md-4">
+      // <img
+      //   className="img-responsive"
+      //   src="https://res.cloudinary.com/moshmosh/image/upload/v1503559666/beatmix/IMG_3449_oqjshw.jpg"
+      // />
+      //       </div>
+      //     </div>
+      //   </div>
+      // </div>
+
+      <Grid fluid={true} className="aboutusPage">
+        <Row>
+          <Col lg={12} className="pageBanner" />
+        </Row>
+        <Row>
+          <Col lg={6} lgOffset={5}>
+            <h1 className="pageHeaders text-right">נבחרת הדיג'יים</h1>
+            <hr />>
+          </Col>
+          <Col lg={1} />
+        </Row>
+        <Row style={djBox} className="row aboutDj">
+          <Col lg={1} />
+          <Col lg={3}>
+            <img
+              className="img-responsive"
+              src="https://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg"
+            />
+          </Col>
+          <Col lg={7}>
+            <div style={djNameFont} className="row djName">
+              <h1>DJ. Tom Alush</h1>
+              <h4>Hiphop, Trans, Techno, Rock</h4>
             </div>
-            <div className="col-md-8">
-              <div style={djNameFont} className="row djName">
-                <h1>DJ. Tom Alush</h1>
-              </div>
-              <div className="row">
-                <h4>Hiphop, Trans, Techno, Rock</h4>
-              </div>
+          </Col>
+          <Col lg={1} />
+        </Row>
+        <br />
+        <br />
+        <Row style={djBox} className="row aboutDj">
+          <Col lg={1} />
+          <Col lg={7}>
+            <div style={djNameFont} className="row djName">
+              <h1>DJ. Amit Machluf</h1>
+              <h4>reaggai, Fun, Trans, Techno, Rock</h4>
             </div>
-          </div>
-          <br />
-          <br />
-          <div style={djBox} className="row aboutDj">
-            <div className="col-md-8">
-              <div style={djNameFont} className="row djName">
-                <h1>DJ. Amit Machluf</h1>
-              </div>
-              <div className="row">
-                <h4>reaggai, Fun, Trans, Techno, Rock</h4>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <img
-                className="img-responsive"
-                src="https://res.cloudinary.com/moshmosh/image/upload/v1503559666/beatmix/IMG_3449_oqjshw.jpg"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+          </Col>
+          <Col lg={3}>
+            <img
+              className="img-responsive"
+              src="https://res.cloudinary.com/moshmosh/image/upload/v1503559666/beatmix/IMG_3449_oqjshw.jpg"
+            />
+          </Col>
+          <Col lg={1} />
+        </Row>
+      </Grid>
     );
   }
 }

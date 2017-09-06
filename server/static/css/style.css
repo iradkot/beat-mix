@@ -16,19 +16,31 @@
   line-height: 80px;
 } */
 
-.navbar-inverse .navbar-nav > li > a {
+.dropdown-menu {
+  background-color: black;
+}
+
+.dropdown-menu > li > a {
+  font-size: 25px;
+}
+
+.navbar-inverse .navbar-nav > li > a,
+.dropdown-menu > li > a {
   text-align: right;
   color: #fff;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover {
+.navbar-inverse .navbar-nav > li > a:hover,
+.dropdown-menu > li > a:hover {
   color: #be1e55;
+  background-color: black;
 }
 .activeNav > a {
   color: #be1e55 !important;
   border-left: 2px solid #be1e55;
   border-right: 2px solid #be1e55;
 }
+
 .dropdown-menu::before,
 .dropdown-menu::after {
   border: none;
@@ -76,8 +88,8 @@ label {
   text-align: right;
 }
 
-input[type='text'],
-input[type='email'],
+input[type="text"],
+input[type="email"],
 #content {
   text-align: right;
   color: black;
@@ -88,8 +100,8 @@ input[type='email'],
   transition: box-shadow 0.3s, border 0.3s;
 }
 
-input[type='text'],
-input[type='email'] {
+input[type="text"],
+input[type="email"] {
   /* width: 450px; */
   height: 40px;
 }
