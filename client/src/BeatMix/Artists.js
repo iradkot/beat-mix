@@ -12,7 +12,7 @@ class Artists extends React.Component {
         <Row>
           <Col lg={6} lgOffset={5}>
             <h1 className="pageHeaders text-right">אמנים</h1>
-            <hr />>
+            <hr />
           </Col>
           <Col lg={1} />
         </Row>
