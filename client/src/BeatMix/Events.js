@@ -49,17 +49,17 @@ class Events extends React.Component {
     return (
       <Grid fluid={true} className="eventsPage">
         <Row>
-          <Col lg={12} className="pageBanner" />
+          <Col lg={12} md={12} xs={12} sm={12} className="pageBanner" />
         </Row>
         <Row>
-          <Col lg={6} lgOffset={5}>
+          <Col lg={6} md={6} xs={12} sm={12} lgOffset={5} mdOffset={5}>
             <h1 className="pageHeaders text-right">אירועים</h1>
             <hr />
           </Col>
-          <Col lg={1} />
+          <Col lg={1} md={1} smHidden xsHidden />
         </Row>
         <div>
-          {isOpen &&
+          {isOpen && (
             <Lightbox
               mainSrc={tempState[photoIndex].src}
               nextSrc={tempState[(photoIndex + 1) % tempState.length].src}
@@ -78,18 +78,19 @@ class Events extends React.Component {
                 this.setState({
                   photoIndex: (photoIndex + 1) % tempState.length
                 })}
-            />}
+            />
+          )}
         </div>
         <Row>
-          <Col lg={1} />
-          <Col lg={10}>
+          <Col lg={1} md={1} sm={1} xs={1} />
+          <Col lg={10} md={10} sm={12} xs={12}>
             <Gallery
               photos={tempState}
               cols={3}
               onClickPhoto={this.openLightbox}
             />
           </Col>
-          <Col lg={1} />
+          <Col lg={1} md={1} sm={1} xs={1} />
         </Row>
       </Grid>
     );
