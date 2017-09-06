@@ -82,8 +82,8 @@ class Events extends React.Component {
           )}
         </div>
         <Row>
-          <Col lg={1} md={1} sm={1} xs={1} />
-          <Col lg={10} md={10} sm={12} xs={12}>
+          <Col lg={2} md={2} sm={1} xs={1} />
+          <Col lg={9} md={9} sm={10} xs={10}>
             <Gallery
               photos={tempState}
               cols={3}
