@@ -71,7 +71,7 @@ class Header extends React.Component {
             </IndexLinkContainer>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>
+      </Navbar>                
     );
   }
 }

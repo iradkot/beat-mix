@@ -1,9 +1,13 @@
 import React from "react";
 import ReactDom from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import Header from "./BeatMix/common/Header";
-import AppRoutes from "./AppRoutes";
 import WebFont from "webfontloader";
+
+import Header from "./BeatMix/common/Header";
+import ContactUsPopOut from "./BeatMix/ContactUs-Popout";
+import AppRoutes from "./AppRoutes";
+import Footer from "./BeatMix/common/footer.js";
+
 
 WebFont.load({
   google: {
@@ -17,7 +21,9 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           <Header />
+          <ContactUsPopOut />
           <AppRoutes />
+          <Footer />
         </div>
       </BrowserRouter>
     );
