@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Grid, Row, Col } from "react-bootstrap";
+import { Grid, Row, Col, Image } from "react-bootstrap";
 
 //style objects:0
 const djBox = {
@@ -41,37 +41,43 @@ class About extends React.Component {
           </Col>
           <Col lg={1} />
         </Row>
-        <Row style={djBox} className="row aboutDj">
-          <Col lg={1} />
-          <Col lg={3}>
-            <img
-              className="img-responsive"
-              src="https://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg"
-            />
-          </Col>
-          <Col lg={7}>
-            <div style={djNameFont} className="row djName">
-              <h1>DJ. Tom Alush</h1>
-              <h4>Hiphop, Trans, Techno, Rock</h4>
-            </div>
+        <Row>
+          <Col lg={2} />
+          <Col lg={9} style={djBox} className="aboutDj">
+            <Col lg={4}>
+              <Image
+                responsive
+                rounded
+                src="https://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg"
+              />
+            </Col>
+            <Col lg={8}>
+              <div style={djNameFont} className="djName">
+                <h1>DJ. Tom Alush</h1>
+                <h4>Hiphop, Trans, Techno, Rock</h4>
+              </div>
+            </Col>
           </Col>
           <Col lg={1} />
         </Row>
         <br />
         <br />
-        <Row style={djBox} className="row aboutDj">
-          <Col lg={1} />
-          <Col lg={7}>
-            <div style={djNameFont} className="row djName">
-              <h1>DJ. Amit Machluf</h1>
-              <h4>reaggai, Fun, Trans, Techno, Rock</h4>
-            </div>
-          </Col>
-          <Col lg={3}>
-            <img
-              className="img-responsive"
-              src="https://res.cloudinary.com/moshmosh/image/upload/v1503559666/beatmix/IMG_3449_oqjshw.jpg"
-            />
+        <Row>
+          <Col lg={2} />
+          <Col lg={9} style={djBox} className="aboutDj">
+            <Col lg={8}>
+              <div style={djNameFont} className="djName">
+                <h1>DJ. Amit Machluf</h1>
+                <h4>Reaggai, Fun, Trans, Techno, Rock</h4>
+              </div>
+            </Col>
+            <Col lg={4}>
+              <Image
+                responsive
+                rounded
+                src="https://res.cloudinary.com/moshmosh/image/upload/v1503559666/beatmix/IMG_3449_oqjshw.jpg"
+              />
+            </Col>
           </Col>
           <Col lg={1} />
         </Row>

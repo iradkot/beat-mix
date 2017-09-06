@@ -49137,31 +49137,36 @@ var About = function (_React$Component) {
         ),
         _react2.default.createElement(
           _reactBootstrap.Row,
-          { style: djBox, className: "row aboutDj" },
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 1 }),
+          null,
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
           _react2.default.createElement(
             _reactBootstrap.Col,
-            { lg: 3 },
-            _react2.default.createElement("img", {
-              className: "img-responsive",
-              src: "https://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg"
-            })
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { lg: 7 },
+            { lg: 9, style: djBox, className: "aboutDj" },
             _react2.default.createElement(
-              "div",
-              { style: djNameFont, className: "row djName" },
+              _reactBootstrap.Col,
+              { lg: 4 },
+              _react2.default.createElement(_reactBootstrap.Image, {
+                responsive: true,
+                rounded: true,
+                src: "https://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg"
+              })
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 8 },
               _react2.default.createElement(
-                "h1",
-                null,
-                "DJ. Tom Alush"
-              ),
-              _react2.default.createElement(
-                "h4",
-                null,
-                "Hiphop, Trans, Techno, Rock"
+                "div",
+                { style: djNameFont, className: "djName" },
+                _react2.default.createElement(
+                  "h1",
+                  null,
+                  "DJ. Tom Alush"
+                ),
+                _react2.default.createElement(
+                  "h4",
+                  null,
+                  "Hiphop, Trans, Techno, Rock"
+                )
               )
             )
           ),
@@ -49171,33 +49176,38 @@ var About = function (_React$Component) {
         _react2.default.createElement("br", null),
         _react2.default.createElement(
           _reactBootstrap.Row,
-          { style: djBox, className: "row aboutDj" },
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 1 }),
+          null,
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
           _react2.default.createElement(
             _reactBootstrap.Col,
-            { lg: 7 },
+            { lg: 9, style: djBox, className: "aboutDj" },
             _react2.default.createElement(
-              "div",
-              { style: djNameFont, className: "row djName" },
+              _reactBootstrap.Col,
+              { lg: 8 },
               _react2.default.createElement(
-                "h1",
-                null,
-                "DJ. Amit Machluf"
-              ),
-              _react2.default.createElement(
-                "h4",
-                null,
-                "reaggai, Fun, Trans, Techno, Rock"
+                "div",
+                { style: djNameFont, className: "djName" },
+                _react2.default.createElement(
+                  "h1",
+                  null,
+                  "DJ. Amit Machluf"
+                ),
+                _react2.default.createElement(
+                  "h4",
+                  null,
+                  "Reaggai, Fun, Trans, Techno, Rock"
+                )
               )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 4 },
+              _react2.default.createElement(_reactBootstrap.Image, {
+                responsive: true,
+                rounded: true,
+                src: "https://res.cloudinary.com/moshmosh/image/upload/v1503559666/beatmix/IMG_3449_oqjshw.jpg"
+              })
             )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { lg: 3 },
-            _react2.default.createElement("img", {
-              className: "img-responsive",
-              src: "https://res.cloudinary.com/moshmosh/image/upload/v1503559666/beatmix/IMG_3449_oqjshw.jpg"
-            })
           ),
           _react2.default.createElement(_reactBootstrap.Col, { lg: 1 })
         )
@@ -49360,8 +49370,8 @@ var Artists = function (_React$Component) {
         _react2.default.createElement(
           _reactBootstrap.Row,
           null,
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 1 }),
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 4 }),
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 3 }),
           _react2.default.createElement(_reactBootstrap.Col, { lg: 6 }),
           _react2.default.createElement(_reactBootstrap.Col, { lg: 1 })
         )
@@ -49512,10 +49522,10 @@ var Events = function (_React$Component) {
         _react2.default.createElement(
           _reactBootstrap.Row,
           null,
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, sm: 1, xs: 1 }),
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 2, md: 2, sm: 1, xs: 1 }),
           _react2.default.createElement(
             _reactBootstrap.Col,
-            { lg: 10, md: 10, sm: 12, xs: 12 },
+            { lg: 9, md: 9, sm: 10, xs: 10 },
             _react2.default.createElement(_reactPhotoGallery2.default, {
               photos: tempState,
               cols: 3,
