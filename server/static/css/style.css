@@ -153,17 +153,6 @@ input[type="email"].focus,
   right: 0px;
 }
 
-.contact-us {
-  background: black;
-  /* width: 277px; */
-  border-radius: 2%;
-  height: 366px;
-  position: fixed;
-  left: 0px;
-  top: 100px;
-  border: 2px solid #be1e55;
-}
-
 .parraSlider {
   background-size: cover !important;
   z-index: -1;
@@ -225,8 +214,56 @@ input[type="email"].focus,
   color: white;
 }
 
+.hide {
+  display: none;
+}
+
+.hider {
+  background: black;
+  border-radius: 2%;
+  height: 366px;
+  position: fixed;
+  left: 0px;
+  top: 100px;
+  border: 2px solid #be1e55;
+  z-index: 1;
+}
+
+.show {
+  width: 255px;  
+  background: black;
+  border-radius: 2%;
+  height: 260px;
+  position: fixed;
+  left: 0px;
+  top: 100px;
+  border: 2px solid #be1e55;
+  z-index: 1;
+}
+
 body {
-  background-color: black;
+  background: url('https://wallpapercave.com/wp/LRxGqsU.jpg') center;
   padding-top: 100px;
   font-family: Arimo;
+}
+
+.popup {
+  display: inline-block;
+}
+
+.fb-comment{
+  margin-top: 121px;
+  height: 293px;
+}
+.logo {
+  height: 100px;
+}
+
+
+#test {
+  /* position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); */
 }
