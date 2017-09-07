@@ -37113,106 +37113,114 @@ var Header = function (_React$Component) {
     value: function render() {
       var popOut = popOutStat ? _react2.default.createElement(_ContactUsPopout2.default, null) : _react2.default.createElement("div", null);
       return _react2.default.createElement(
-        _reactBootstrap.Navbar,
-        { style: navbarStyle, collapseOnSelect: true, inverse: true, fixedTop: true },
+        "div",
+        null,
         _react2.default.createElement(
-          _reactBootstrap.Navbar.Header,
-          null,
+          _reactBootstrap.Navbar,
+          { style: navbarStyle, collapseOnSelect: true, inverse: true, fixedTop: true },
           _react2.default.createElement(
-            _reactBootstrap.Navbar.Brand,
+            _reactBootstrap.Navbar.Header,
             null,
             _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: "/" },
-              _react2.default.createElement("img", {
-                style: navbarBrandImgStyle,
-                src: "http://beatmix.mitchatnim.co.il/img/0239/799.png"
-              })
-            )
+              _reactBootstrap.Navbar.Brand,
+              null,
+              _react2.default.createElement(
+                _reactRouterDom.Link,
+                { to: "/" },
+                _react2.default.createElement("img", {
+                  style: navbarBrandImgStyle,
+                  src: "http://beatmix.mitchatnim.co.il/img/0239/799.png"
+                })
+              )
+            ),
+            _react2.default.createElement(_reactBootstrap.Navbar.Toggle, null)
           ),
-          _react2.default.createElement(_reactBootstrap.Navbar.Toggle, null)
-        ),
-        _react2.default.createElement(
-          _reactBootstrap.Navbar.Collapse,
-          null,
           _react2.default.createElement(
-            _reactBootstrap.Nav,
-            { style: navStyle, pullRight: true },
+            _reactBootstrap.Navbar.Collapse,
+            null,
             _react2.default.createElement(
-              "li",
-              { role: "presentation" },
+              _reactBootstrap.Nav,
+              { style: navStyle, pullRight: true },
               _react2.default.createElement(
-                "a",
-                { target: "_blank", href: "https://www.facebook.com/beatmixdjs" },
-                "\u05E4\u05D9\u05D9\u05E1\u05D1\u05D5\u05E7"
-              )
-            ),
-            _react2.default.createElement(
-              _reactRouterBootstrap.IndexLinkContainer,
-              { to: "/ContactUs", onClick: this.popOutOff, activeClassName: "activeNav" },
-              _react2.default.createElement(
-                _reactBootstrap.NavItem,
-                { eventKey: 5 },
-                "\u05E6\u05D5\u05E8-\u05E7\u05E9\u05E8"
-              )
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.NavDropdown,
-              {
-                eventKey: 4,
-                title: "\u05D2\u05DC\u05E8\u05D9\u05D5\u05EA",
-                id: "basic-nav-dropdown",
-                activeClassName: "activeNav"
-              },
-              _react2.default.createElement(
-                _reactRouterBootstrap.IndexLinkContainer,
-                { to: "/Artists", onClick: this.popOutOn, activeClassName: "activeNav" },
+                "li",
+                { role: "presentation" },
                 _react2.default.createElement(
-                  _reactBootstrap.MenuItem,
-                  { eventKey: 4.1 },
-                  "\u05D0\u05DE\u05E0\u05D9\u05DD"
+                  "a",
+                  { target: "_blank", href: "https://www.facebook.com/beatmixdjs" },
+                  "\u05E4\u05D9\u05D9\u05E1\u05D1\u05D5\u05E7"
                 )
               ),
               _react2.default.createElement(
                 _reactRouterBootstrap.IndexLinkContainer,
-                { to: "/Events", onClick: this.popOutOn, activeClassName: "activeNav" },
+                { to: "/ContactUs", onClick: this.popOutOff, activeClassName: "activeNav" },
                 _react2.default.createElement(
-                  _reactBootstrap.MenuItem,
-                  { eventKey: 4.2 },
-                  "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
+                  _reactBootstrap.NavItem,
+                  { eventKey: 5 },
+                  "\u05E6\u05D5\u05E8-\u05E7\u05E9\u05E8"
                 )
-              )
-            ),
-            _react2.default.createElement(
-              _reactRouterBootstrap.IndexLinkContainer,
-              { to: "/WhyBeatMix", onClick: this.popOutOn, activeClassName: "activeNav" },
+              ),
               _react2.default.createElement(
-                _reactBootstrap.NavItem,
-                { eventKey: 3 },
-                "\u05DC\u05DE\u05D4 \u05D3\u05D0\u05D1\u05DC \u05D3\u05D9\u05D2'\u05D9\u05D9\u05D6"
-              )
-            ),
-            _react2.default.createElement(
-              _reactRouterBootstrap.IndexLinkContainer,
-              { to: "/AboutUs", onClick: this.popOutOn, activeClassName: "activeNav" },
+                _reactBootstrap.NavDropdown,
+                {
+                  eventKey: 4,
+                  title: "\u05D2\u05DC\u05E8\u05D9\u05D5\u05EA",
+                  id: "basic-nav-dropdown",
+                  activeClassName: "activeNav"
+                },
+                _react2.default.createElement(
+                  _reactRouterBootstrap.IndexLinkContainer,
+                  { to: "/Artists", onClick: this.popOutOn, activeClassName: "activeNav" },
+                  _react2.default.createElement(
+                    _reactBootstrap.MenuItem,
+                    { eventKey: 4.1 },
+                    "\u05D0\u05DE\u05E0\u05D9\u05DD"
+                  )
+                ),
+                _react2.default.createElement(
+                  _reactRouterBootstrap.IndexLinkContainer,
+                  { to: "/Events", onClick: this.popOutOn, activeClassName: "activeNav" },
+                  _react2.default.createElement(
+                    _reactBootstrap.MenuItem,
+                    { eventKey: 4.2 },
+                    "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
+                  )
+                )
+              ),
               _react2.default.createElement(
-                _reactBootstrap.NavItem,
-                { eventKey: 2 },
-                "\u05E0\u05D1\u05D7\u05E8\u05EA \u05D4\u05D3\u05D9\u05D2'\u05D9\u05D9\u05DD"
-              )
-            ),
-            _react2.default.createElement(
-              _reactRouterBootstrap.IndexLinkContainer,
-              { to: "/", onClick: this.popOutOn, activeClassName: "activeNav" },
+                _reactRouterBootstrap.IndexLinkContainer,
+                { to: "/WhyBeatMix", onClick: this.popOutOn, activeClassName: "activeNav" },
+                _react2.default.createElement(
+                  _reactBootstrap.NavItem,
+                  { eventKey: 3 },
+                  "\u05DC\u05DE\u05D4 \u05D3\u05D0\u05D1\u05DC \u05D3\u05D9\u05D2'\u05D9\u05D9\u05D6"
+                )
+              ),
               _react2.default.createElement(
-                _reactBootstrap.NavItem,
-                { eventKey: 1 },
-                "\u05D3\u05E3 \u05D4\u05D1\u05D9\u05EA"
+                _reactRouterBootstrap.IndexLinkContainer,
+                { to: "/AboutUs", onClick: this.popOutOn, activeClassName: "activeNav" },
+                _react2.default.createElement(
+                  _reactBootstrap.NavItem,
+                  { eventKey: 2 },
+                  "\u05E0\u05D1\u05D7\u05E8\u05EA \u05D4\u05D3\u05D9\u05D2'\u05D9\u05D9\u05DD"
+                )
+              ),
+              _react2.default.createElement(
+                _reactRouterBootstrap.IndexLinkContainer,
+                { to: "/", onClick: this.popOutOn, activeClassName: "activeNav" },
+                _react2.default.createElement(
+                  _reactBootstrap.NavItem,
+                  { eventKey: 1 },
+                  "\u05D3\u05E3 \u05D4\u05D1\u05D9\u05EA"
+                )
               )
             )
           )
         ),
-        popOut
+        _react2.default.createElement(
+          "div",
+          { className: "popout-div" },
+          popOut
+        )
       );
     }
   }]);
