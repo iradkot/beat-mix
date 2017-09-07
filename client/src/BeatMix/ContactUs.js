@@ -8,15 +8,9 @@ class ContactUs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    let a = document.getElementsByClassName('show');
-    console.log(a);
-    a.class += "hide";
+    // let a = document.getElementsByClassName('show');
   }
 
-  ComponentWillUnmount() {
-    let a = document.getElementsByClassName('show');
-    a.class -= "hide";
-  }
   render() {
     return (
       <Grid fluid={true} className="contactUsPage">

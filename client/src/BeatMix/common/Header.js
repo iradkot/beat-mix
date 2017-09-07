@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown } from "react-bootstrap";
 import { IndexLinkContainer } from "react-router-bootstrap";
+import ContactUsPopOut from "../ContactUs-Popout";
+
 
 const navbarStyle = {
   backgroundColor: "black",
@@ -22,8 +24,21 @@ const navStyle = {
   lineHeight: "80px"
 };
 
+let popOutStat = true;
+
 class Header extends React.Component {
+  constructor(props){
+    super(props);
+    this.popOutOn= this.popOutOn.bind(this);
+  }
+  popOutOn() {
+    popOutStat=true;
+  }
+  popOutOff() {
+    popOutStat=false;
+  }
   render() {
+    let popOut = popOutStat? <ContactUsPopOut />:<div/>;
     return (
       <Navbar style={navbarStyle} collapseOnSelect inverse fixedTop>
         <Navbar.Header>
@@ -44,7 +59,7 @@ class Header extends React.Component {
                 פייסבוק
               </a>
             </li>
-            <IndexLinkContainer to="/ContactUs" activeClassName="activeNav">
+            <IndexLinkContainer to="/ContactUs" onClick={this.popOutOff} activeClassName="activeNav">
               <NavItem eventKey={5}>צור-קשר</NavItem>
             </IndexLinkContainer>
             <NavDropdown
@@ -53,24 +68,25 @@ class Header extends React.Component {
               id="basic-nav-dropdown"
               activeClassName="activeNav"
             >
-              <IndexLinkContainer to="/Artists" activeClassName="activeNav">
+              <IndexLinkContainer to="/Artists" onClick={this.popOutOn} activeClassName="activeNav">
                 <MenuItem eventKey={4.1}>אמנים</MenuItem>
               </IndexLinkContainer>
-              <IndexLinkContainer to="/Events" activeClassName="activeNav">
+              <IndexLinkContainer to="/Events" onClick={this.popOutOn} activeClassName="activeNav">
                 <MenuItem eventKey={4.2}>אירועים</MenuItem>
               </IndexLinkContainer>
             </NavDropdown>
-            <IndexLinkContainer to="/WhyBeatMix" activeClassName="activeNav">
+            <IndexLinkContainer to="/WhyBeatMix" onClick={this.popOutOn} activeClassName="activeNav">
               <NavItem eventKey={3}>למה דאבל דיג'ייז</NavItem>
             </IndexLinkContainer>
-            <IndexLinkContainer to="/AboutUs" activeClassName="activeNav">
+            <IndexLinkContainer to="/AboutUs" onClick={this.popOutOn} activeClassName="activeNav">
               <NavItem eventKey={2}>נבחרת הדיג'יים</NavItem>
             </IndexLinkContainer>
-            <IndexLinkContainer to="/" activeClassName="activeNav">
+            <IndexLinkContainer to="/" onClick={this.popOutOn} activeClassName="activeNav">
               <NavItem eventKey={1}>דף הבית</NavItem>
             </IndexLinkContainer>
           </Nav>
         </Navbar.Collapse>
+        {popOut}
       </Navbar>                
     );
   }

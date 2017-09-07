@@ -7,9 +7,9 @@ import { IndexLinkContainer } from "react-router-bootstrap";
 import FbPlugins from "./FbPlugins";
 
 var image_arr = [
-  "http://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg",
-  "http://res.cloudinary.com/moshmosh/image/upload/v1503559675/beatmix/IMG_3443_sg0943.jpg",
-  "http://res.cloudinary.com/moshmosh/image/upload/v1503559714/beatmix/IMG_3530_mklqvr.jpg"
+  "http://res.cloudinary.com/moshmosh/image/upload/v1503559675/beatmix/IMG_3443_sg0943.jpg"
+  // "http://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg",
+  // "http://res.cloudinary.com/moshmosh/image/upload/v1503559714/beatmix/IMG_3530_mklqvr.jpg"
 ];
 
 class HomePage extends React.Component {
@@ -21,15 +21,16 @@ class HomePage extends React.Component {
     let introStyle = {
       background: `url("https://www.walldevil.com/wallpapers/a95/abstract-backgrounds-black-cool-wallpapers-dark.jpg") no-repear center center fixed`,
       color: "white",
-      backgroundSize: "cover"
+      backgroundSize: "cover",
+      marginBottom: '22px'
     };
 
     return (
       <Grid fluid={true} className="intro">
         <Row>
-          <Col lg={12}>
-            <ParralaxImageSlider height={539} image_arr={image_arr} />
-          </Col>
+          {/* <Col lg={12}> */}
+            <ParralaxImageSlider height={613} image_arr={image_arr} />
+          {/* </Col> */}
         </Row>
         <Row className="show-grid" style={introStyle}>
           <Col lg={2} />
@@ -97,7 +98,11 @@ class HomePage extends React.Component {
         <Row>
           <Col lg={2} />
           <Col lg={9} className="text-right">
-            <FbPlugins get="comment" />
+            <Col lg={4}/>
+            <Col lg={7} className="fb-comment">
+              <FbPlugins get="comment" />
+            </Col>
+            <Col lg={1} />
           </Col>
           <Col lg={1} />
         </Row>

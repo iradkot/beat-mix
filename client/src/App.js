@@ -15,13 +15,12 @@ WebFont.load({
   }
 });
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
         <div>
           <Header />
-          <ContactUsPopOut />
           <AppRoutes />
           <Footer />
         </div>
