@@ -40,6 +40,7 @@ class Header extends React.Component {
   render() {
     let popOut = popOutStat? <ContactUsPopOut />:<div/>;
     return (
+      <div>
       <Navbar style={navbarStyle} collapseOnSelect inverse fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
@@ -86,8 +87,11 @@ class Header extends React.Component {
             </IndexLinkContainer>
           </Nav>
         </Navbar.Collapse>
-        {popOut}
-      </Navbar>                
+      </Navbar> 
+      <div className="popout-div">
+      {popOut}
+        </div>   
+      </div>            
     );
   }
 }
