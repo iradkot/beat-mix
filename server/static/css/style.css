@@ -102,7 +102,6 @@ input[type="email"],
 
 input[type="text"],
 input[type="email"] {
-  /* width: 450px; */
   height: 40px;
 }
 
@@ -139,9 +138,7 @@ input[type="email"].focus,
 .no-padding {
   padding-left: 0;
   padding-right: 0;
-  /* height: -webkit-fill-available;  */
   height: 900px;
-  /* background-attachment: no-repeat center center fixed; */
 }
 
 /*starting animatiom*/
@@ -255,20 +252,107 @@ body {
   margin-top: 121px;
   height: 293px;
 }
+
 .logo {
   height: 100px;
 }
+
 @media only screen and (max-width: 991px) {
-  .popout-div,
+  .popOut,
+  .popOutActive,
   .hideOnMobile {
     display: none;
   }
 }
 
-#test {
-  /* position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); */
+.popOut {
+  width: 248px;
+  height: 71px;
+  border-radius: 100px;
+  background: #141414;
+  border: 2px solid #be1e55;
+  position: fixed;
+  top: 114px;
+  left: 7px;
+  text-align: center;
+  z-index: 20;
+  color: #be1e55;
+}
+
+.popOut:hover {
+  cursor: pointer;
+  color: black;
+  border: 2px solid black;
+  animation: mymove 0.6s infinite;
+}
+
+.popOutActive {
+  width: 248px;
+  height: 471px;
+  border-radius: 10px;
+  background: #141414;
+  border: 2px solid #be1e55;
+  position: fixed;
+  top: 114px;
+  left: 7px;
+  text-align: center;
+  z-index: 20;
+  color: #be1e55;
+  animation: open 1s 1;
+}
+
+.closePopup:hover {
+  cursor: pointer;
+}
+
+.popOutForm {
+  text-align: "center";
+  font-size: "15px";
+}
+
+.popOutForm::-webkit-input-placeholder {
+  text-align: right;
+  font-weight: bold !important;
+  color: black !important;
+  font-size: 18px !important;
+}
+
+@keyframes open {
+  0% {
+    top: 114px;
+    left: 7px;
+    background: #be1e55;
+    width: 248px;
+    height: 71px;
+  }
+  100% {
+    top: 114px;
+    left: 7px;
+    background: #141414;
+    width: 248px;
+    height: 471px;
+  }
+}
+@keyframes mymove {
+  0% {
+    top: 114px;
+    left: 7px;
+    background: #be1e55;
+    width: 248px;
+    height: 71px;
+  }
+  50% {
+    top: 114px;
+    left: 2px;
+    background: #be1e55;
+    width: 258px;
+    height: 71px;
+  }
+  100% {
+    top: 114px;
+    left: 7px;
+    background: #be1e55;
+    width: 248px;
+    height: 71px;
+  }
 }
