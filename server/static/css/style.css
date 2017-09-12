@@ -230,7 +230,7 @@ input[type="email"].focus,
 }
 
 .show {
-  width: 255px;  
+  width: 255px;
   background: black;
   border-radius: 2%;
   height: 260px;
@@ -242,7 +242,7 @@ input[type="email"].focus,
 }
 
 body {
-  background: url('https://wallpapercave.com/wp/LRxGqsU.jpg') center;
+  background: url("https://wallpapercave.com/wp/LRxGqsU.jpg") center;
   padding-top: 100px;
   font-family: Arimo;
 }
@@ -251,19 +251,19 @@ body {
   display: inline-block;
 }
 
-.fb-comment{
+.fb-comment {
   margin-top: 121px;
   height: 293px;
 }
 .logo {
   height: 100px;
 }
-@media only screen and (max-width: 500px) {
-  .popout-div{
+@media only screen and (max-width: 991px) {
+  .popout-div,
+  .hideOnMobile {
     display: none;
   }
 }
-
 
 #test {
   /* position: relative;
