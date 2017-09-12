@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Navbar, Nav, NavItem, MenuItem, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavItem, MenuItem, NavDropdown} from "react-bootstrap";
+
 import { IndexLinkContainer } from "react-router-bootstrap";
-import ContactUsPopOut from "../ContactUs-Popout";
+import ContactUsPopOut from "../ContactUs-popout";
 
 
 const navbarStyle = {
@@ -30,6 +31,26 @@ class Header extends React.Component {
   constructor(props){
     super(props);
     this.popOutOn= this.popOutOn.bind(this);
+    this.clickedOffer = this.clickedOffer.bind(this);
+    this.state = {
+      clicked: false,
+      name: "",
+      email: "",
+      content: "",
+      number: ""
+    }
+  }
+  handleSubmit(event) {
+    event.preventDefault();
+    let temp = this.state;
+    let self = this;
+    axios
+      .post("/contactus/email", temp)
+      .then(function(res) {
+        alert("Email Sent!");
+        self.setState({ name: "", email: "", content: "", number: "" });
+      })
+      .catch(function(error) {});
   }
   popOutOn() {
     popOutStat=true;
@@ -37,12 +58,20 @@ class Header extends React.Component {
   popOutOff() {
     popOutStat=false;
   }
+  clickedOffer() {
+    let newClick = !this.state.clicked;
+    this.setState({clicked: newClick});
+  }
   render() {
-    let popOut = popOutStat? <ContactUsPopOut />:<div/>;
+    // let popOut = popOutStat? <ContactUsPopOut />:<div/>;
+    let popOutClosed = <div className="popOut"> <h2 onClick={this.clickedOffer}>!קבלו הצעה</h2></div>;
+    let popOutOpen = <div className="popOutActive"><h4 className="closePopup" onClick={this.clickedOffer}>סגור </h4><ContactUsPopOut/></div>
+    let popOut = this.state.clicked? popOutOpen:popOutClosed;
+    // let popOut = <div className={popOutClass}><h2 onClick={this.clickedOffer}>!קבלו הצעה</h2> </div>;
     return (
       <div>
       <Navbar style={navbarStyle} collapseOnSelect inverse fixedTop>
-        <Navbar.Header>
+        <Navbar.Header> 
           <Navbar.Brand>
             <Link to="/">
               <img

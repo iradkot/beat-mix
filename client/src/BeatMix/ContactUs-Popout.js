@@ -6,69 +6,91 @@ import { FormGroup, Grid, Row, Col, ResponsiveEmbed } from "react-bootstrap";
 class ContactUsPopout extends React.Component {
   constructor(props) {
     super(props);
-    this.contactBtn = this.contactBtn.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
-      class: "hider"
+      name: "",
+      email: "",
+      content: "",
+      number: ""
     };
   }
-
-  contactBtn() {
-    if (this.state.class === "hider") {
-      this.setState({ class: "show" });
-    } else {
-      this.setState({ class: "hider" });
-    }
+  handleSubmit(event) {
+    event.preventDefault();
+    let temp = this.state;
+    let self = this;
+    axios
+      .post("/contactus/email", temp)
+      .then(function (res) {
+        alert("Email Sent!");
+        self.setState({ name: "", email: "", content: "", number: "" });
+      })
+      .catch(function (error) { });
   }
 
   render() {
+
     return (
-      <Grid className='show'>
+      <Grid fluid={true}>
         <Row>
-          <Col lg={12}>
-          <h1 style={{textAlign: "center"}}> צרו קשר </h1>
-          </Col>
-        </Row>
-        <Row>
-          <Col lg={12}>
-          <input
+          <form action="#" id="contactUsForm" onSubmit={this.handleSubmit}>
+            <Col lg={12}>
+              <FormGroup>
+                <input 
                   type="text"
-                  className="form-control"
-                  id="name"
-                  placeholder="Name"
+                  className="form-control popOutForm"
+                  placeholder="שם פרטי + שם משפחה"
                   required
-                /> 
-          </Col>
-        </Row>
-        <Row>
-          <Col lg={12}>
-          <input
-          type="email"
-          className="form-control"
-          id="email"
-          placeholder="Email"
-          required
-        />
-          </Col>
-        </Row>
-        <Row>
-          <Col lg={12}>
-          <input
-          type="text"
-          className="form-control"
-          id="number"
-          placeholder="Number"
-          required
-        /> 
-          </Col>
-        </Row>
-        <Row>
-          <Col lg={12}>
-          <button className="btn btn-primary formSubmitBtn" type="submit">
-                  Send
-                </button>
-          </Col>
+                  value={this.state.name}
+                  onChange={event =>
+                    this.setState({ name: event.target.value })}
+                />
+              </FormGroup>
+              <FormGroup>
+                <input 
+                  type="email"
+                  className="form-control popOutForm"
+                  placeholder="אימייל"
+                  required
+                  value={this.state.email}
+                  onChange={event =>
+                    this.setState({ email: event.target.value })}
+                />
+              </FormGroup>
+              <FormGroup>
+                <input 
+                  type="text"
+                  className="form-control popOutForm"
+                  placeholder="מספר ליצירת קשר"
+                  required
+                  value={this.state.number}
+                  onChange={event =>
+                    this.setState({ number: event.target.value })}
+                />
+              </FormGroup>
+            </Col>
+            <Col lg={12}>
+              <FormGroup>
+                <textarea 
+                  className="form-control popOutForm"
+                  placeholder="פרטים נוספים"
+                  rows="8" 
+                  cols="50"
+                  required
+                  value={this.state.content}
+                  onChange={event =>
+                    this.setState({ content: event.target.value })}
+                />
+              </FormGroup>
+              <div className="text-center">
+                <button className="btn btn-primary formSubmitBtn" type="submit">
+                  שלח
+              </button>
+              </div>
+            </Col>
+          </form>
         </Row>
       </Grid>
+
     );
   }
 }
