@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Grid, Row, Col, Image, Panel } from "react-bootstrap";
 import ParralaxImageSlider from "./parralax-image-slider";
 import { IndexLinkContainer } from "react-router-bootstrap";
-var scrollToElement = require("scroll-to-element");
+// var scrollToElement = require("scroll-to-element");
 
 import FbPlugins from "./FbPlugins";
 
