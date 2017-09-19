@@ -74,7 +74,7 @@ class Artists extends React.Component {
             </Col>
             <Col lg={1} />
           </Row>
-          <Row style={{ background: "black" }}>
+          <Row className="carousel-row">
             <div className="artists-carousel-container">
               <div className="artists-carousel" style={carouselStyle}>
                 <div className="item a" />
@@ -82,13 +82,22 @@ class Artists extends React.Component {
                 <div className="item c" />
               </div>
             </div>
-            <div className="next" onClick={this.rotateNext}>
-              Next
+            <div className="newNext" onClick={this.rotateNext}>
+              <img className="newNextImg" src="http://res.cloudinary.com/iradkot/image/upload/a_0/v1505818360/112886-glowing-purple-neon-icon-arrows-arrow-thick-right_k97xsc.png"/>
             </div>
-            <div className="prev" onClick={this.rotatePrev}>
-              Prev
+            <div className="newPrev" onClick={this.rotatePrev}>
+            <img className="newPrevImg" src="http://res.cloudinary.com/iradkot/image/upload/a_180/v1505818360/112886-glowing-purple-neon-icon-arrows-arrow-thick-right_k97xsc.png"/>
             </div>
           </Row>
+          <Row className="mobile-artists" style={{display: "none"}}>
+            <img className="tom responsive" src="http://res.cloudinary.com/iradkot/image/upload/v1505745602/data_2_pdv9wu.jpg"/>
+            </Row>
+            <Row className="mobile-artists" style={{display: "none"}}>
+            <img className="tom responsive" src="http://res.cloudinary.com/iradkot/image/upload/v1505745602/data_2_pdv9wu.jpg"/>
+            </Row>
+            <Row className="mobile-artists" style={{display: "none"}}>
+            <img className="tom responsive" src="http://res.cloudinary.com/iradkot/image/upload/v1505745602/data_2_pdv9wu.jpg"/>
+            </Row>
         </Grid>
       </div>
     );
