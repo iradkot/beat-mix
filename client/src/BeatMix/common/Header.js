@@ -24,7 +24,8 @@ const navStyle = {
   lineHeight: "80px"
 };
 
-let popOutStat = true;
+let popOutStat =
+  window.location.href === "http://localhost:3000/ContactUs" ? false : true;
 
 class Header extends React.Component {
   constructor(props) {
