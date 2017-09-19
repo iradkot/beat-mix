@@ -32,18 +32,22 @@ export default class Footer extends React.Component {
               <Col lg={2} md={2} sm={10} xs={10}>
                 <Row className="hideOnMobile" style={{ height: "27.5px" }} />
                 <Col lg={6} md={6} sm={3} xs={3}>
-                  <Image
-                    id="test"
-                    style={{ height: "45px" }}
-                    src="http://icons.iconarchive.com/icons/uiconstock/stitched-social-media/512/soundcloud-icon.png"
-                  />
+                  <a target="_blank" href="https://soundcloud.com/beatmixdjs">
+                    <Image
+                      id="test"
+                      style={{ height: "45px" }}
+                      src="http://icons.iconarchive.com/icons/uiconstock/stitched-social-media/512/soundcloud-icon.png"
+                    />
+                  </a>
                 </Col>
                 <Col lg={6} md={6} sm={3} xs={3}>
-                  <Image
-                    id="test"
-                    style={{ height: "45px" }}
-                    src="http://iconbug.com/data/46/256/e5da8e60ffe95bca3aa593711b88b6f3.png"
-                  />
+                  <a target="_blank" href="https://www.facebook.com/beatmixdjs">
+                    <Image
+                      id="test"
+                      style={{ height: "45px" }}
+                      src="http://iconbug.com/data/46/256/e5da8e60ffe95bca3aa593711b88b6f3.png"
+                    />
+                  </a>
                 </Col>
                 <Col lgHidden mdHidden sm={3} xs={3}>
                   <a

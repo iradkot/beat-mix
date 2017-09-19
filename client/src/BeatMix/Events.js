@@ -84,7 +84,7 @@ class Events extends React.Component {
         <Row>
           <Col lg={2} md={2} sm={1} xs={1} />
           <Col lg={9} md={9} sm={10} xs={10}>
-            < 
+            <Gallery
               photos={tempState}
               cols={3}
               onClickPhoto={this.openLightbox}
