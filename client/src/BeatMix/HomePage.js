@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Grid, Row, Col, Image, Panel } from "react-bootstrap";
 import ParralaxImageSlider from "./parralax-image-slider";
 import { IndexLinkContainer } from "react-router-bootstrap";
+var scrollToElement = require('scroll-to-element');
 
 import FbPlugins from "./FbPlugins";
 
@@ -36,7 +37,7 @@ class HomePage extends React.Component {
           <Col lg={2} />
           <Col lg={4}>
             <Image
-              src="http://res.cloudinary.com/moshmosh/image/upload/v1503559665/beatmix/IMG_3471_toxlwd.jpg"
+              src="https://res.cloudinary.com/moshmosh/image/upload/v1504511466/beatmix/13731600_10154326354283965_8252077073868369476_n.jpg"
               responsive
             />
           </Col>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown} from "react-bootstrap";
 
 import { IndexLinkContainer } from "react-router-bootstrap";
-import ContactUsPopOut from "../ContactUs-popout";
+import ContactUsPopOut from "../ContactUs-Popout";
 
 
 const navbarStyle = {
@@ -25,7 +25,7 @@ const navStyle = {
   lineHeight: "80px"
 };
 
-let popOutStat = true;
+let popOutStat = window.location.href==='http://localhost:3000/ContactUs'?false: true;
 
 class Header extends React.Component {
   constructor(props){
@@ -66,7 +66,7 @@ class Header extends React.Component {
     // let popOut = popOutStat? <ContactUsPopOut />:<div/>;
     let popOutClosed = <div className="popOut"> <h2 onClick={this.clickedOffer}>!קבלו הצעה</h2></div>;
     let popOutOpen = <div className="popOutActive"><h4 className="closePopup" onClick={this.clickedOffer}>סגור </h4><ContactUsPopOut/></div>
-    let popOut = this.state.clicked? popOutOpen:popOutClosed;
+    let popOut = popOutStat? this.state.clicked? popOutOpen:popOutClosed: <div/>;
     // let popOut = <div className={popOutClass}><h2 onClick={this.clickedOffer}>!קבלו הצעה</h2> </div>;
     return (
       <div>
