@@ -1,16 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Grid, Row, Col, Image, Panel } from "react-bootstrap";
-import ParralaxImageSlider from "./parralax-image-slider";
 import { IndexLinkContainer } from "react-router-bootstrap";
-// var scrollToElement = require("scroll-to-element");
-
+import ParralaxImageSlider from "./parralax-image-slider";
 import FbPlugins from "./FbPlugins";
 
 var image_arr = [
   "http://res.cloudinary.com/moshmosh/image/upload/v1503559675/beatmix/IMG_3443_sg0943.jpg"
-  // "http://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg",
-  // "http://res.cloudinary.com/moshmosh/image/upload/v1503559714/beatmix/IMG_3530_mklqvr.jpg"
 ];
 
 class HomePage extends React.Component {
@@ -29,9 +25,7 @@ class HomePage extends React.Component {
     return (
       <Grid fluid={true} className="intro">
         <Row>
-          {/* <Col lg={12}> */}
           <ParralaxImageSlider height={613} image_arr={image_arr} />
-          {/* </Col> */}
         </Row>
         <Row className="show-grid" style={introStyle}>
           <Col lg={2} />

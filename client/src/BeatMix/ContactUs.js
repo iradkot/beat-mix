@@ -8,7 +8,6 @@ class ContactUs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    // let a = document.getElementsByClassName('show');
   }
 
   render() {

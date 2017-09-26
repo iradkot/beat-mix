@@ -1,4 +1,5 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 import HomePage from "./BeatMix/HomePage";
 import AboutUs from "./BeatMix/AboutUs";
 import WhyBeatMix from "./BeatMix/WhyBeatMix";
@@ -7,8 +8,6 @@ import Events from "./BeatMix/Events";
 import ContactUs from "./BeatMix/ContactUs";
 import Admin from "./BeatMix/Admin";
 import Page404 from "./BeatMix/common/404";
-
-import { Switch, Route } from "react-router-dom";
 
 const AppRoutes = () => (
   <div>
@@ -21,7 +20,7 @@ const AppRoutes = () => (
         path="/WhyBeatMix"
         component={WhyBeatMix}
       />
-      <Route name="Artists" exact path="/Artists" component={Artists} />
+      <Route name="Artists" exact path="/Artists" component={AboutUs} />
       <Route name="Events" exact path="/Events" component={Events} />
       <Route name="ContactUs" exact path="/ContactUs" component={ContactUs} />
       <Route name="Admin" exact path="/Admin" component={Admin} />
