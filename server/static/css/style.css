@@ -42,7 +42,8 @@
   color: #be1e55 !important;
   border-left: 2px solid #be1e55;
   border-right: 2px solid #be1e55;
-  animation: activeNav 1s 1;
+  text-shadow: 1px 1px rgb(182, 182, 182);
+  animation: activeNav 0.8s 1;
 }
 
 .dropdown-menu::before,
@@ -76,8 +77,6 @@ hr {
 }
 
 .formSubmitBtn {
-  /* background-color: #be1e55; */
-  /* color: #be1e55; */
   font-weight: bold;
   font-size: 30px;
   width: 100px;
@@ -275,7 +274,7 @@ body {
     font-size: 20px !important;
   }
 }
- .popOut {
+.popOut {
   width: 244px;
   height: 71px;
   border-radius: 100px;
@@ -327,10 +326,19 @@ body {
 
 @keyframes activeNav {
   0% {
-    transform: rotate(0deg);
+    text-shadow: 0px 0px rgb(0, 0, 0);
+    /* border-left: 2px solid #000000;
+    border-right: 2px solid #000000; */
   }
-  100% {
-    transform: rotate(-360deg);
+  50% {
+    text-shadow: 3px 3px rgb(143, 72, 105);
+    /* border-left: 2px solid #be1e55;
+    border-right: 2px solid #be1e55; */
+  }
+  50% {
+    text-shadow: 1px 1px rgb(182, 182, 182);
+    /* border-left: 2px solid #be1e55;
+    border-right: 2px solid #be1e55; */
   }
 }
 
@@ -377,6 +385,65 @@ body {
 
 /* artists page carousell */
 
+@media only screen and (max-width: 991px) {
+  .artists-carousel-container {
+    display: none;
+  }
+  .artists-carousel {
+    display: none;
+  }
+  .item {
+    display: none;
+  }
+  .newNextImg,
+  .newPrevImg {
+    display: none;
+  }
+  .mobile-artists {
+    display: inline-block !important;
+  }
+  .tom {
+    height: 439px;
+    padding: 20px;
+    padding-left: 12%;
+  }
+}
+
+.carousel-row {
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: 1px;
+  display: block;
+  padding-bottom: 18px;
+}
+.newNextImg {
+  height: 141px;
+  position: absolute;
+  top: 739px;
+  left: 1114px;
+  cursor: pointer;
+}
+.newPrevImg {
+  height: 141px;
+  position: absolute;
+  top: 739px;
+  left: 200px;
+  cursor: pointer;
+}
+.newPrevImg:hover,
+.newNextImg:hover {
+  margin-top: -3px;
+  transition: 0.3s;
+  -webkit-filter: drop-shadow(7px 5px 5px rgb(255, 255, 255));
+  filter: drop-shadow(7px 5px 5px rgb(255, 255, 255));
+}
+.newPrevImg:active,
+.newNextImg:active {
+  margin-top: 0px;
+  transition: 0.2s;
+  -webkit-filter: drop-shadow(7px 5px 5px rgb(92, 92, 92));
+  filter: drop-shadow(7px 5px 5px rgb(92, 92, 92));
+}
 .artists-carousel-container {
   padding-top: 120px;
   padding-bottom: 100px;
@@ -429,40 +496,4 @@ body {
   background: url("http://res.cloudinary.com/iradkot/image/upload/v1505419780/data_lbfl2e.png")
     no-repeat center center;
   background-size: contain;
-}
-
-.next,
-.prev {
-  color: #444;
-  position: absolute;
-  top: 700px;
-  padding: 1em 2em;
-  cursor: pointer;
-  background: #ccc;
-  border-radius: 5px;
-  border-top: 1px solid #fff;
-  box-shadow: 0 5px 0 #999;
-  transition: box-shadow 0.1s, top 0.1s;
-}
-/* .next:hover, .prev:hover { color: #000; }
-.next:active, .prev:active {
-  top: 104px;
-  box-shadow: 0 1px 0 #999;
-} */
-.next {
-  right: 5em;
-}
-.prev {
-  left: 5em;
-}
-/* .p {
-  text-size: 2px;
-} */
-
-#test {
-  /* position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); */
 }
