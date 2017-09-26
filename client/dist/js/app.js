@@ -48293,7 +48293,7 @@ var AppRoutes = function AppRoutes() {
       _reactRouterDom.Switch,
       null,
       _react2.default.createElement(_reactRouterDom.Route, { name: "HomePage", exact: true, path: "/", component: _HomePage2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { name: "AboutUs", exact: true, path: "/AboutUs", component: _AboutUs2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { name: "AboutUs", exact: true, path: "/AboutUs", component: _Artists2.default }),
       _react2.default.createElement(_reactRouterDom.Route, {
         name: "WhyBeatMix",
         exact: true,
@@ -49896,7 +49896,7 @@ var Artists = function (_React$Component) {
           ),
           _react2.default.createElement(
             _reactBootstrap.Row,
-            { style: { background: "black" } },
+            { className: "carousel-row" },
             _react2.default.createElement(
               "div",
               { className: "artists-carousel-container" },
@@ -49910,14 +49910,44 @@ var Artists = function (_React$Component) {
             ),
             _react2.default.createElement(
               "div",
-              { className: "next", onClick: this.rotateNext },
-              "Next"
+              { className: "newNext", onClick: this.rotateNext },
+              _react2.default.createElement("img", {
+                className: "newNextImg",
+                src: "http://res.cloudinary.com/iradkot/image/upload/a_0/v1505818360/112886-glowing-purple-neon-icon-arrows-arrow-thick-right_k97xsc.png"
+              })
             ),
             _react2.default.createElement(
               "div",
-              { className: "prev", onClick: this.rotatePrev },
-              "Prev"
+              { className: "newPrev", onClick: this.rotatePrev },
+              _react2.default.createElement("img", {
+                className: "newPrevImg",
+                src: "http://res.cloudinary.com/iradkot/image/upload/a_180/v1505818360/112886-glowing-purple-neon-icon-arrows-arrow-thick-right_k97xsc.png"
+              })
             )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            { className: "mobile-artists", style: { display: "none" } },
+            _react2.default.createElement("img", {
+              className: "tom responsive",
+              src: "http://res.cloudinary.com/iradkot/image/upload/v1505745602/data_2_pdv9wu.jpg"
+            })
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            { className: "mobile-artists", style: { display: "none" } },
+            _react2.default.createElement("img", {
+              className: "tom responsive",
+              src: "http://res.cloudinary.com/iradkot/image/upload/v1505745602/data_2_pdv9wu.jpg"
+            })
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            { className: "mobile-artists", style: { display: "none" } },
+            _react2.default.createElement("img", {
+              className: "tom responsive",
+              src: "http://res.cloudinary.com/iradkot/image/upload/v1505745602/data_2_pdv9wu.jpg"
+            })
           )
         )
       );

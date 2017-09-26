@@ -247,12 +247,6 @@ input[type="email"].focus,
   z-index: 1;
 }
 
-body {
-  background: url("https://wallpapercave.com/wp/LRxGqsU.jpg") center;
-  padding-top: 100px;
-  font-family: Arimo;
-}
-
 .popup {
   display: inline-block;
 }
@@ -496,4 +490,10 @@ body {
   background: url("http://res.cloudinary.com/iradkot/image/upload/v1505419780/data_lbfl2e.png")
     no-repeat center center;
   background-size: contain;
+}
+
+body {
+  background: url("https://wallpapercave.com/wp/LRxGqsU.jpg") center;
+  padding-top: 100px;
+  font-family: Arimo;
 }
