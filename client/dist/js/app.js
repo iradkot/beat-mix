@@ -52917,7 +52917,7 @@ var Footer = function (_React$Component) {
             _react2.default.createElement(
               _reactBootstrap.Col,
               { lg: 12, md: 12, sm: 12, xs: 12, style: style },
-              _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, sm: 2, xs: 2 }),
+              _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, smHidden: true, xsHidden: true }),
               _react2.default.createElement(
                 _reactBootstrap.Col,
                 { lg: 1, md: 1, smHidden: true, xsHidden: true },
@@ -52928,37 +52928,37 @@ var Footer = function (_React$Component) {
               ),
               _react2.default.createElement(
                 _reactBootstrap.Col,
-                { lg: 2, md: 2, sm: 10, xs: 10 },
+                { lg: 2, md: 2, sm: 8, xs: 8, smOffset: 2, xsOffset: 2 },
                 _react2.default.createElement(_reactBootstrap.Row, { className: "hideOnMobile", style: { height: "27.5px" } }),
                 _react2.default.createElement(
                   _reactBootstrap.Col,
-                  { lg: 6, md: 6, sm: 3, xs: 3 },
+                  { lg: 6, md: 6, sm: 4, xs: 4 },
                   _react2.default.createElement(
                     "a",
                     { target: "_blank", href: "https://soundcloud.com/beatmixdjs" },
                     _react2.default.createElement(_reactBootstrap.Image, {
                       id: "test",
                       style: { height: "45px" },
-                      src: "http://icons.iconarchive.com/icons/uiconstock/stitched-social-media/512/soundcloud-icon.png"
+                      src: "http://www.iconninja.com/files/104/745/156/soundcloud-icon.svg"
                     })
                   )
                 ),
                 _react2.default.createElement(
                   _reactBootstrap.Col,
-                  { lg: 6, md: 6, sm: 3, xs: 3 },
+                  { lg: 6, md: 6, sm: 4, xs: 4 },
                   _react2.default.createElement(
                     "a",
                     { target: "_blank", href: "https://www.facebook.com/beatmixdjs" },
                     _react2.default.createElement(_reactBootstrap.Image, {
                       id: "test",
                       style: { height: "45px" },
-                      src: "http://iconbug.com/data/46/256/e5da8e60ffe95bca3aa593711b88b6f3.png"
+                      src: "https://www.shareicon.net/data/2015/09/30/109345_media_512x512.png"
                     })
                   )
                 ),
                 _react2.default.createElement(
                   _reactBootstrap.Col,
-                  { lgHidden: true, mdHidden: true, sm: 3, xs: 3 },
+                  { lgHidden: true, mdHidden: true, sm: 4, xs: 4 },
                   _react2.default.createElement(
                     "a",
                     {
@@ -52966,7 +52966,11 @@ var Footer = function (_React$Component) {
                       href: "tel:050-690-7817",
                       style: { fontSize: "25px" }
                     },
-                    _react2.default.createElement("i", { className: "fa fa-mobile  fa-2x", "aria-hidden": "true" })
+                    _react2.default.createElement(_reactBootstrap.Image, {
+                      id: "test",
+                      style: { height: "45px" },
+                      src: "https://cdn4.iconfinder.com/data/icons/flatron-set-2/512/call-512.png"
+                    })
                   )
                 )
               ),
