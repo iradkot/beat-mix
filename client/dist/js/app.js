@@ -21275,6 +21275,15 @@ var fbCommentsStyle = {
   backgroundColor: "white"
 };
 
+var fbStyle = {
+  margin: "22px auto",
+  transform: "scale(2.5)",
+  msTransform: "scale(1.5)",
+  WebkitTransform: "scale(1.5)",
+  OTransform: "scale(1.5)",
+  MozTransform: "scale(1.5)"
+};
+
 var FbPlugins = function (_React$Component) {
   _inherits(FbPlugins, _React$Component);
 
@@ -21304,7 +21313,7 @@ var FbPlugins = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      if (this.props.get === 'like') {
+      if (this.props.get === "like") {
         return _react2.default.createElement("div", {
           className: "fb-like",
           "data-href": "https://www.facebook.com/elevationmosh/",
@@ -21312,22 +21321,24 @@ var FbPlugins = function (_React$Component) {
           "data-action": "like",
           "data-size": "large",
           "data-show-faces": "false",
-          "data-share": "false"
+          "data-share": "false",
+          style: fbStyle
         });
-      } else if (this.props.get === 'comment') {
+      } else if (this.props.get === "comment") {
         return _react2.default.createElement("div", {
           className: "fb-comments",
           "data-href": "https://www.facebook.com/elevationmosh",
           "data-numposts": "5",
           style: fbCommentsStyle
         });
-      } else if (this.props.get === 'follow') {
+      } else if (this.props.get === "follow") {
         return _react2.default.createElement("div", {
           className: "fb-follow",
           "data-href": "https://www.facebook.com/elevationmosh/",
           "data-layout": "button",
           "data-size": "large",
-          "data-show-faces": "true"
+          "data-show-faces": "true",
+          style: fbStyle
         });
       } else return _react2.default.createElement("div", null);
     }
@@ -52899,10 +52910,7 @@ var Footer = function (_React$Component) {
     value: function render() {
       var style = {
         marginTop: "3px",
-        // border: "2px solid #be1e55",
-        // borderRadius: '5px',
         background: "black",
-        // height: "71px",
         textAlign: "center"
       };
       return _react2.default.createElement(
@@ -52917,19 +52925,19 @@ var Footer = function (_React$Component) {
             _react2.default.createElement(
               _reactBootstrap.Col,
               { lg: 12, md: 12, sm: 12, xs: 12, style: style },
-              _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, smHidden: true, xsHidden: true }),
+              _react2.default.createElement(_reactBootstrap.Col, { lg: 2, md: 2, smHidden: true, xsHidden: true }),
               _react2.default.createElement(
                 _reactBootstrap.Col,
                 { lg: 1, md: 1, smHidden: true, xsHidden: true },
                 _react2.default.createElement(_reactBootstrap.Image, {
-                  src: "https://res.cloudinary.com/moshmosh/image/upload/v1504511510/beatmix/PRO_FACE.png",
-                  responsive: true
+                  id: "test",
+                  style: { height: "72.5px" },
+                  src: "https://res.cloudinary.com/moshmosh/image/upload/v1504511510/beatmix/PRO_FACE.png"
                 })
               ),
               _react2.default.createElement(
                 _reactBootstrap.Col,
-                { lg: 2, md: 2, sm: 8, xs: 8, smOffset: 2, xsOffset: 2 },
-                _react2.default.createElement(_reactBootstrap.Row, { className: "hideOnMobile", style: { height: "27.5px" } }),
+                { lg: 2, md: 2, sm: 12, xs: 12 },
                 _react2.default.createElement(
                   _reactBootstrap.Col,
                   { lg: 6, md: 6, sm: 4, xs: 4 },
@@ -52938,7 +52946,7 @@ var Footer = function (_React$Component) {
                     { target: "_blank", href: "https://soundcloud.com/beatmixdjs" },
                     _react2.default.createElement(_reactBootstrap.Image, {
                       id: "test",
-                      style: { height: "45px" },
+                      style: { height: "72.5px" },
                       src: "http://www.iconninja.com/files/104/745/156/soundcloud-icon.svg"
                     })
                   )
@@ -52951,7 +52959,7 @@ var Footer = function (_React$Component) {
                     { target: "_blank", href: "https://www.facebook.com/beatmixdjs" },
                     _react2.default.createElement(_reactBootstrap.Image, {
                       id: "test",
-                      style: { height: "45px" },
+                      style: { height: "72.5px" },
                       src: "https://www.shareicon.net/data/2015/09/30/109345_media_512x512.png"
                     })
                   )
@@ -52968,7 +52976,7 @@ var Footer = function (_React$Component) {
                     },
                     _react2.default.createElement(_reactBootstrap.Image, {
                       id: "test",
-                      style: { height: "45px" },
+                      style: { height: "72.5px" },
                       src: "https://cdn4.iconfinder.com/data/icons/flatron-set-2/512/call-512.png"
                     })
                   )
@@ -52976,40 +52984,21 @@ var Footer = function (_React$Component) {
               ),
               _react2.default.createElement(
                 _reactBootstrap.Col,
-                { lg: 4, md: 4, smHidden: true, xsHidden: true },
+                { lg: 2, md: 2, smHidden: true, xsHidden: true, style: { color: "#4080FF" } },
+                _react2.default.createElement(_reactBootstrap.Row, { className: "hideOnMobile", style: { height: "20.625px" } }),
                 _react2.default.createElement(
-                  _reactBootstrap.Col,
-                  { lg: 6, md: 6, smHidden: true, xsHidden: true },
-                  _react2.default.createElement(_reactBootstrap.Image, {
-                    src: "https://res.cloudinary.com/moshmosh/image/upload/v1504511510/beatmix/P.png",
-                    className: "img-responsive logo"
-                  })
-                ),
-                _react2.default.createElement(_reactBootstrap.Row, { className: "hideOnMobile", style: { height: "27.5px" } }),
-                _react2.default.createElement(
-                  _reactBootstrap.Col,
+                  "a",
                   {
-                    lg: 6,
-                    md: 6,
-                    smHidden: true,
-                    xsHidden: true,
-                    style: { color: "#4080FF" }
+                    className: "mobileNum",
+                    href: "tel:050-690-7817",
+                    style: { fontSize: "27.5px", fontWeight: "bold" }
                   },
-                  _react2.default.createElement(
-                    "a",
-                    {
-                      className: "mobileNum",
-                      href: "tel:050-690-7817",
-                      style: { fontSize: "25px" }
-                    },
-                    "050-690-7817"
-                  )
+                  "050-690-7817"
                 )
               ),
               _react2.default.createElement(
                 _reactBootstrap.Col,
                 { lg: 2, smHidden: true, xsHidden: true },
-                _react2.default.createElement(_reactBootstrap.Row, { style: { height: "36px" } }),
                 _react2.default.createElement(
                   _reactBootstrap.Col,
                   { lg: 6 },
@@ -53023,13 +53012,14 @@ var Footer = function (_React$Component) {
               ),
               _react2.default.createElement(
                 _reactBootstrap.Col,
-                { lg: 1, smHidden: true, xsHidden: true },
+                { lg: 1, md: 1, smHidden: true, xsHidden: true },
                 _react2.default.createElement(_reactBootstrap.Image, {
-                  src: "https://res.cloudinary.com/moshmosh/image/upload/v1504511510/beatmix/PRO_FACE.png",
-                  responsive: true
+                  id: "test",
+                  style: { height: "72.5px" },
+                  src: "https://res.cloudinary.com/moshmosh/image/upload/v1504511510/beatmix/PRO_FACE.png"
                 })
               ),
-              _react2.default.createElement(_reactBootstrap.Col, { lg: 1, smHidden: true, xsHidden: true })
+              _react2.default.createElement(_reactBootstrap.Col, { lg: 2, md: 2, smHidden: true, xsHidden: true })
             )
           )
         )
