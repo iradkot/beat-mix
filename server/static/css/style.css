@@ -336,12 +336,8 @@ body {
     /* border-left: 2px solid #000000;
     border-right: 2px solid #000000; */
   }
-  50% {
-    text-shadow: 3px 3px rgb(143, 72, 105);
-    /* border-left: 2px solid #be1e55;
-    border-right: 2px solid #be1e55; */
-  }
-  50% {
+
+  100% {
     text-shadow: 1px 1px rgb(182, 182, 182);
     /* border-left: 2px solid #be1e55;
     border-right: 2px solid #be1e55; */
