@@ -1,28 +1,12 @@
-/* .navbar-fixed-top {
-  background-color: black;
-  min-height: 120px;
-} */
-
-/* #navbarBrand {
-  width: 234px;
-  position: fixed;
-  left: 50px;
-} */
-
-/* .navbar-nav > li > a {
-  font-size: 30px;
-  padding-top: 15px;
-  padding-bottom: 0px;
-  line-height: 80px;
-} */
-
 .dropdown-menu {
   background-color: black;
   border-bottom-left-radius: 50px;
 }
+
 .navbar-inverse {
   border-bottom-left-radius: 50px;
 }
+
 .dropdown-menu > li > a {
   font-size: 25px;
 }
@@ -38,11 +22,13 @@
   color: #be1e55;
   background-color: black;
 }
+
 .activeNav > a {
   color: #be1e55 !important;
   border-left: 2px solid #be1e55;
   border-right: 2px solid #be1e55;
-  animation: activeNav 1s 1;
+  text-shadow: 1px 1px rgb(182, 182, 182);
+  animation: activeNav 0.8s 1;
 }
 
 .dropdown-menu::before,
@@ -76,14 +62,13 @@ hr {
 }
 
 .formSubmitBtn {
-  /* background-color: #be1e55; */
-  /* color: #be1e55; */
   font-weight: bold;
   font-size: 30px;
   width: 100px;
   height: 50px;
   border-radius: 0;
 }
+
 .show-grid {
   padding-top: 10px;
 }
@@ -109,7 +94,6 @@ input[type="email"],
 
 input[type="text"],
 input[type="email"] {
-  /* width: 450px; */
   height: 40px;
 }
 
@@ -130,14 +114,12 @@ input[type="email"].focus,
 }
 
 :-moz-placeholder {
-  /* Firefox 18- */
   font-weight: bold;
   color: black;
   font-size: 30px !important;
 }
 
 ::-moz-placeholder {
-  /* Firefox 19+ */
   font-weight: bold;
   color: black;
   font-size: 30px !important;
@@ -146,12 +128,9 @@ input[type="email"].focus,
 .no-padding {
   padding-left: 0;
   padding-right: 0;
-  /* height: -webkit-fill-available;  */
   height: 900px;
-  /* background-attachment: no-repeat center center fixed; */
 }
 
-/*starting animatiom*/
 .fade-enter {
   right: 100px;
 }
@@ -164,6 +143,7 @@ input[type="email"].focus,
   background-size: cover !important;
   z-index: -1;
 }
+
 .intro-image {
   color: white !important;
   margin-top: 18px;
@@ -173,18 +153,25 @@ input[type="email"].focus,
   text-align: right;
 }
 
+.intro-talk > p {
+  font-size: 19px;
+}
+
 .intro {
   color: white;
 }
+
 .intro-image {
   transition: all 0.5s ease-in-out;
 }
+
 .intro-image:hover {
   transition: all 0.5s ease-in-out;
   cursor: pointer;
   margin-top: 1px;
   box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
 }
+
 .footer {
   color: black;
   text-align: center;
@@ -248,33 +235,30 @@ input[type="email"].focus,
   z-index: 1;
 }
 
-body {
-  background: url("https://wallpapercave.com/wp/LRxGqsU.jpg") center;
-  padding-top: 100px;
-  font-family: Arimo;
-}
-
 .popup {
   display: inline-block;
 }
 
 .fb-comment {
   margin-top: 121px;
-  height: 293px;
+  height: 340px;
 }
+
 .logo {
   height: 100px;
 }
+
 @media only screen and (max-width: 768px) {
-  .popout-div,
+  .popOut-div,
+  .popOut,
   .hideOnMobile {
     display: none;
   }
-
   .mobileNum {
     font-size: 20px !important;
   }
 }
+
 .popOut {
   width: 244px;
   height: 71px;
@@ -310,9 +294,11 @@ body {
   color: #be1e55;
   animation: open 1s 1;
 }
+
 .closePopup:hover {
   cursor: pointer;
 }
+
 .popOutForm {
   text-align: "center";
   font-size: "15px";
@@ -327,10 +313,11 @@ body {
 
 @keyframes activeNav {
   0% {
-    transform: rotate(0deg);
+    text-shadow: 0px 0px rgb(0, 0, 0);
   }
+
   100% {
-    transform: rotate(-360deg);
+    text-shadow: 1px 1px rgb(182, 182, 182);
   }
 }
 
@@ -351,6 +338,7 @@ body {
     height: 471px;
   }
 }
+
 @keyframes mymove {
   0% {
     top: 114px;
@@ -376,6 +364,70 @@ body {
 }
 
 /* artists page carousell */
+
+@media only screen and (max-width: 991px) {
+  .artists-carousel-container {
+    display: none;
+  }
+  .artists-carousel {
+    display: none;
+  }
+  .item {
+    display: none;
+  }
+  .newNextImg,
+  .newPrevImg {
+    display: none;
+  }
+  .mobile-artists {
+    display: inline-block !important;
+  }
+  .tom {
+    height: 439px;
+    padding: 20px;
+    padding-left: 12%;
+  }
+}
+
+.carousel-row {
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: 1px;
+  display: block;
+  padding-bottom: 18px;
+}
+
+.newNextImg {
+  height: 141px;
+  position: absolute;
+  top: 729px;
+  left: 1106px;
+  cursor: pointer;
+}
+
+.newPrevImg {
+  height: 141px;
+  position: absolute;
+  top: 729px;
+  left: 260px;
+  cursor: pointer;
+}
+
+.newPrevImg:hover,
+.newNextImg:hover {
+  margin-top: -3px;
+  transition: 0.3s;
+  -webkit-filter: drop-shadow(7px 5px 5px rgb(255, 255, 255));
+  filter: drop-shadow(7px 5px 5px rgb(255, 255, 255));
+}
+
+.newPrevImg:active,
+.newNextImg:active {
+  margin-top: 1px;
+  transition: 0.2s;
+  -webkit-filter: drop-shadow(7px 5px 5px rgb(137, 137, 137));
+  filter: drop-shadow(7px 5px 5px rgb(137, 137, 137));
+}
 
 .artists-carousel-container {
   padding-top: 120px;
@@ -431,38 +483,8 @@ body {
   background-size: contain;
 }
 
-.next,
-.prev {
-  color: #444;
-  position: absolute;
-  top: 700px;
-  padding: 1em 2em;
-  cursor: pointer;
-  background: #ccc;
-  border-radius: 5px;
-  border-top: 1px solid #fff;
-  box-shadow: 0 5px 0 #999;
-  transition: box-shadow 0.1s, top 0.1s;
-}
-/* .next:hover, .prev:hover { color: #000; }
-.next:active, .prev:active {
-  top: 104px;
-  box-shadow: 0 1px 0 #999;
-} */
-.next {
-  right: 5em;
-}
-.prev {
-  left: 5em;
-}
-/* .p {
-  text-size: 2px;
-} */
-
-#test {
-  /* position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); */
+body {
+  background: url("https://wallpapercave.com/wp/LRxGqsU.jpg") center;
+  padding-top: 100px;
+  /* font-family: Arimo; */
 }

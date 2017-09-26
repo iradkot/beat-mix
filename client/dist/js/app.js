@@ -36118,7 +36118,6 @@ var Header = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      // let popOut = popOutStat? <ContactUsPopOut />:<div/>;
       var popOutClosed = _react2.default.createElement(
         "div",
         { className: "popOut" },
@@ -36141,7 +36140,6 @@ var Header = function (_React$Component) {
         _react2.default.createElement(_ContactUsPopout2.default, null)
       );
       var popOut = popOutStat ? this.state.clicked ? popOutOpen : popOutClosed : _react2.default.createElement("div", null);
-      // let popOut = <div className={popOutClass}><h2 onClick={this.clickedOffer}>!קבלו הצעה</h2> </div>;
       if (window.outerWidth > 768) {
         return _react2.default.createElement(
           "div",
@@ -36195,38 +36193,16 @@ var Header = function (_React$Component) {
                   )
                 ),
                 _react2.default.createElement(
-                  _reactBootstrap.NavDropdown,
+                  _reactRouterBootstrap.IndexLinkContainer,
                   {
-                    eventKey: 4,
-                    title: "\u05D2\u05DC\u05E8\u05D9\u05D5\u05EA",
-                    id: "basic-nav-dropdown",
+                    to: "/Events",
+                    onClick: this.popOutOn,
                     activeClassName: "activeNav"
                   },
                   _react2.default.createElement(
-                    _reactRouterBootstrap.IndexLinkContainer,
-                    {
-                      to: "/Artists",
-                      onClick: this.popOutOn,
-                      activeClassName: "activeNav"
-                    },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: 4.1 },
-                      "\u05D0\u05DE\u05E0\u05D9\u05DD"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    _reactRouterBootstrap.IndexLinkContainer,
-                    {
-                      to: "/Events",
-                      onClick: this.popOutOn,
-                      activeClassName: "activeNav"
-                    },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: 4.2 },
-                      "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
-                    )
+                    _reactBootstrap.NavItem,
+                    { eventKey: 4 },
+                    "\u05D2\u05DC\u05E8\u05D9\u05D5\u05EA"
                   )
                 ),
                 _react2.default.createElement(
@@ -36347,38 +36323,16 @@ var Header = function (_React$Component) {
                   )
                 ),
                 _react2.default.createElement(
-                  _reactBootstrap.NavDropdown,
+                  _reactRouterBootstrap.IndexLinkContainer,
                   {
-                    eventKey: 4,
-                    title: "\u05D2\u05DC\u05E8\u05D9\u05D5\u05EA",
-                    id: "basic-nav-dropdown",
+                    to: "/Events",
+                    onClick: this.popOutOn,
                     activeClassName: "activeNav"
                   },
                   _react2.default.createElement(
-                    _reactRouterBootstrap.IndexLinkContainer,
-                    {
-                      to: "/Artists",
-                      onClick: this.popOutOn,
-                      activeClassName: "activeNav"
-                    },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: 4.1 },
-                      "\u05D0\u05DE\u05E0\u05D9\u05DD"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    _reactRouterBootstrap.IndexLinkContainer,
-                    {
-                      to: "/Events",
-                      onClick: this.popOutOn,
-                      activeClassName: "activeNav"
-                    },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: 4.2 },
-                      "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
-                    )
+                    _reactBootstrap.NavItem,
+                    { eventKey: 4 },
+                    "\u05D2\u05DC\u05E8\u05D9\u05D5\u05EA"
                   )
                 ),
                 _react2.default.createElement(
@@ -48260,6 +48214,8 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(28);
+
 var _HomePage = __webpack_require__(523);
 
 var _HomePage2 = _interopRequireDefault(_HomePage);
@@ -48292,8 +48248,6 @@ var _ = __webpack_require__(555);
 
 var _2 = _interopRequireDefault(_);
 
-var _reactRouterDom = __webpack_require__(28);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var AppRoutes = function AppRoutes() {
@@ -48304,14 +48258,14 @@ var AppRoutes = function AppRoutes() {
       _reactRouterDom.Switch,
       null,
       _react2.default.createElement(_reactRouterDom.Route, { name: "HomePage", exact: true, path: "/", component: _HomePage2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { name: "AboutUs", exact: true, path: "/AboutUs", component: _AboutUs2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { name: "AboutUs", exact: true, path: "/AboutUs", component: _Artists2.default }),
       _react2.default.createElement(_reactRouterDom.Route, {
         name: "WhyBeatMix",
         exact: true,
         path: "/WhyBeatMix",
         component: _WhyBeatMix2.default
       }),
-      _react2.default.createElement(_reactRouterDom.Route, { name: "Artists", exact: true, path: "/Artists", component: _Artists2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { name: "Artists", exact: true, path: "/Artists", component: _AboutUs2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { name: "Events", exact: true, path: "/Events", component: _Events2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { name: "ContactUs", exact: true, path: "/ContactUs", component: _ContactUs2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { name: "Admin", exact: true, path: "/Admin", component: _Admin2.default }),
@@ -48343,11 +48297,11 @@ var _reactRouterDom = __webpack_require__(28);
 
 var _reactBootstrap = __webpack_require__(32);
 
+var _reactRouterBootstrap = __webpack_require__(225);
+
 var _parralaxImageSlider = __webpack_require__(524);
 
 var _parralaxImageSlider2 = _interopRequireDefault(_parralaxImageSlider);
-
-var _reactRouterBootstrap = __webpack_require__(225);
 
 var _FbPlugins = __webpack_require__(235);
 
@@ -48360,12 +48314,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-// var scrollToElement = require("scroll-to-element");
 
-var image_arr = ["http://res.cloudinary.com/moshmosh/image/upload/v1503559675/beatmix/IMG_3443_sg0943.jpg"
-// "http://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg",
-// "http://res.cloudinary.com/moshmosh/image/upload/v1503559714/beatmix/IMG_3530_mklqvr.jpg"
-];
+var image_arr = ["http://res.cloudinary.com/moshmosh/image/upload/v1503559675/beatmix/IMG_3443_sg0943.jpg"];
 
 var HomePage = function (_React$Component) {
   _inherits(HomePage, _React$Component);
@@ -49447,12 +49397,11 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-//style objects:0
 var djBox = {
   textAlign: "center",
   border: "1px solid rgb(189,30,85)"
-  // borderRadius: "5px"
 };
+
 var djTeam = {
   fontFamiley: "Oswald",
   color: "rgb(189,30,85)",
@@ -49467,6 +49416,7 @@ var djNameFont = {
   webkitTransform: "rotate(2deg)",
   textDecoration: "underline"
 };
+
 var djImage = {
   height: "100px",
   width: "100px",
@@ -49529,7 +49479,7 @@ var About = function (_React$Component) {
               { lg: 8 },
               _react2.default.createElement(
                 "div",
-                { style: djNameFont, className: "djName" },
+                { className: "djName" },
                 _react2.default.createElement(
                   "h1",
                   null,
@@ -49559,7 +49509,7 @@ var About = function (_React$Component) {
               { lg: 8 },
               _react2.default.createElement(
                 "div",
-                { style: djNameFont, className: "djName" },
+                { className: "djName" },
                 _react2.default.createElement(
                   "h1",
                   null,
@@ -49907,7 +49857,7 @@ var Artists = function (_React$Component) {
           ),
           _react2.default.createElement(
             _reactBootstrap.Row,
-            { style: { background: "black" } },
+            { className: "carousel-row" },
             _react2.default.createElement(
               "div",
               { className: "artists-carousel-container" },
@@ -49921,14 +49871,44 @@ var Artists = function (_React$Component) {
             ),
             _react2.default.createElement(
               "div",
-              { className: "next", onClick: this.rotateNext },
-              "Next"
+              { className: "newNext", onClick: this.rotateNext },
+              _react2.default.createElement("img", {
+                className: "newNextImg",
+                src: "http://res.cloudinary.com/iradkot/image/upload/a_0/v1505818360/112886-glowing-purple-neon-icon-arrows-arrow-thick-right_k97xsc.png"
+              })
             ),
             _react2.default.createElement(
               "div",
-              { className: "prev", onClick: this.rotatePrev },
-              "Prev"
+              { className: "newPrev", onClick: this.rotatePrev },
+              _react2.default.createElement("img", {
+                className: "newPrevImg",
+                src: "http://res.cloudinary.com/iradkot/image/upload/a_180/v1505818360/112886-glowing-purple-neon-icon-arrows-arrow-thick-right_k97xsc.png"
+              })
             )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            { className: "mobile-artists", style: { display: "none" } },
+            _react2.default.createElement("img", {
+              className: "tom responsive",
+              src: "http://res.cloudinary.com/iradkot/image/upload/v1505745602/data_2_pdv9wu.jpg"
+            })
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            { className: "mobile-artists", style: { display: "none" } },
+            _react2.default.createElement("img", {
+              className: "tom responsive",
+              src: "http://res.cloudinary.com/iradkot/image/upload/v1505745602/data_2_pdv9wu.jpg"
+            })
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            { className: "mobile-artists", style: { display: "none" } },
+            _react2.default.createElement("img", {
+              className: "tom responsive",
+              src: "http://res.cloudinary.com/iradkot/image/upload/v1505745602/data_2_pdv9wu.jpg"
+            })
           )
         )
       );
@@ -52611,7 +52591,6 @@ var ContactUs = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (ContactUs.__proto__ || Object.getPrototypeOf(ContactUs)).call(this, props));
 
     _this.state = {};
-    // let a = document.getElementsByClassName('show');
     return _this;
   }
 

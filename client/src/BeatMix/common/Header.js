@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown } from "react-bootstrap";
-
 import { IndexLinkContainer } from "react-router-bootstrap";
 import ContactUsPopOut from "../ContactUs-Popout";
 
@@ -63,7 +62,6 @@ class Header extends React.Component {
     this.setState({ clicked: newClick });
   }
   render() {
-    // let popOut = popOutStat? <ContactUsPopOut />:<div/>;
     let popOutClosed = (
       <div className="popOut">
         {" "}
@@ -85,7 +83,6 @@ class Header extends React.Component {
     ) : (
       <div />
     );
-    // let popOut = <div className={popOutClass}><h2 onClick={this.clickedOffer}>!קבלו הצעה</h2> </div>;
     if (window.outerWidth > 768) {
       return (
         <div>
@@ -115,27 +112,13 @@ class Header extends React.Component {
                 >
                   <NavItem eventKey={5}>צור-קשר</NavItem>
                 </IndexLinkContainer>
-                <NavDropdown
-                  eventKey={4}
-                  title="גלריות"
-                  id="basic-nav-dropdown"
+                <IndexLinkContainer
+                  to="/Events"
+                  onClick={this.popOutOn}
                   activeClassName="activeNav"
                 >
-                  <IndexLinkContainer
-                    to="/Artists"
-                    onClick={this.popOutOn}
-                    activeClassName="activeNav"
-                  >
-                    <MenuItem eventKey={4.1}>אמנים</MenuItem>
-                  </IndexLinkContainer>
-                  <IndexLinkContainer
-                    to="/Events"
-                    onClick={this.popOutOn}
-                    activeClassName="activeNav"
-                  >
-                    <MenuItem eventKey={4.2}>אירועים</MenuItem>
-                  </IndexLinkContainer>
-                </NavDropdown>
+                  <NavItem eventKey={4}>גלריות</NavItem>
+                </IndexLinkContainer>
                 <IndexLinkContainer
                   to="/WhyBeatMix"
                   onClick={this.popOutOn}
@@ -202,27 +185,13 @@ class Header extends React.Component {
                 >
                   <NavItem eventKey={3}>למה דאבל דיג'ייז</NavItem>
                 </IndexLinkContainer>
-                <NavDropdown
-                  eventKey={4}
-                  title="גלריות"
-                  id="basic-nav-dropdown"
+                <IndexLinkContainer
+                  to="/Events"
+                  onClick={this.popOutOn}
                   activeClassName="activeNav"
                 >
-                  <IndexLinkContainer
-                    to="/Artists"
-                    onClick={this.popOutOn}
-                    activeClassName="activeNav"
-                  >
-                    <MenuItem eventKey={4.1}>אמנים</MenuItem>
-                  </IndexLinkContainer>
-                  <IndexLinkContainer
-                    to="/Events"
-                    onClick={this.popOutOn}
-                    activeClassName="activeNav"
-                  >
-                    <MenuItem eventKey={4.2}>אירועים</MenuItem>
-                  </IndexLinkContainer>
-                </NavDropdown>
+                  <NavItem eventKey={4}>גלריות</NavItem>
+                </IndexLinkContainer>
                 <IndexLinkContainer
                   to="/ContactUs"
                   onClick={this.popOutOff}
