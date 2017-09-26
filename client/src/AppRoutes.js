@@ -14,7 +14,7 @@ const AppRoutes = () =>
   <div>
     <Switch>
       <Route name="HomePage" exact path="/" component={HomePage} />
-      <Route name="AboutUs" exact path="/AboutUs" component={AboutUs} />
+      <Route name="AboutUs" exact path="/AboutUs" component={Artists} />
       <Route
         name="WhyBeatMix"
         exact

@@ -49346,7 +49346,7 @@ var AppRoutes = function AppRoutes() {
       _reactRouterDom.Switch,
       null,
       _react2.default.createElement(_reactRouterDom.Route, { name: "HomePage", exact: true, path: "/", component: _HomePage2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { name: "AboutUs", exact: true, path: "/AboutUs", component: _AboutUs2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { name: "AboutUs", exact: true, path: "/AboutUs", component: _Artists2.default }),
       _react2.default.createElement(_reactRouterDom.Route, {
         name: "WhyBeatMix",
         exact: true,
