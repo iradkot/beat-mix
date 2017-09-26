@@ -256,7 +256,7 @@ input[type="email"].focus,
 body {
   background: url("https://wallpapercave.com/wp/LRxGqsU.jpg") center;
   padding-top: 100px;
-  font-family: Arimo;
+  /* font-family: Arimo; */
 }
 
 .popup {
@@ -272,6 +272,7 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .popOut-div,
+  .popOut,
   .hideOnMobile {
     display: none;
   }
@@ -423,15 +424,15 @@ body {
 .newNextImg {
   height: 141px;
   position: absolute;
-  top: 739px;
-  left: 1114px;
+  top: 729px;
+  left: 1106px;
   cursor: pointer;
 }
 .newPrevImg {
   height: 141px;
   position: absolute;
-  top: 739px;
-  left: 200px;
+  top: 729px;
+  left: 260px;
   cursor: pointer;
 }
 .newPrevImg:hover, .newNextImg:hover {
@@ -441,10 +442,10 @@ body {
   filter:         drop-shadow(7px 5px 5px rgb(255, 255, 255));
 }
 .newPrevImg:active, .newNextImg:active {
-  margin-top: 0px;
+  margin-top: 1px;
   transition: 0.2s;
-  -webkit-filter: drop-shadow(7px 5px 5px rgb(92, 92, 92));
-  filter:         drop-shadow(7px 5px 5px rgb(92, 92, 92));
+  -webkit-filter: drop-shadow(7px 5px 5px rgb(137, 137, 137));
+  filter:         drop-shadow(7px 5px 5px rgb(137, 137, 137));
 }
 .artists-carousel-container {
   padding-top: 120px;

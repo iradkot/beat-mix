@@ -52,7 +52,7 @@ class About extends React.Component {
               />
             </Col>
             <Col lg={8}>
-              <div style={djNameFont} className="djName">
+              <div className="djName">
                 <h1>DJ. Tom Alush</h1>
                 <h4>Hiphop, Trans, Techno, Rock</h4>
               </div>
@@ -66,7 +66,7 @@ class About extends React.Component {
           <Col lg={2} />
           <Col lg={9} style={djBox} className="aboutDj">
             <Col lg={8}>
-              <div style={djNameFont} className="djName">
+              <div className="djName">
                 <h1>DJ. Amit Machluf</h1>
                 <h4>Reaggai, Fun, Trans, Techno, Rock</h4>
               </div>

@@ -46,11 +46,11 @@ class Header extends React.Component {
     let self = this;
     axios
       .post("/contactus/email", temp)
-      .then(function(res) {
+      .then(function (res) {
         alert("Email Sent!");
         self.setState({ name: "", email: "", content: "", number: "" });
       })
-      .catch(function(error) {});
+      .catch(function (error) { });
   }
   popOutOn() {
     popOutStat = true;
@@ -81,87 +81,139 @@ class Header extends React.Component {
     let popOut = popOutStat ? this.state.clicked ? (
       popOutOpen
     ) : (
-      popOutClosed
-    ) : (
-      <div />
-    );
+        popOutClosed
+      ) : (
+        <div />
+      );
     // let popOut = <div className={popOutClass}><h2 onClick={this.clickedOffer}>!קבלו הצעה</h2> </div>;
-    return (
-      <div>
-        <Navbar style={navbarStyle} collapseOnSelect inverse fixedTop>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <Link to="/">
-                <img
-                  style={navbarBrandImgStyle}
-                  src="http://beatmix.mitchatnim.co.il/img/0239/799.png"
-                />
-              </Link>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav style={navStyle} pullRight>
-              <li role="presentation">
-                <a target="_blank" href="https://www.facebook.com/beatmixdjs">
-                  פייסבוק
-                </a>
-              </li>
-              <IndexLinkContainer
-                to="/ContactUs"
-                onClick={this.popOutOff}
-                activeClassName="activeNav"
-              >
-                <NavItem eventKey={5}>צור-קשר</NavItem>
-              </IndexLinkContainer>
-              <NavDropdown
-                eventKey={4}
-                title="גלריות"
-                id="basic-nav-dropdown"
-                activeClassName="activeNav"
-              >
+    if (window.outerWidth > 768) {
+      return (
+        <div>
+          <Navbar style={navbarStyle} collapseOnSelect inverse fixedTop>
+            <Navbar.Header>
+              <Navbar.Brand>
+                <Link to="/">
+                  <img
+                    style={navbarBrandImgStyle}
+                    src="http://beatmix.mitchatnim.co.il/img/0239/799.png"
+                  />
+                </Link>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse>
+              <Nav style={navStyle} pullRight>
+                <li role="presentation">
+                  <a target="_blank" href="https://www.facebook.com/beatmixdjs">
+                    פייסבוק
+                  </a>
+                </li>
                 <IndexLinkContainer
-                  to="/Artists"
-                  onClick={this.popOutOn}
+                  to="/ContactUs"
+                  onClick={this.popOutOff}
                   activeClassName="activeNav"
                 >
-                  <MenuItem eventKey={4.1}>אמנים</MenuItem>
+                  <NavItem eventKey={5}>צור-קשר</NavItem>
                 </IndexLinkContainer>
                 <IndexLinkContainer
                   to="/Events"
                   onClick={this.popOutOn}
                   activeClassName="activeNav"
                 >
-                  <MenuItem eventKey={4.2}>אירועים</MenuItem>
+                  <NavItem eventKey={4}>גלריות</NavItem>
                 </IndexLinkContainer>
-              </NavDropdown>
-              <IndexLinkContainer
-                to="/WhyBeatMix"
-                onClick={this.popOutOn}
-                activeClassName="activeNav"
-              >
-                <NavItem eventKey={3}>למה דאבל דיג'ייז</NavItem>
-              </IndexLinkContainer>
-              <IndexLinkContainer
-                to="/AboutUs"
-                onClick={this.popOutOn}
-                activeClassName="activeNav"
-              >
-                <NavItem eventKey={2}>נבחרת הדיג'יים</NavItem>
-              </IndexLinkContainer>
-              <IndexLinkContainer
-                to="/"
-                onClick={this.popOutOn}
-                activeClassName="activeNav"
-              >
-                <NavItem eventKey={1}>דף הבית</NavItem>
-              </IndexLinkContainer>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-        <div className="popout-div">{popOut}</div>
-      </div>
-    );
+                <IndexLinkContainer
+                  to="/WhyBeatMix"
+                  onClick={this.popOutOn}
+                  activeClassName="activeNav"
+                >
+                  <NavItem eventKey={3}>למה דאבל דיג'ייז</NavItem>
+                </IndexLinkContainer>
+                <IndexLinkContainer
+                  to="/AboutUs"
+                  onClick={this.popOutOn}
+                  activeClassName="activeNav"
+                >
+                  <NavItem eventKey={2}>נבחרת הדיג'יים</NavItem>
+                </IndexLinkContainer>
+                <IndexLinkContainer
+                  to="/"
+                  onClick={this.popOutOn}
+                  activeClassName="activeNav"
+                >
+                  <NavItem eventKey={1}>דף הבית</NavItem>
+                </IndexLinkContainer>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+          <div className="popout-div">{popOut}</div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <Navbar style={navbarStyle} collapseOnSelect inverse fixedTop>
+            <Navbar.Header>
+              <Navbar.Brand>
+                <Link to="/">
+                  <img
+                    style={navbarBrandImgStyle}
+                    src="http://beatmix.mitchatnim.co.il/img/0239/799.png"
+                  />
+                </Link>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse>
+              <Nav style={navStyle} pullRight>
+                <IndexLinkContainer
+                  to="/"
+                  onClick={this.popOutOn}
+                  activeClassName="activeNav"
+                >
+                  <NavItem eventKey={1}>דף הבית</NavItem>
+                </IndexLinkContainer>
+
+                <IndexLinkContainer
+                  to="/AboutUs"
+                  onClick={this.popOutOn}
+                  activeClassName="activeNav"
+                >
+                  <NavItem eventKey={2}>נבחרת הדיג'יים</NavItem>
+                </IndexLinkContainer>
+                <IndexLinkContainer
+                  to="/WhyBeatMix"
+                  onClick={this.popOutOn}
+                  activeClassName="activeNav"
+                >
+                  <NavItem eventKey={3}>למה דאבל דיג'ייז</NavItem>
+                </IndexLinkContainer>
+                <IndexLinkContainer
+                  to="/Events"
+                  onClick={this.popOutOn}
+                  activeClassName="activeNav"
+                >
+                  <NavItem eventKey={4}>גלריות</NavItem>
+                </IndexLinkContainer>
+                <IndexLinkContainer
+                  to="/ContactUs"
+                  onClick={this.popOutOff}
+                  activeClassName="activeNav"
+                >
+                  <NavItem eventKey={5}>צור-קשר</NavItem>
+                </IndexLinkContainer>
+                <li role="presentation">
+                  <a target="_blank" href="https://www.facebook.com/beatmixdjs">
+                    פייסבוק
+                  </a>
+                </li>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+          <div className="popout-div">{popOut}</div>
+        </div>
+      );
+    }
   }
 }
 
