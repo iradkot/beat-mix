@@ -172,10 +172,13 @@ input[type="email"].focus,
 }
 
 .intro-talk {
+  color: #FFFFFF;
   text-align: right;
+  font-family: 'Suez One', serif;
 }
 .intro-talk > p{
-  font-size: 19px;
+  font-size: 21px;
+  font-family: 'Frank Ruhl Libre', serif;
 }
 
 .intro {
@@ -188,7 +191,7 @@ input[type="email"].focus,
   transition: all 0.5s ease-in-out;
   cursor: pointer;
   margin-top: 1px;
-  box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+  box-shadow: 0 8px 16px 0 rgb(194, 194, 194);
 }
 .footer {
   color: black;
@@ -215,6 +218,7 @@ input[type="email"].focus,
 
 .homeImageLinks {
   text-align: center;
+  height: 376px;
 }
 
 .intro-text:hover {
@@ -386,6 +390,10 @@ body {
   }
 }
 
+/** artistPage! **/
+.artistPage {
+  background: black;
+}
 /* artists page carousell */
 
 @media only screen and (max-width: 991px) {
@@ -425,14 +433,14 @@ body {
   height: 141px;
   position: absolute;
   top: 729px;
-  left: 1106px;
+  left: 72vw;
   cursor: pointer;
 }
 .newPrevImg {
   height: 141px;
   position: absolute;
   top: 729px;
-  left: 260px;
+  left: 16vw;
   cursor: pointer;
 }
 .newPrevImg:hover, .newNextImg:hover {
@@ -452,7 +460,7 @@ body {
   padding-bottom: 100px;
   margin: 0 auto;
   width: 500px;
-  height: 600px;
+  height: 720px;
   position: relative;
   perspective: 1000px;
 }
@@ -470,7 +478,7 @@ body {
   position: absolute;
   background: #000;
   width: 500px;
-  height: 350px;
+  height: 500px;
   line-height: 200px;
   font-size: 5em;
   text-align: center;
@@ -482,21 +490,21 @@ body {
 
 .a {
   transform: rotateY(0deg) translateZ(300px);
-  background: url("http://res.cloudinary.com/iradkot/image/upload/v1505745602/data_2_pdv9wu.jpg")
+  background: url("http://res.cloudinary.com/beat-mix/image/upload/v1507033627/tom_yfcnbs.png")
     no-repeat center center;
   background-size: contain;
 }
 
 .b {
   transform: rotateY(120deg) translateZ(250px);
-  background: url("http://res.cloudinary.com/iradkot/image/upload/v1505745602/data_2_pdv9wu.jpg")
+  background: url("http://res.cloudinary.com/beat-mix/image/upload/v1507033621/hadar_wc5dn1.png")
     no-repeat center center;
   background-size: contain;
 }
 
 .c {
   transform: rotateY(240deg) translateZ(250px);
-  background: url("http://res.cloudinary.com/iradkot/image/upload/v1505419780/data_lbfl2e.png")
+  background: url("http://res.cloudinary.com/beat-mix/image/upload/v1507033628/amit_k29bsl.png")
     no-repeat center center;
   background-size: contain;
 }
