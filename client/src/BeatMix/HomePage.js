@@ -70,6 +70,7 @@ class HomePage extends React.Component {
                   className="intro-image"
                   src="http://res.cloudinary.com/moshmosh/image/upload/v1504516544/tomAndAmitEquip_yk0ryb.jpg"
                   responsive
+                  style={{ height: "428px" }}
                 />
               </Link>
             </Col>
@@ -84,6 +85,7 @@ class HomePage extends React.Component {
                   className="intro-image"
                   src="http://res.cloudinary.com/moshmosh/image/upload/c_scale,w_700/v1503559677/beatmix/IMG_3497_k2xykm.jpg"
                   responsive
+                  style={{ height: "428px" }}
                 />
               </Link>
             </Col>
@@ -91,15 +93,25 @@ class HomePage extends React.Component {
           <Col lg={1} />
         </Row>
         <Row>
-          <Col lg={2} />
-          <Col lg={9} className="text-right">
-            <Col lg={4} />
-            <Col lg={7} className="fb-comment">
+          <Col lg={2} md={2} sm={1} xs={1} />
+          <Col
+            lgHidden
+            mdHidden
+            sm={10}
+            xs={10}
+            style={{ backgroundColor: "white" }}
+          >
+            <FbPlugins get="comment" />
+          </Col>
+
+          <Col lg={9} md={9} smHidden xsHidden className="text-right">
+            <Col lg={4} md={4} smHidden xsHidden />
+            <Col lg={7} md={7} smHidden xsHidden className="fb-comment">
               <FbPlugins get="comment" />
             </Col>
-            <Col lg={1} />
+            <Col lg={1} smHidden xsHidden />
           </Col>
-          <Col lg={1} />
+          <Col lg={1} smHidden xsHidden />
         </Row>
       </Grid>
     );

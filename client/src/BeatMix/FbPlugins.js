@@ -1,16 +1,12 @@
 import React from "react";
 
-const fbCommentsStyle = {
-  backgroundColor: "white"
-};
-
 const fbStyle = {
   margin: "22px auto",
-  transform: "scale(2.5)",
-  msTransform: "scale(1.5)",
-  WebkitTransform: "scale(1.5)",
-  OTransform: "scale(1.5)",
-  MozTransform: "scale(1.5)"
+  // transform: "scale(2.5)",
+  // msTransform: "scale(1.5)",
+  // WebkitTransform: "scale(1.5)",
+  // OTransform: "scale(1.5)",
+  // MozTransform: "scale(1.5)"
 };
 
 class FbPlugins extends React.Component {
@@ -50,7 +46,7 @@ class FbPlugins extends React.Component {
           className="fb-comments"
           data-href="https://www.facebook.com/elevationmosh"
           data-numposts="5"
-          style={fbCommentsStyle}
+          style={{ backgroundColor: "white" }}
         />
       );
     } else if (this.props.get === "follow") {
