@@ -21271,17 +21271,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var fbCommentsStyle = {
-  backgroundColor: "white"
-};
-
 var fbStyle = {
-  margin: "22px auto",
-  transform: "scale(2.5)",
-  msTransform: "scale(1.5)",
-  WebkitTransform: "scale(1.5)",
-  OTransform: "scale(1.5)",
-  MozTransform: "scale(1.5)"
+  margin: "22px auto"
+  // transform: "scale(2.5)",
+  // msTransform: "scale(1.5)",
+  // WebkitTransform: "scale(1.5)",
+  // OTransform: "scale(1.5)",
+  // MozTransform: "scale(1.5)"
 };
 
 var FbPlugins = function (_React$Component) {
@@ -21329,7 +21325,7 @@ var FbPlugins = function (_React$Component) {
           className: "fb-comments",
           "data-href": "https://www.facebook.com/elevationmosh",
           "data-numposts": "5",
-          style: fbCommentsStyle
+          style: { backgroundColor: "white" }
         });
       } else if (this.props.get === "follow") {
         return _react2.default.createElement("div", {
@@ -22413,7 +22409,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 _webfontloader2.default.load({
   google: {
-    families: ["Oswald", "sans-serif", "Arimo"]
+    families: ["Arimo"]
   }
 });
 
@@ -48421,7 +48417,8 @@ var HomePage = function (_React$Component) {
                 _react2.default.createElement(_reactBootstrap.Image, {
                   className: "intro-image",
                   src: "http://res.cloudinary.com/moshmosh/image/upload/v1504516544/tomAndAmitEquip_yk0ryb.jpg",
-                  responsive: true
+                  responsive: true,
+                  style: { height: "428px" }
                 })
               )
             ),
@@ -48447,7 +48444,8 @@ var HomePage = function (_React$Component) {
                 _react2.default.createElement(_reactBootstrap.Image, {
                   className: "intro-image",
                   src: "http://res.cloudinary.com/moshmosh/image/upload/c_scale,w_700/v1503559677/beatmix/IMG_3497_k2xykm.jpg",
-                  responsive: true
+                  responsive: true,
+                  style: { height: "428px" }
                 })
               )
             )
@@ -48457,19 +48455,30 @@ var HomePage = function (_React$Component) {
         _react2.default.createElement(
           _reactBootstrap.Row,
           null,
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 2, md: 2, sm: 1, xs: 1 }),
           _react2.default.createElement(
             _reactBootstrap.Col,
-            { lg: 9, className: "text-right" },
-            _react2.default.createElement(_reactBootstrap.Col, { lg: 4 }),
+            {
+              lgHidden: true,
+              mdHidden: true,
+              sm: 10,
+              xs: 10,
+              style: { backgroundColor: "white" }
+            },
+            _react2.default.createElement(_FbPlugins2.default, { get: "comment" })
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Col,
+            { lg: 9, md: 9, smHidden: true, xsHidden: true, className: "text-right" },
+            _react2.default.createElement(_reactBootstrap.Col, { lg: 4, md: 4, smHidden: true, xsHidden: true }),
             _react2.default.createElement(
               _reactBootstrap.Col,
-              { lg: 7, className: "fb-comment" },
+              { lg: 7, md: 7, smHidden: true, xsHidden: true, className: "fb-comment" },
               _react2.default.createElement(_FbPlugins2.default, { get: "comment" })
             ),
-            _react2.default.createElement(_reactBootstrap.Col, { lg: 1 })
+            _react2.default.createElement(_reactBootstrap.Col, { lg: 1, smHidden: true, xsHidden: true })
           ),
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 1 })
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 1, smHidden: true, xsHidden: true })
         )
       );
     }
@@ -52893,113 +52902,110 @@ var Footer = function (_React$Component) {
         textAlign: "center"
       };
       return _react2.default.createElement(
-        "div",
-        null,
+        _reactBootstrap.Grid,
+        { fluid: true },
         _react2.default.createElement(
-          _reactBootstrap.Grid,
-          { fluid: true },
+          _reactBootstrap.Row,
+          null,
           _react2.default.createElement(
-            _reactBootstrap.Row,
-            null,
+            _reactBootstrap.Col,
+            { lg: 12, md: 12, sm: 12, xs: 12, style: style },
+            _react2.default.createElement(_reactBootstrap.Col, { lg: 2, md: 2, smHidden: true, xsHidden: true }),
             _react2.default.createElement(
               _reactBootstrap.Col,
-              { lg: 12, md: 12, sm: 12, xs: 12, style: style },
-              _react2.default.createElement(_reactBootstrap.Col, { lg: 2, md: 2, smHidden: true, xsHidden: true }),
+              { lg: 1, md: 1, smHidden: true, xsHidden: true },
+              _react2.default.createElement(_reactBootstrap.Image, {
+                id: "test",
+                style: { height: "72.5px" },
+                src: "https://res.cloudinary.com/moshmosh/image/upload/v1504511510/beatmix/PRO_FACE.png"
+              })
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 2, md: 2, sm: 12, xs: 12 },
+              _react2.default.createElement(_reactBootstrap.Row, { className: "hideOnMobile", style: { height: "8.75px" } }),
               _react2.default.createElement(
                 _reactBootstrap.Col,
-                { lg: 1, md: 1, smHidden: true, xsHidden: true },
-                _react2.default.createElement(_reactBootstrap.Image, {
-                  id: "test",
-                  style: { height: "72.5px" },
-                  src: "https://res.cloudinary.com/moshmosh/image/upload/v1504511510/beatmix/PRO_FACE.png"
-                })
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.Col,
-                { lg: 2, md: 2, sm: 12, xs: 12 },
+                { lg: 6, md: 6, sm: 4, xs: 4 },
                 _react2.default.createElement(
-                  _reactBootstrap.Col,
-                  { lg: 6, md: 6, sm: 4, xs: 4 },
-                  _react2.default.createElement(
-                    "a",
-                    { target: "_blank", href: "https://soundcloud.com/beatmixdjs" },
-                    _react2.default.createElement(_reactBootstrap.Image, {
-                      id: "test",
-                      style: { height: "72.5px" },
-                      src: "http://www.iconninja.com/files/104/745/156/soundcloud-icon.svg"
-                    })
-                  )
-                ),
-                _react2.default.createElement(
-                  _reactBootstrap.Col,
-                  { lg: 6, md: 6, sm: 4, xs: 4 },
-                  _react2.default.createElement(
-                    "a",
-                    { target: "_blank", href: "https://www.facebook.com/beatmixdjs" },
-                    _react2.default.createElement(_reactBootstrap.Image, {
-                      id: "test",
-                      style: { height: "72.5px" },
-                      src: "https://www.shareicon.net/data/2015/09/30/109345_media_512x512.png"
-                    })
-                  )
-                ),
-                _react2.default.createElement(
-                  _reactBootstrap.Col,
-                  { lgHidden: true, mdHidden: true, sm: 4, xs: 4 },
-                  _react2.default.createElement(
-                    "a",
-                    {
-                      className: "mobileNum",
-                      href: "tel:050-690-7817",
-                      style: { fontSize: "25px" }
-                    },
-                    _react2.default.createElement(_reactBootstrap.Image, {
-                      id: "test",
-                      style: { height: "72.5px" },
-                      src: "https://cdn4.iconfinder.com/data/icons/flatron-set-2/512/call-512.png"
-                    })
-                  )
+                  "a",
+                  { target: "_blank", href: "https://soundcloud.com/beatmixdjs" },
+                  _react2.default.createElement(_reactBootstrap.Image, {
+                    id: "test",
+                    style: { height: "55px" },
+                    src: "http://www.iconninja.com/files/104/745/156/soundcloud-icon.svg"
+                  })
                 )
               ),
               _react2.default.createElement(
                 _reactBootstrap.Col,
-                { lg: 2, md: 2, smHidden: true, xsHidden: true, style: { color: "#4080FF" } },
-                _react2.default.createElement(_reactBootstrap.Row, { className: "hideOnMobile", style: { height: "20.625px" } }),
+                { lg: 6, md: 6, sm: 4, xs: 4 },
+                _react2.default.createElement(
+                  "a",
+                  { target: "_blank", href: "https://www.facebook.com/beatmixdjs" },
+                  _react2.default.createElement(_reactBootstrap.Image, {
+                    id: "test",
+                    style: { height: "55px" },
+                    src: "https://www.shareicon.net/data/2015/09/30/109345_media_512x512.png"
+                  })
+                )
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Col,
+                { lgHidden: true, mdHidden: true, sm: 4, xs: 4 },
                 _react2.default.createElement(
                   "a",
                   {
                     className: "mobileNum",
                     href: "tel:050-690-7817",
-                    style: { fontSize: "27.5px", fontWeight: "bold" }
+                    style: { fontSize: "25px" }
                   },
-                  "050-690-7817"
+                  _react2.default.createElement(_reactBootstrap.Image, {
+                    id: "test",
+                    style: { height: "55px" },
+                    src: "https://cdn4.iconfinder.com/data/icons/flatron-set-2/512/call-512.png"
+                  })
                 )
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 2, md: 2, smHidden: true, xsHidden: true, style: { color: "#4080FF" } },
+              _react2.default.createElement(_reactBootstrap.Row, { className: "hideOnMobile", style: { height: "20.625px" } }),
+              _react2.default.createElement(
+                "a",
+                {
+                  className: "mobileNum",
+                  href: "tel:050-690-7817",
+                  style: { fontSize: "27.5px", fontWeight: "bold" }
+                },
+                "050-690-7817"
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 2, smHidden: true, xsHidden: true },
+              _react2.default.createElement(
+                _reactBootstrap.Col,
+                { lg: 6 },
+                _react2.default.createElement(_FbPlugins2.default, { get: "follow" })
               ),
               _react2.default.createElement(
                 _reactBootstrap.Col,
-                { lg: 2, smHidden: true, xsHidden: true },
-                _react2.default.createElement(
-                  _reactBootstrap.Col,
-                  { lg: 6 },
-                  _react2.default.createElement(_FbPlugins2.default, { get: "follow" })
-                ),
-                _react2.default.createElement(
-                  _reactBootstrap.Col,
-                  { lg: 6 },
-                  _react2.default.createElement(_FbPlugins2.default, { get: "like" })
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.Col,
-                { lg: 1, md: 1, smHidden: true, xsHidden: true },
-                _react2.default.createElement(_reactBootstrap.Image, {
-                  id: "test",
-                  style: { height: "72.5px" },
-                  src: "https://res.cloudinary.com/moshmosh/image/upload/v1504511510/beatmix/PRO_FACE.png"
-                })
-              ),
-              _react2.default.createElement(_reactBootstrap.Col, { lg: 2, md: 2, smHidden: true, xsHidden: true })
-            )
+                { lg: 6 },
+                _react2.default.createElement(_FbPlugins2.default, { get: "like" })
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { lg: 1, md: 1, smHidden: true, xsHidden: true },
+              _react2.default.createElement(_reactBootstrap.Image, {
+                id: "test",
+                style: { height: "72.5px" },
+                src: "https://res.cloudinary.com/moshmosh/image/upload/v1504511510/beatmix/PRO_FACE.png"
+              })
+            ),
+            _react2.default.createElement(_reactBootstrap.Col, { lg: 2, md: 2, smHidden: true, xsHidden: true })
           )
         )
       );

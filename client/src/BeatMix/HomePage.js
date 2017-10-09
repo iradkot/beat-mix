@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Grid, Row, Col, Image, Panel } from "react-bootstrap";
-import { IndexLinkContainer } from "react-router-bootstrap";
 import ParralaxImageSlider from "./parralax-image-slider";
+import { IndexLinkContainer } from "react-router-bootstrap";
+// var scrollToElement = require("scroll-to-element");
+
 import FbPlugins from "./FbPlugins";
 
 var image_arr = [
   "http://res.cloudinary.com/moshmosh/image/upload/v1503559675/beatmix/IMG_3443_sg0943.jpg"
+  // "http://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg",
+  // "http://res.cloudinary.com/moshmosh/image/upload/v1503559714/beatmix/IMG_3530_mklqvr.jpg"
 ];
 
 class HomePage extends React.Component {
@@ -25,7 +29,9 @@ class HomePage extends React.Component {
     return (
       <Grid fluid={true} className="intro">
         <Row>
+          {/* <Col lg={12}> */}
           <ParralaxImageSlider height={613} image_arr={image_arr} />
+          {/* </Col> */}
         </Row>
         <Row className="show-grid" style={introStyle}>
           <Col lg={2} />
@@ -41,9 +47,9 @@ class HomePage extends React.Component {
               {" "}
               אנחנו תם אלוש ועמית מכלוף - חברי ילדות שנושמים מוזיקה מאז שאנחנו
               זוכרים את עצמנו. כשנעלה על עמדת ה-דיג'יי בחתונה שלכם, האורחים
-              יתעוררו לחיים והקצב יעל הכי גבוה שאפשר, בדיוק כמו שחלמתם שיקרה. זו
-              ההזדמנות שלכם לחסוך הרבה התלבטויות זמן וגם כסף, ולשריין אותנו
-              לאירוע הקרב ובא.{" "}
+              יתעוררו לחיים והקצב יעלה הכי גבוה שאפשר, בדיוק כמו שחלמתם שיקרה. זו
+              ההזדמנות שלכם לחסוך הרבה התלבטויות וזמן, ולשריין אותנו
+              .לאירוע הקרב ובא{" "}
             </p>
           </Col>
           <Col lg={1}> </Col>
@@ -89,19 +95,29 @@ class HomePage extends React.Component {
             </Col>
           </Col>
           <Col lg={1} />
-        </Row>
-        <Row>
-          <Col lg={2} />
-          <Col lg={9} className="text-right">
-            <Col lg={4} />
-            <Col lg={7} className="fb-comment">
+          </Row>
+          <Row>
+            <Col lg={2} md={2} sm={1} xs={1} />
+            <Col
+              lgHidden
+              mdHidden
+              sm={10}
+              xs={10}
+              style={{ backgroundColor: "white" }}
+            >
               <FbPlugins get="comment" />
             </Col>
-            <Col lg={1} />
-          </Col>
-          <Col lg={1} />
-        </Row>
-      </Grid>
+  
+            <Col lg={9} md={9} smHidden xsHidden className="text-right">
+              <Col lg={4} md={4} smHidden xsHidden />
+              <Col lg={7} md={7} smHidden xsHidden className="fb-comment">
+                <FbPlugins get="comment" />
+              </Col>
+              <Col lg={1} smHidden xsHidden />
+            </Col>
+            <Col lg={1} smHidden xsHidden />
+          </Row>
+        </Grid>
     );
   }
 }

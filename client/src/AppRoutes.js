@@ -1,5 +1,4 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
 import HomePage from "./BeatMix/HomePage";
 import AboutUs from "./BeatMix/AboutUs";
 import WhyBeatMix from "./BeatMix/WhyBeatMix";
@@ -9,7 +8,9 @@ import ContactUs from "./BeatMix/ContactUs";
 import Admin from "./BeatMix/Admin";
 import Page404 from "./BeatMix/common/404";
 
-const AppRoutes = () => (
+import { Switch, Route } from "react-router-dom";
+
+const AppRoutes = () =>
   <div>
     <Switch>
       <Route name="HomePage" exact path="/" component={HomePage} />
@@ -26,7 +27,6 @@ const AppRoutes = () => (
       <Route name="Admin" exact path="/Admin" component={Admin} />
       <Route path="*" component={Page404} />
     </Switch>
-  </div>
-);
+  </div>;
 
 export default AppRoutes;
