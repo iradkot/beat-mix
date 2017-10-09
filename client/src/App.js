@@ -11,7 +11,7 @@ import Footer from "./BeatMix/common/footer.js";
 
 WebFont.load({
   google: {
-    families: ["Oswald", "sans-serif", "Arimo"]
+    families: ["Arimo"]
   }
 });
 

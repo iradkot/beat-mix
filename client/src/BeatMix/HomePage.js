@@ -95,19 +95,29 @@ class HomePage extends React.Component {
             </Col>
           </Col>
           <Col lg={1} />
-        </Row>
-        <Row>
-          <Col lg={2} />
-          <Col lg={9} className="text-right">
-            <Col lg={4} />
-            <Col lg={7} className="fb-comment">
+          </Row>
+          <Row>
+            <Col lg={2} md={2} sm={1} xs={1} />
+            <Col
+              lgHidden
+              mdHidden
+              sm={10}
+              xs={10}
+              style={{ backgroundColor: "white" }}
+            >
               <FbPlugins get="comment" />
             </Col>
-            <Col lg={1} />
-          </Col>
-          <Col lg={1} />
-        </Row>
-      </Grid>
+  
+            <Col lg={9} md={9} smHidden xsHidden className="text-right">
+              <Col lg={4} md={4} smHidden xsHidden />
+              <Col lg={7} md={7} smHidden xsHidden className="fb-comment">
+                <FbPlugins get="comment" />
+              </Col>
+              <Col lg={1} smHidden xsHidden />
+            </Col>
+            <Col lg={1} smHidden xsHidden />
+          </Row>
+        </Grid>
     );
   }
 }
