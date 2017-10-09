@@ -13,13 +13,13 @@ class ContactUs extends React.Component {
 
   render() {
     return (
-      <Grid fluid={true} className="contactUsPage">
+      <Grid fluid={true} className="contactUsPage" >
         <Row>
           <Col lg={12} md={12} xs={12} sm={12} className="pageBanner" />
         </Row>
         <Row>
           <Col lg={6} md={6} xs={12} sm={12} lgOffset={5} mdOffset={5}>
-            <h1 className="pageHeaders text-right">צור-קשר</h1>
+            <h1 className="pageHeaders text-right" style={{ textShadow: '1px 1px black', fontFamily: 'Suez One' }}>צור-קשר</h1>
             <hr />
           </Col>
           <Col lg={1} md={1} smHidden xsHidden />
@@ -33,6 +33,10 @@ class ContactUs extends React.Component {
           </Col>
           <Col lg={6} md={6} xs={12} sm={12}>
             <ContactUsForm />
+            <div className="text-right" style={{ fontWeight: 'bold', color: 'white', textShadow: '2px 2px black', fontFamily: 'Suez One' }}>
+              <h3> תם אלוש - 0506907817 </h3>
+              <h3> עמית מכלוף - 0507967960 </h3>
+            </div>
           </Col>
           <Col lg={1} md={6} smHidden xsHidden />
         </Row>

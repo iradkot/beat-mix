@@ -18,7 +18,7 @@ class Admin extends React.Component {
         theme: "minimal",
         show_powered_by: false
       },
-      function(error, result) {}
+      function (error, result) { }
     );
   }
 
@@ -27,8 +27,7 @@ class Admin extends React.Component {
       <div>
         <div className="pageBanner col-lg-12" />
         <div className="col-lg-6 col-lg-offset-3">
-          <h1>Admin Upload Page</h1>
-          {/* <Link to="/"> */}
+          <h1 style={{ textShadow: '1px 1px black', fontFamily: 'Suez One' }}>Admin Upload Page</h1>
           <button
             type="button"
             className="btn btn-default"
@@ -36,7 +35,6 @@ class Admin extends React.Component {
           >
             Add Image(s)
           </button>
-          {/* </Link> */}
         </div>
       </div>
     );

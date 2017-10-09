@@ -57,7 +57,9 @@ class HomePage extends React.Component {
         <Row>
           <Col lg={2} />
           <Col lg={10} className="between">
-            <h1 className="text-center">
+            <h1 className="text-center" style={{
+              fontFamily: "'Suez One', 'serif'"
+            }}>
               ...דמיינו את החתונה שלם עם הטאצ' של ביט-מיקס
             </h1>
           </Col>
@@ -66,12 +68,14 @@ class HomePage extends React.Component {
           <Col lg={2} />
           <Col lg={9}>
             <Col lg={6} className="homeImageLinks">
-              <IndexLinkContainer to="/ContactUs">
+              <IndexLinkContainer to="/AboutUs">
                 <Row>
-                  <h1 className="intro-text">צור קשר</h1>
+                  <h1 className="intro-text" style={{
+                    fontFamily: "'Suez One', 'serif'"
+                  }}>נבחרת הדיג'יים</h1>
                 </Row>
               </IndexLinkContainer>
-              <Link to="/ContactUs">
+              <Link to="/AboutUs">
                 <Image
                   className="intro-image"
                   src="http://res.cloudinary.com/moshmosh/image/upload/v1504516544/tomAndAmitEquip_yk0ryb.jpg"
@@ -82,7 +86,9 @@ class HomePage extends React.Component {
             <Col lg={6} className="homeImageLinks">
               <IndexLinkContainer to="/Events">
                 <Row>
-                  <h1 className="intro-text">לגלריות</h1>
+                  <h1 className="intro-text" style={{
+                    fontFamily: "'Suez One', 'serif'"
+                  }}>לגלריות</h1>
                 </Row>
               </IndexLinkContainer>
               <Link to="/Events">
@@ -95,29 +101,25 @@ class HomePage extends React.Component {
             </Col>
           </Col>
           <Col lg={1} />
-          </Row>
-          <Row>
-            <Col lg={2} md={2} sm={1} xs={1} />
-            <Col
-              lgHidden
-              mdHidden
-              sm={10}
-              xs={10}
-              style={{ backgroundColor: "white" }}
-            >
+        </Row>
+        <Row>
+          <Col
+            lgHidden
+            mdHidden
+            sm={12}
+            xs={12}
+            style={{ backgroundColor: "white" }}
+          >
+            <FbPlugins get="comment" />
+          </Col>
+          <Col lg={12} md={12} smHidden xsHidden className="text-right">
+            <Col lg={5} md={5} smHidden xsHidden />
+            <Col lg={6} md={6} smHidden xsHidden className="fb-comment">
               <FbPlugins get="comment" />
             </Col>
-  
-            <Col lg={9} md={9} smHidden xsHidden className="text-right">
-              <Col lg={4} md={4} smHidden xsHidden />
-              <Col lg={7} md={7} smHidden xsHidden className="fb-comment">
-                <FbPlugins get="comment" />
-              </Col>
-              <Col lg={1} smHidden xsHidden />
-            </Col>
-            <Col lg={1} smHidden xsHidden />
-          </Row>
-        </Grid>
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }

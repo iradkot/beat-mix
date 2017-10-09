@@ -21,16 +21,16 @@ class ContactUsForm extends React.Component {
     let self = this;
     axios
       .post("/contactus/email", temp)
-      .then(function(res) {
+      .then(function (res) {
         alert("Email Sent!");
         self.setState({ name: "", email: "", content: "", number: "" });
       })
-      .catch(function(error) {});
+      .catch(function (error) { });
   }
 
   render() {
     return (
-      <Grid fluid={true}>
+      <Grid fluid={true} style={{ marginRight: '-15px' }}>
         <Row>
           <form action="#" id="contactUsForm" onSubmit={this.handleSubmit}>
             <Col lg={6} md={6} sm={12} xs={12} lgPush={6}>
@@ -39,7 +39,7 @@ class ContactUsForm extends React.Component {
                   type="text"
                   className="form-control"
                   id="name"
-                  placeholder="Name"
+                  placeholder="שם"
                   required
                   value={this.state.name}
                   onChange={event =>
@@ -51,8 +51,7 @@ class ContactUsForm extends React.Component {
                   type="email"
                   className="form-control"
                   id="email"
-                  placeholder="Email"
-                  required
+                  placeholder="אימייל"
                   value={this.state.email}
                   onChange={event =>
                     this.setState({ email: event.target.value })}
@@ -63,7 +62,7 @@ class ContactUsForm extends React.Component {
                   type="text"
                   className="form-control"
                   id="number"
-                  placeholder="Number"
+                  placeholder="מספר ליצירת קשר"
                   required
                   value={this.state.number}
                   onChange={event =>
@@ -76,7 +75,7 @@ class ContactUsForm extends React.Component {
                 <textarea
                   className="form-control"
                   id="content"
-                  placeholder="Message"
+                  placeholder="פרטים נוספים"
                   required
                   value={this.state.content}
                   onChange={event =>
@@ -85,7 +84,7 @@ class ContactUsForm extends React.Component {
               </FormGroup>
               <div className="text-center">
                 <button className="btn btn-primary formSubmitBtn" type="submit">
-                  Send
+                  שלח
                 </button>
               </div>
             </Col>
