@@ -37252,7 +37252,7 @@ var navStyle = {
   lineHeight: "80px"
 };
 
-var popOutStat = window.location.href === "http://localhost:3000/ContactUs" ? false : true;
+var popOutStat = window.location.pathname === "/ContactUs" ? false : true;
 
 var Header = function (_React$Component) {
   _inherits(Header, _React$Component);
@@ -37304,7 +37304,6 @@ var Header = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      // let popOut = popOutStat? <ContactUsPopOut />:<div/>;
       var popOutClosed = _react2.default.createElement(
         "div",
         { className: "popOut" },
@@ -37327,7 +37326,6 @@ var Header = function (_React$Component) {
         _react2.default.createElement(_ContactUsPopout2.default, null)
       );
       var popOut = popOutStat ? this.state.clicked ? popOutOpen : popOutClosed : _react2.default.createElement("div", null);
-      // let popOut = <div className={popOutClass}><h2 onClick={this.clickedOffer}>!קבלו הצעה</h2> </div>;
       if (window.outerWidth > 768) {
         return _react2.default.createElement(
           "div",
@@ -37381,16 +37379,48 @@ var Header = function (_React$Component) {
                   )
                 ),
                 _react2.default.createElement(
-                  _reactRouterBootstrap.IndexLinkContainer,
+                  _reactBootstrap.NavDropdown,
                   {
-                    to: "/Events",
-                    onClick: this.popOutOn,
+                    eventKey: 4,
+                    title: "\u05D2\u05DC\u05E8\u05D9\u05D5\u05EA",
+                    id: "basic-nav-dropdown",
                     activeClassName: "activeNav"
                   },
                   _react2.default.createElement(
-                    _reactBootstrap.NavItem,
-                    { eventKey: 4 },
-                    "\u05D2\u05DC\u05E8\u05D9\u05D5\u05EA"
+                    _reactRouterBootstrap.IndexLinkContainer,
+                    { to: "/Events", onClick: this.popOutOn, activeClassName: "activeNav" },
+                    _react2.default.createElement(
+                      _reactBootstrap.MenuItem,
+                      { eventKey: 4.1 },
+                      "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _reactRouterBootstrap.IndexLinkContainer,
+                    { to: "/Amit", onClick: this.popOutOn, activeClassName: "activeNav" },
+                    _react2.default.createElement(
+                      _reactBootstrap.MenuItem,
+                      { eventKey: 4.2 },
+                      "\u05E2\u05DE\u05D9\u05EA \u05DE\u05DB\u05DC\u05D5\u05E3"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _reactRouterBootstrap.IndexLinkContainer,
+                    { to: "/Tom", onClick: this.popOutOn, activeClassName: "activeNav" },
+                    _react2.default.createElement(
+                      _reactBootstrap.MenuItem,
+                      { eventKey: 4.3 },
+                      "\u05EA\u05DD \u05D0\u05DC\u05D5\u05E9"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _reactRouterBootstrap.IndexLinkContainer,
+                    { to: "/Hadar", onClick: this.popOutOn, activeClassName: "activeNav" },
+                    _react2.default.createElement(
+                      _reactBootstrap.MenuItem,
+                      { eventKey: 4.4 },
+                      "\u05D4\u05D3\u05E8 \u05E0\u05D5\u05D9"
+                    )
                   )
                 ),
                 _react2.default.createElement(
@@ -37511,16 +37541,48 @@ var Header = function (_React$Component) {
                   )
                 ),
                 _react2.default.createElement(
-                  _reactRouterBootstrap.IndexLinkContainer,
+                  _reactBootstrap.NavDropdown,
                   {
-                    to: "/Events",
-                    onClick: this.popOutOn,
+                    eventKey: 4,
+                    title: "\u05D2\u05DC\u05E8\u05D9\u05D5\u05EA",
+                    id: "basic-nav-dropdown",
                     activeClassName: "activeNav"
                   },
                   _react2.default.createElement(
-                    _reactBootstrap.NavItem,
-                    { eventKey: 4 },
-                    "\u05D2\u05DC\u05E8\u05D9\u05D5\u05EA"
+                    _reactRouterBootstrap.IndexLinkContainer,
+                    { to: "/Events", onClick: this.popOutOn, activeClassName: "activeNav" },
+                    _react2.default.createElement(
+                      _reactBootstrap.MenuItem,
+                      { eventKey: 4.1 },
+                      "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _reactRouterBootstrap.IndexLinkContainer,
+                    { to: "/Amit", onClick: this.popOutOn, activeClassName: "activeNav" },
+                    _react2.default.createElement(
+                      _reactBootstrap.MenuItem,
+                      { eventKey: 4.2 },
+                      "\u05E2\u05DE\u05D9\u05EA \u05DE\u05DB\u05DC\u05D5\u05E3"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _reactRouterBootstrap.IndexLinkContainer,
+                    { to: "/Tom", onClick: this.popOutOn, activeClassName: "activeNav" },
+                    _react2.default.createElement(
+                      _reactBootstrap.MenuItem,
+                      { eventKey: 4.3 },
+                      "\u05EA\u05DD \u05D0\u05DC\u05D5\u05E9"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _reactRouterBootstrap.IndexLinkContainer,
+                    { to: "/Hadar", onClick: this.popOutOn, activeClassName: "activeNav" },
+                    _react2.default.createElement(
+                      _reactBootstrap.MenuItem,
+                      { eventKey: 4.4 },
+                      "\u05D4\u05D3\u05E8 \u05E0\u05D5\u05D9"
+                    )
                   )
                 ),
                 _react2.default.createElement(
@@ -49455,6 +49517,9 @@ var AppRoutes = function AppRoutes() {
       }),
       _react2.default.createElement(_reactRouterDom.Route, { name: "Artists", exact: true, path: "/Artists", component: _AboutUs2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { name: "Events", exact: true, path: "/Events", component: _Events2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { name: "Amit", exact: true, path: "/Amit", component: _Events2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { name: "Tom", exact: true, path: "/Tom", component: _Events2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { name: "Hadar", exact: true, path: "/Hadar", component: _Events2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { name: "ContactUs", exact: true, path: "/ContactUs", component: _ContactUs2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { name: "Admin", exact: true, path: "/Admin", component: _Admin2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { path: "*", component: _2.default })
@@ -51164,7 +51229,8 @@ var Events = function (_React$Component) {
       pictures: [],
       photoIndex: 0,
       isOpen: false,
-      width: -1
+      width: -1,
+      folder: window.location.pathname
     };
     _this.getFromCloud = _this.getFromCloud.bind(_this);
     _this.openLightbox = _this.openLightbox.bind(_this);
@@ -51177,14 +51243,20 @@ var Events = function (_React$Component) {
     value: function getFromCloud() {
       var temp = this.state;
       var self = this;
-      axios.get("/getFromCloudinary/beatmix").then(function (res) {
+      // let folder = window.location.pathname;
+      // let folder = '/Events';
+      axios.get("/getFromCloudinary" + this.state.folder).then(function (res) {
         var pictures = res.data.resources;
         var new_random = [];
-        for (var i = 0; i < 20; i++) {
-          var randomNum = Math.floor(Math.random() * pictures.length);
-          var chosen = pictures[randomNum];
-          pictures.splice(randomNum, 1);
-          new_random.push(chosen);
+        if (pictures.length > 20) {
+          for (var i = 0; i < 20; i++) {
+            var randomNum = Math.floor(Math.random() * pictures.length);
+            var chosen = pictures[randomNum];
+            pictures.splice(randomNum, 1);
+            new_random.push(chosen);
+          }
+        } else {
+          new_random = pictures;
         }
         var picArranged = new_random.map(function (picture, index) {
           return picture = {
@@ -51206,6 +51278,10 @@ var Events = function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
+      if (this.state.folder != window.location.pathname) {
+        this.setState({ folder: window.location.pathname });
+        this.getFromCloud();
+      }
       var _state = this.state,
           photoIndex = _state.photoIndex,
           isOpen = _state.isOpen;

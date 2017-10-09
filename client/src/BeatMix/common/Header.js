@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown } from "react-bootstrap";
-
 import { IndexLinkContainer } from "react-router-bootstrap";
 import ContactUsPopOut from "../ContactUs-Popout";
 
@@ -18,7 +17,7 @@ const navbarBrandImgStyle = {
 };
 
 const navStyle = {
-  marginRight: '10px',  
+  marginRight: '10px',
   fontSize: "25px",
   paddingTop: "35px",
   paddingBottom: "0px",
@@ -26,7 +25,7 @@ const navStyle = {
 };
 
 let popOutStat =
-  window.location.href === "http://localhost:3000/ContactUs" ? false : true;
+  window.location.pathname === "/ContactUs" ? false : true;
 
 class Header extends React.Component {
   constructor(props) {
@@ -64,7 +63,6 @@ class Header extends React.Component {
     this.setState({ clicked: newClick });
   }
   render() {
-    // let popOut = popOutStat? <ContactUsPopOut />:<div/>;
     let popOutClosed = (
       <div className="popOut">
         {" "}
@@ -86,7 +84,6 @@ class Header extends React.Component {
       ) : (
         <div />
       );
-    // let popOut = <div className={popOutClass}><h2 onClick={this.clickedOffer}>!קבלו הצעה</h2> </div>;
     if (window.outerWidth > 768) {
       return (
         <div>
@@ -116,13 +113,25 @@ class Header extends React.Component {
                 >
                   <NavItem eventKey={5}>צור-קשר</NavItem>
                 </IndexLinkContainer>
-                <IndexLinkContainer
-                  to="/Events"
-                  onClick={this.popOutOn}
+                <NavDropdown
+                  eventKey={4}
+                  title="גלריות"
+                  id="basic-nav-dropdown"
                   activeClassName="activeNav"
                 >
-                  <NavItem eventKey={4}>גלריות</NavItem>
-                </IndexLinkContainer>
+                  <IndexLinkContainer to="/Events" onClick={this.popOutOn} activeClassName="activeNav">
+                    <MenuItem eventKey={4.1}>אירועים</MenuItem>
+                  </IndexLinkContainer>
+                  <IndexLinkContainer to="/Amit" onClick={this.popOutOn} activeClassName="activeNav">
+                    <MenuItem eventKey={4.2}>עמית מכלוף</MenuItem>
+                  </IndexLinkContainer>
+                  <IndexLinkContainer to="/Tom" onClick={this.popOutOn} activeClassName="activeNav">
+                    <MenuItem eventKey={4.3}>תם אלוש</MenuItem>
+                  </IndexLinkContainer>
+                  <IndexLinkContainer to="/Hadar" onClick={this.popOutOn} activeClassName="activeNav">
+                    <MenuItem eventKey={4.4}>הדר נוי</MenuItem>
+                  </IndexLinkContainer>
+                </NavDropdown>
                 <IndexLinkContainer
                   to="/WhyBeatMix"
                   onClick={this.popOutOn}
@@ -189,13 +198,25 @@ class Header extends React.Component {
                 >
                   <NavItem eventKey={3}>למה ביטמיקס</NavItem>
                 </IndexLinkContainer>
-                <IndexLinkContainer
-                  to="/Events"
-                  onClick={this.popOutOn}
+                <NavDropdown
+                  eventKey={4}
+                  title="גלריות"
+                  id="basic-nav-dropdown"
                   activeClassName="activeNav"
                 >
-                  <NavItem eventKey={4}>גלריות</NavItem>
-                </IndexLinkContainer>
+                  <IndexLinkContainer to="/Events" onClick={this.popOutOn} activeClassName="activeNav">
+                    <MenuItem eventKey={4.1}>אירועים</MenuItem>
+                  </IndexLinkContainer>
+                  <IndexLinkContainer to="/Amit" onClick={this.popOutOn} activeClassName="activeNav">
+                    <MenuItem eventKey={4.2}>עמית מכלוף</MenuItem>
+                  </IndexLinkContainer>
+                  <IndexLinkContainer to="/Tom" onClick={this.popOutOn} activeClassName="activeNav">
+                    <MenuItem eventKey={4.3}>תם אלוש</MenuItem>
+                  </IndexLinkContainer>
+                  <IndexLinkContainer to="/Hadar" onClick={this.popOutOn} activeClassName="activeNav">
+                    <MenuItem eventKey={4.4}>הדר נוי</MenuItem>
+                  </IndexLinkContainer>
+                </NavDropdown>
                 <IndexLinkContainer
                   to="/ContactUs"
                   onClick={this.popOutOff}

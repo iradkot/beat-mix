@@ -23,6 +23,9 @@ const AppRoutes = () =>
       />
       <Route name="Artists" exact path="/Artists" component={AboutUs} />
       <Route name="Events" exact path="/Events" component={Events} />
+      <Route name="Amit" exact path="/Amit" component={Events} />
+      <Route name="Tom" exact path="/Tom" component={Events} />
+      <Route name="Hadar" exact path="/Hadar" component={Events} />
       <Route name="ContactUs" exact path="/ContactUs" component={ContactUs} />
       <Route name="Admin" exact path="/Admin" component={Admin} />
       <Route path="*" component={Page404} />
