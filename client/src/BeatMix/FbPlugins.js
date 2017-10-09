@@ -31,7 +31,7 @@ class FbPlugins extends React.Component {
       return (
         <div
           className="fb-like"
-          data-href="https://www.facebook.com/elevationmosh/"
+          data-href="https://www.facebook.com/beatmixdjs"
           data-layout="button_count"
           data-action="like"
           data-size="large"
@@ -44,7 +44,7 @@ class FbPlugins extends React.Component {
       return (
         <div
           className="fb-comments"
-          data-href="https://www.facebook.com/elevationmosh"
+          data-href="https://www.facebook.com/beatmixdjs"
           data-numposts="5"
           style={{ backgroundColor: "white" }}
         />
@@ -53,7 +53,7 @@ class FbPlugins extends React.Component {
       return (
         <div
           className="fb-follow"
-          data-href="https://www.facebook.com/elevationmosh/"
+          data-href="https://www.facebook.com/beatmixdjs"
           data-layout="button"
           data-size="large"
           data-show-faces="true"

@@ -18,6 +18,7 @@ const navbarBrandImgStyle = {
 };
 
 const navStyle = {
+  marginRight: '10px',  
   fontSize: "25px",
   paddingTop: "35px",
   paddingBottom: "0px",
@@ -127,7 +128,7 @@ class Header extends React.Component {
                   onClick={this.popOutOn}
                   activeClassName="activeNav"
                 >
-                  <NavItem eventKey={3}>למה דאבל דיג'ייז</NavItem>
+                  <NavItem eventKey={3}>למה ביטמיקס</NavItem>
                 </IndexLinkContainer>
                 <IndexLinkContainer
                   to="/AboutUs"
@@ -186,7 +187,7 @@ class Header extends React.Component {
                   onClick={this.popOutOn}
                   activeClassName="activeNav"
                 >
-                  <NavItem eventKey={3}>למה דאבל דיג'ייז</NavItem>
+                  <NavItem eventKey={3}>למה ביטמיקס</NavItem>
                 </IndexLinkContainer>
                 <IndexLinkContainer
                   to="/Events"

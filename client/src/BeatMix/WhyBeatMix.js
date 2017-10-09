@@ -15,7 +15,7 @@ class WhyBeatMix extends React.Component {
         </Row>
         <Row>
           <Col lg={6} lgOffset={5}>
-            <h1 className="pageHeaders text-right">למה דאבל דיג'ייז</h1>
+            <h1 className="pageHeaders text-right" style={{ textShadow: '1px 1px black', fontFamily: 'Suez One' }}>למה דאבל דיג'ייז</h1>
             <hr />
           </Col>
           <Col lg={1} />

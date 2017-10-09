@@ -11,7 +11,7 @@ import Footer from "./BeatMix/common/footer.js";
 
 WebFont.load({
   google: {
-    families: ["Arimo"]
+    families: ['Arimo', 'Assistant', 'Frank Ruhl Libre', 'Secular One', 'Suez One']
   }
 });
 

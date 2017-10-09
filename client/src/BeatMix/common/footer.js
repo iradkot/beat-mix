@@ -64,9 +64,9 @@ export default class Footer extends React.Component {
               <a
                 className="mobileNum"
                 href="tel:050-690-7817"
-                style={{ fontSize: "27.5px", fontWeight: "bold" }}
+                style={{ fontSize: "27.5px", fontWeight: "bold", fontFamily: 'Suez One' }}
               >
-                050-690-7817
+                0506907817
               </a>
             </Col>
             <Col lg={2} smHidden xsHidden>
