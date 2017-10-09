@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown } from "react-bootstrap";
+
 import { IndexLinkContainer } from "react-router-bootstrap";
 import ContactUsPopOut from "../ContactUs-Popout";
 
@@ -45,11 +46,11 @@ class Header extends React.Component {
     let self = this;
     axios
       .post("/contactus/email", temp)
-      .then(function(res) {
+      .then(function (res) {
         alert("Email Sent!");
         self.setState({ name: "", email: "", content: "", number: "" });
       })
-      .catch(function(error) {});
+      .catch(function (error) { });
   }
   popOutOn() {
     popOutStat = true;
@@ -62,6 +63,7 @@ class Header extends React.Component {
     this.setState({ clicked: newClick });
   }
   render() {
+    // let popOut = popOutStat? <ContactUsPopOut />:<div/>;
     let popOutClosed = (
       <div className="popOut">
         {" "}
@@ -79,10 +81,11 @@ class Header extends React.Component {
     let popOut = popOutStat ? this.state.clicked ? (
       popOutOpen
     ) : (
-      popOutClosed
-    ) : (
-      <div />
-    );
+        popOutClosed
+      ) : (
+        <div />
+      );
+    // let popOut = <div className={popOutClass}><h2 onClick={this.clickedOffer}>!קבלו הצעה</h2> </div>;
     if (window.outerWidth > 768) {
       return (
         <div>

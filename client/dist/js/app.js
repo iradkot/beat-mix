@@ -3111,9 +3111,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_prop_types_extra_lib_elementType__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_prop_types_extra_lib_elementType___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_prop_types_extra_lib_elementType__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_createChainedFunction__ = __webpack_require__(17);
-
-
 
 
 
@@ -3126,7 +3123,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var propTypes = {
   href: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.string,
   onClick: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.func,
-  onKeyDown: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.func,
   disabled: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.bool,
   role: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.string,
   tabIndex: __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.number, __WEBPACK_IMPORTED_MODULE_6_prop_types___default.a.string]),
@@ -3161,7 +3157,6 @@ var SafeAnchor = function (_React$Component) {
     var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, _React$Component.call(this, props, context));
 
     _this.handleClick = _this.handleClick.bind(_this);
-    _this.handleKeyDown = _this.handleKeyDown.bind(_this);
     return _this;
   }
 
@@ -3186,19 +3181,11 @@ var SafeAnchor = function (_React$Component) {
     }
   };
 
-  SafeAnchor.prototype.handleKeyDown = function handleKeyDown(event) {
-    if (event.key === ' ') {
-      event.preventDefault();
-      this.handleClick(event);
-    }
-  };
-
   SafeAnchor.prototype.render = function render() {
     var _props2 = this.props,
         Component = _props2.componentClass,
         disabled = _props2.disabled,
-        onKeyDown = _props2.onKeyDown,
-        props = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_objectWithoutProperties___default()(_props2, ['componentClass', 'disabled', 'onKeyDown']);
+        props = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_objectWithoutProperties___default()(_props2, ['componentClass', 'disabled']);
 
     if (isTrivialHref(props.href)) {
       props.role = props.role || 'button';
@@ -3213,8 +3200,7 @@ var SafeAnchor = function (_React$Component) {
     }
 
     return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(Component, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, props, {
-      onClick: this.handleClick,
-      onKeyDown: Object(__WEBPACK_IMPORTED_MODULE_8__utils_createChainedFunction__["a" /* default */])(this.handleKeyDown, onKeyDown)
+      onClick: this.handleClick
     }));
   };
 
@@ -20384,11 +20370,6 @@ var propTypes = {
   checked: __WEBPACK_IMPORTED_MODULE_5_prop_types___default.a.bool,
 
   /**
-   * The disabled state of both the label and input
-   */
-  disabled: __WEBPACK_IMPORTED_MODULE_5_prop_types___default.a.bool,
-
-  /**
    * [onChange description]
    */
   onChange: __WEBPACK_IMPORTED_MODULE_5_prop_types___default.a.func,
@@ -20417,8 +20398,6 @@ var ToggleButton = function (_React$Component) {
         value = _props.value,
         props = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_objectWithoutProperties___default()(_props, ['children', 'name', 'checked', 'type', 'onChange', 'value']);
 
-    var disabled = props.disabled;
-
     return __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_7__Button__["a" /* default */],
       __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, props, {
@@ -20431,7 +20410,6 @@ var ToggleButton = function (_React$Component) {
         autoComplete: 'off',
         value: value,
         checked: !!checked,
-        disabled: !!disabled,
         onChange: onChange
       }),
       children
@@ -20556,7 +20534,7 @@ var LinkContainer = function (_Component) {
     var _this2 = this;
 
     var _props = this.props,
-        children = _props.children,
+        _children = _props.children,
         replace = _props.replace,
         to = _props.to,
         exact = _props.exact,
@@ -20570,8 +20548,6 @@ var LinkContainer = function (_Component) {
 
     var href = this.context.router.history.createHref(typeof to === 'string' ? { pathname: to } : to);
 
-    var child = _react2.default.Children.only(children);
-
     return _react2.default.createElement(_reactRouterDom.Route, {
       path: (typeof to === 'undefined' ? 'undefined' : _typeof(to)) === 'object' ? to.pathname : to,
       exact: exact,
@@ -20582,8 +20558,8 @@ var LinkContainer = function (_Component) {
 
         var isActive = !!(getIsActive ? getIsActive(match, location) : match);
 
-        return _react2.default.cloneElement(child, _extends({}, props, {
-          className: [className, child.props.className, isActive ? activeClassName : null].join(' ').trim(),
+        return _react2.default.cloneElement(_react2.default.Children.only(_children), _extends({}, props, {
+          className: isActive ? [className, activeClassName].join(' ') : className,
           style: isActive ? _extends({}, style, activeStyle) : style,
           href: href,
           onClick: _this2.handleClick
@@ -21296,12 +21272,12 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var fbStyle = {
-  margin: "22px auto",
-  transform: "scale(2.5)",
-  msTransform: "scale(1.5)",
-  WebkitTransform: "scale(1.5)",
-  OTransform: "scale(1.5)",
-  MozTransform: "scale(1.5)"
+  margin: "22px auto"
+  // transform: "scale(2.5)",
+  // msTransform: "scale(1.5)",
+  // WebkitTransform: "scale(1.5)",
+  // OTransform: "scale(1.5)",
+  // MozTransform: "scale(1.5)"
 };
 
 var FbPlugins = function (_React$Component) {
@@ -22433,7 +22409,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 _webfontloader2.default.load({
   google: {
-    families: ["Oswald", "sans-serif", "Arimo"]
+    families: ["Arimo"]
   }
 });
 
@@ -37718,14 +37694,6 @@ var Carousel = function (_React$Component) {
         direction: nextProps.direction != null ? nextProps.direction : this.getDirection(activeIndex, nextProps.activeIndex)
       });
     }
-
-    if (nextProps.activeIndex == null && this.state.activeIndex >= nextProps.children.length) {
-      this.setState({
-        activeIndex: 0,
-        previousActiveIndex: null,
-        direction: null
-      });
-    }
   };
 
   Carousel.prototype.componentDidMount = function componentDidMount() {
@@ -50128,18 +50096,14 @@ exports.default = Events;
 
 
 Object.defineProperty(exports, '__esModule', {
-	value: true
+    value: true
 });
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -50154,151 +50118,162 @@ var _propTypes = __webpack_require__(2);
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var Gallery = (function (_React$Component) {
-	_inherits(Gallery, _React$Component);
+    _inherits(Gallery, _React$Component);
 
-	function Gallery() {
-		_classCallCheck(this, Gallery);
+    function Gallery() {
+        _classCallCheck(this, Gallery);
 
-		_get(Object.getPrototypeOf(Gallery.prototype), 'constructor', this).call(this);
-		this.state = {
-			containerWidth: 0
-		};
-		this.handleResize = this.handleResize.bind(this);
-	}
+        _get(Object.getPrototypeOf(Gallery.prototype), 'constructor', this).call(this);
+        this.state = {
+            containerWidth: 0
+        };
+        this.handleResize = this.handleResize.bind(this);
+    }
 
-	_createClass(Gallery, [{
-		key: 'componentDidMount',
-		value: function componentDidMount() {
-			this.setState({ containerWidth: Math.floor(this._gallery.clientWidth) });
-			window.addEventListener('resize', this.handleResize);
-		}
-	}, {
-		key: 'componentDidUpdate',
-		value: function componentDidUpdate() {
-			if (this._gallery.clientWidth !== this.state.containerWidth) {
-				this.setState({ containerWidth: Math.floor(this._gallery.clientWidth) });
-			}
-		}
-	}, {
-		key: 'componentWillUnmount',
-		value: function componentWillUnmount() {
-			window.removeEventListener('resize', this.handleResize, false);
-		}
-	}, {
-		key: 'handleResize',
-		value: function handleResize(e) {
-			this.setState({ containerWidth: Math.floor(this._gallery.clientWidth) });
-		}
-	}, {
-		key: 'aspectRatio',
-		value: function aspectRatio(_ref) {
-			var width = _ref.width;
-			var height = _ref.height;
+    _createClass(Gallery, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.setState({ containerWidth: Math.floor(this._gallery.clientWidth) });
+            window.addEventListener('resize', this.handleResize);
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate() {
+            if (this._gallery.clientWidth !== this.state.containerWidth) {
+                this.setState({ containerWidth: Math.floor(this._gallery.clientWidth) });
+            }
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            window.removeEventListener('resize', this.handleResize, false);
+        }
+    }, {
+        key: 'handleResize',
+        value: function handleResize(e) {
+            this.setState({ containerWidth: Math.floor(this._gallery.clientWidth) });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this = this;
 
-			return width / height;
-		}
-	}, {
-		key: 'scalePhotoDimensions',
-		value: function scalePhotoDimensions() {
-			var _this = this;
+            var cols = this.props.cols,
+                photoPreviewNodes = [],
+                contWidth = this.state.containerWidth - cols * (this.props.margin * 2);
 
-			var _props = this.props;
-			var cols = _props.cols;
-			var margin = _props.margin;
-			var photos = _props.photos;
+            contWidth = Math.floor(contWidth); // add some padding to prevent layout prob
+            var remainder = this.props.photos.length % cols;
+            if (remainder) {
+                // there are fewer photos than cols num in last row
+                var lastRowWidth = Math.floor(this.state.containerWidth / cols * remainder - remainder * (this.props.margin * 2));
+                var lastRowIndex = this.props.photos.length - remainder;
+            }
+            // loop thru each set of  cols num
+            // eg. if cols is 3 it will  loop thru 0,1,2, then 3,4,5 to perform calculations for the particular set
+            for (var i = 0; i < this.props.photos.length; i += cols) {
+                var totalAr = 0,
+                    commonHeight = 0;
 
-			// subtract 1 pixel because the browser may round up a pixel
-			var containerWidth = this.state.containerWidth - 1;
+                // get the total aspect ratio of the row
+                for (var j = i; j < i + cols; j++) {
+                    if (j == this.props.photos.length) {
+                        break;
+                    }
+                    this.props.photos[j].aspectRatio = this.props.photos[j].width / this.props.photos[j].height;
+                    totalAr += this.props.photos[j].aspectRatio;
+                }
+                if (i === lastRowIndex) {
+                    commonHeight = lastRowWidth / totalAr;
+                } else {
+                    commonHeight = contWidth / totalAr;
+                }
+                // run thru the same set of items again to give the width and common height
 
-			// divide photos in rows based on cols per row [[1,2,3],[4,5,6],[7,8]]]
-			var rows = photos.reduce(function (acc, item, idx) {
-				var rowNum = Math.floor(idx / cols);
-				acc[rowNum] = acc[rowNum] ? [].concat(_toConsumableArray(acc[rowNum]), [item]) : [item];
-				return acc;
-			}, []);
+                var _loop = function (k) {
+                    if (k == _this.props.photos.length) {
+                        return 'break';
+                    }
 
-			// scale the image dimensions
-			rows = rows.map(function (row) {
-				var totalAspectRatio = row.reduce(function (acc, photo, idx) {
-					return acc + _this.aspectRatio(photo);
-				}, 0);
-				// calculate the width differently if its the last row and there are fewer photos left than col num
-				var rowWidth = row.length < cols ? Math.floor(containerWidth / cols * row.length - row.length * (margin * 2)) : Math.floor(containerWidth - row.length * (margin * 2));
-				var rowHeight = rowWidth / totalAspectRatio;
-				return row.map(function (photo) {
-					return _extends({}, photo, {
-						width: rowHeight * _this.aspectRatio(photo),
-						height: rowHeight
-					});
-				});
-			});
+                    var src = _this.props.photos[k].src,
+                        srcset = undefined,
+                        sizes = undefined;
+                    if (_this.props.photos[k].srcset) {
+                        srcset = _this.props.photos[k].srcset.join();
+                    }
+                    if (_this.props.photos[k].sizes) {
+                        sizes = _this.props.photos[k].sizes.join();
+                    }
 
-			// flatten back the photos array
-			return rows.reduce(function (acc, row) {
-				return [].concat(_toConsumableArray(acc), _toConsumableArray(row));
-			}, []);
-		}
-	}, {
-		key: 'render',
-		value: function render() {
-			var _this2 = this;
+                    style.margin = _this.props.margin;
+                    photoPreviewNodes.push(_react2['default'].createElement(
+                        'div',
+                        { key: k, style: style },
+                        _react2['default'].createElement(
+                            'a',
+                            { href: '#', className: k, onClick: function (e) {
+                                    return _this.props.onClickPhoto(k, e);
+                                } },
+                            _react2['default'].createElement('img', { src: src, srcSet: srcset, sizes: sizes, style: { display: 'block', border: 0 }, height: commonHeight, width: commonHeight * _this.props.photos[k].aspectRatio, alt: _this.props.photos[k].alt })
+                        )
+                    ));
+                };
 
-			var resizedPhotos = this.scalePhotoDimensions();
-			style.margin = this.props.margin;
-			return _react2['default'].createElement(
-				'div',
-				{ id: 'Gallery', className: 'clearfix', ref: function (c) {
-						return _this2._gallery = c;
-					} },
-				resizedPhotos.map(function (photo, idx) {
-					return _react2['default'].createElement(
-						'div',
-						{ style: style, key: idx },
-						_react2['default'].createElement(
-							'a',
-							{ href: '#', onClick: function (e) {
-									return _this2.props.onClickPhoto(idx, e);
-								} },
-							_react2['default'].createElement('img', { src: photo.src, srcSet: photo.srcset.join(), sizes: photo.sizes.join(), style: { display: 'block', border: 0 }, height: photo.height, width: photo.width, alt: photo.alt })
-						)
-					);
-				})
-			);
-		}
-	}]);
+                for (var k = i; k < i + cols; k++) {
+                    var _ret = _loop(k);
 
-	return Gallery;
+                    if (_ret === 'break') break;
+                }
+            }
+            return this.renderGallery(photoPreviewNodes);
+        }
+    }, {
+        key: 'renderGallery',
+        value: function renderGallery(photoPreviewNodes) {
+            var _this2 = this;
+
+            return _react2['default'].createElement(
+                'div',
+                { id: 'Gallery', className: 'clearfix', ref: function (c) {
+                        return _this2._gallery = c;
+                    } },
+                photoPreviewNodes
+            );
+        }
+    }]);
+
+    return Gallery;
 })(_react2['default'].Component);
 
 ;
 Gallery.displayName = 'Gallery';
 Gallery.propTypes = {
-	photos: function photos(props, propName, componentName) {
-		return _propTypes2['default'].arrayOf(_propTypes2['default'].shape({
-			src: _propTypes2['default'].string.isRequired,
-			width: _propTypes2['default'].number.isRequired,
-			height: _propTypes2['default'].number.isRequired,
-			alt: _propTypes2['default'].string,
-			srcset: _propTypes2['default'].array,
-			sizes: _propTypes2['default'].array
-		})).isRequired.apply(this, arguments);
-	},
-	onClickPhoto: _propTypes2['default'].func,
-	cols: _propTypes2['default'].number,
-	margin: _propTypes2['default'].number
+    photos: function photos(props, propName, componentName) {
+        return _propTypes2['default'].arrayOf(_propTypes2['default'].shape({
+            src: _propTypes2['default'].string.isRequired,
+            width: _propTypes2['default'].number.isRequired,
+            height: _propTypes2['default'].number.isRequired,
+            alt: _propTypes2['default'].string,
+            srcset: _propTypes2['default'].array,
+            sizes: _propTypes2['default'].array
+        })).isRequired.apply(this, arguments);
+    },
+    onClickPhoto: _propTypes2['default'].func,
+    cols: _propTypes2['default'].number,
+    margin: _propTypes2['default'].number
 };
 Gallery.defaultProps = {
-	cols: 3,
-	onClickPhoto: function onClickPhoto(k, e) {
-		e.preventDefault();
-	},
-	margin: 2
+    cols: 3,
+    onClickPhoto: function onClickPhoto(k, e) {
+        e.preventDefault();
+    },
+    margin: 2
 };
 // Gallery image style
 var style = {
-	display: 'block',
-	backgroundColor: '#e3e3e3',
-	float: 'left'
+    display: 'block',
+    backgroundColor: '#e3e3e3',
+    float: 'left'
 };
 
 exports['default'] = Gallery;
@@ -51298,7 +51273,7 @@ module.exports = exports['default'];
                                     className: styles.loadingContainer
                                 }, loadingIcon)));
                             }
-                            imageStyle.width = isNaN(bestImageInfo.width) ? null : bestImageInfo.width, imageStyle.height = isNaN(bestImageInfo.height) ? null : bestImageInfo.height;
+                            imageStyle.width = bestImageInfo.width, imageStyle.height = bestImageInfo.height;
                             var imageSrc = bestImageInfo.src;
                             discourageDownloads ? (imageStyle.backgroundImage = "url('" + imageSrc + "')", images.push(_react2.default.createElement("div", {
                                 className: imageClass + " " + styles.image + " " + styles.imageDiscourager,
@@ -51372,7 +51347,7 @@ module.exports = exports['default'];
                     }, _react2.default.createElement("div", {
                         // eslint-disable-line jsx-a11y/no-static-element-interactions
                         // Floating modal with closing animations
-                        className: "ril-outer " + styles.outer + " " + styles.outerAnimating + " " + this.props.wrapperClassName + " " + (isClosing ? " ril-closing " + styles.outerClosing : ""),
+                        className: "ril-outer " + styles.outer + " " + styles.outerAnimating + (isClosing ? " ril-closing " + styles.outerClosing : ""),
                         style: {
                             transition: "opacity " + animationDuration + "ms",
                             animationDuration: animationDuration + "ms",
@@ -51399,14 +51374,12 @@ module.exports = exports['default'];
                         type: "button",
                         className: "ril-prev-button " + styles.navButtons + " " + styles.navButtonPrev,
                         key: "prev",
-                        "aria-label": this.props.prevLabel,
                         onClick: this.isAnimating() ? noop : this.requestMovePrev
                     }), nextSrc && _react2.default.createElement("button", {
                         // Move to next image button
                         type: "button",
                         className: "ril-next-button " + styles.navButtons + " " + styles.navButtonNext,
                         key: "next",
-                        "aria-label": this.props.nextLabel,
                         onClick: this.isAnimating() ? noop : this.requestMoveNext
                     }), _react2.default.createElement("div", {
                         // Lightbox toolbar
@@ -51430,7 +51403,6 @@ module.exports = exports['default'];
                         // Lightbox zoom in button
                         type: "button",
                         key: "zoom-in",
-                        "aria-label": this.props.zoomInLabel,
                         className: "ril-zoom-in " + zoomInButtonClasses.join(" "),
                         onClick: zoomInButtonHandler
                     })), enableZoom && _react2.default.createElement("li", {
@@ -51439,7 +51411,6 @@ module.exports = exports['default'];
                         // Lightbox zoom out button
                         type: "button",
                         key: "zoom-out",
-                        "aria-label": this.props.zoomOutLabel,
                         className: "ril-zoom-out " + zoomOutButtonClasses.join(" "),
                         onClick: zoomOutButtonHandler
                     })), _react2.default.createElement("li", {
@@ -51448,7 +51419,6 @@ module.exports = exports['default'];
                         // Lightbox close button
                         type: "button",
                         key: "close",
-                        "aria-label": this.props.closeLabel,
                         className: "ril-close ril-toolbar__item__child" + (" " + styles.toolbarItemChild + " " + styles.builtinButton + " " + styles.closeButton),
                         onClick: this.isAnimating() ? noop : this.requestClose
                     })))), this.props.imageCaption && _react2.default.createElement("div", {
@@ -51597,7 +51567,6 @@ module.exports = exports['default'];
             reactModalStyle: _propTypes2.default.object,
             // Padding (px) between the edge of the window and the lightbox
             imagePadding: _propTypes2.default.number,
-            wrapperClassName: _propTypes2.default.string,
             //-----------------------------
             // Other
             //-----------------------------
@@ -51606,13 +51575,7 @@ module.exports = exports['default'];
             // When true, clicks outside of the image close the lightbox
             clickOutsideToClose: _propTypes2.default.bool,
             // Set to false to disable zoom functionality and hide zoom buttons
-            enableZoom: _propTypes2.default.bool,
-            // Aria-labels
-            nextLabel: _propTypes2.default.string,
-            prevLabel: _propTypes2.default.string,
-            zoomInLabel: _propTypes2.default.string,
-            zoomOutLabel: _propTypes2.default.string,
-            closeLabel: _propTypes2.default.string
+            enableZoom: _propTypes2.default.bool
         }, ReactImageLightbox.defaultProps = {
             onMovePrevRequest: function() {},
             onMoveNextRequest: function() {},
@@ -51627,13 +51590,7 @@ module.exports = exports['default'];
             reactModalStyle: {},
             imagePadding: 10,
             clickOutsideToClose: !0,
-            enableZoom: !0,
-            wrapperClassName: "",
-            nextLabel: "Next image",
-            prevLabel: "Previous image",
-            zoomInLabel: "Zoom in",
-            zoomOutLabel: "Zoom out",
-            closeLabel: "Close lightbox"
+            enableZoom: !0
         }, exports.default = ReactImageLightbox;
     }, /* 3 */
     /***/
@@ -52966,6 +52923,7 @@ var Footer = function (_React$Component) {
             _react2.default.createElement(
               _reactBootstrap.Col,
               { lg: 2, md: 2, sm: 12, xs: 12 },
+              _react2.default.createElement(_reactBootstrap.Row, { className: "hideOnMobile", style: { height: "8.75px" } }),
               _react2.default.createElement(
                 _reactBootstrap.Col,
                 { lg: 6, md: 6, sm: 4, xs: 4 },
@@ -52974,7 +52932,7 @@ var Footer = function (_React$Component) {
                   { target: "_blank", href: "https://soundcloud.com/beatmixdjs" },
                   _react2.default.createElement(_reactBootstrap.Image, {
                     id: "test",
-                    style: { height: "72.5px" },
+                    style: { height: "55px" },
                     src: "http://www.iconninja.com/files/104/745/156/soundcloud-icon.svg"
                   })
                 )
@@ -52987,7 +52945,7 @@ var Footer = function (_React$Component) {
                   { target: "_blank", href: "https://www.facebook.com/beatmixdjs" },
                   _react2.default.createElement(_reactBootstrap.Image, {
                     id: "test",
-                    style: { height: "72.5px" },
+                    style: { height: "55px" },
                     src: "https://www.shareicon.net/data/2015/09/30/109345_media_512x512.png"
                   })
                 )
@@ -53004,7 +52962,7 @@ var Footer = function (_React$Component) {
                   },
                   _react2.default.createElement(_reactBootstrap.Image, {
                     id: "test",
-                    style: { height: "72.5px" },
+                    style: { height: "55px" },
                     src: "https://cdn4.iconfinder.com/data/icons/flatron-set-2/512/call-512.png"
                   })
                 )

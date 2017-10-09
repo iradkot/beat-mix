@@ -2,11 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Grid, Row, Col, Image } from "react-bootstrap";
 
+//style objects:0
 const djBox = {
   textAlign: "center",
   border: "1px solid rgb(189,30,85)"
+  // borderRadius: "5px"
 };
-
 const djTeam = {
   fontFamiley: "Oswald",
   color: "rgb(189,30,85)",
@@ -21,13 +22,11 @@ const djNameFont = {
   webkitTransform: "rotate(2deg)",
   textDecoration: "underline"
 };
-
 const djImage = {
   height: "100px",
   width: "100px",
   display: "inline-block"
 };
-
 class About extends React.Component {
   render() {
     return (
@@ -86,4 +85,5 @@ class About extends React.Component {
     );
   }
 }
+
 export default About;
