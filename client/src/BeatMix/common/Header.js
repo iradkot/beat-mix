@@ -17,15 +17,14 @@ const navbarBrandImgStyle = {
 };
 
 const navStyle = {
-  marginRight: '10px',
+  marginRight: "10px",
   fontSize: "25px",
   paddingTop: "35px",
   paddingBottom: "0px",
   lineHeight: "80px"
 };
 
-let popOutStat =
-  window.location.pathname === "/ContactUs" ? false : true;
+let popOutStat = window.location.pathname === "/ContactUs" ? false : true;
 
 class Header extends React.Component {
   constructor(props) {
@@ -46,11 +45,11 @@ class Header extends React.Component {
     let self = this;
     axios
       .post("/contactus/email", temp)
-      .then(function (res) {
+      .then(function(res) {
         alert("Email Sent!");
         self.setState({ name: "", email: "", content: "", number: "" });
       })
-      .catch(function (error) { });
+      .catch(function(error) {});
   }
   popOutOn() {
     popOutStat = true;
@@ -77,13 +76,15 @@ class Header extends React.Component {
         <ContactUsPopOut />
       </div>
     );
-    let popOut = popOutStat ? this.state.clicked ? (
-      popOutOpen
-    ) : (
-        popOutClosed
+    let popOut = popOutStat ? (
+      this.state.clicked ? (
+        popOutOpen
       ) : (
-        <div />
-      );
+        popOutClosed
+      )
+    ) : (
+      <div />
+    );
     if (window.outerWidth > 768) {
       return (
         <div>
@@ -97,6 +98,15 @@ class Header extends React.Component {
                   />
                 </Link>
               </Navbar.Brand>
+              <iframe
+                className="hideOnMobile"
+                style={{ border: "1px solid black" }}
+                width="260"
+                height="94"
+                scrolling="yes"
+                frameborder="no"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/333600809&amp;color=%23be1e55&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
+              />
               <Navbar.Toggle />
             </Navbar.Header>
             <Navbar.Collapse>
@@ -119,16 +129,32 @@ class Header extends React.Component {
                   id="basic-nav-dropdown"
                   activeClassName="activeNav"
                 >
-                  <IndexLinkContainer to="/Events" onClick={this.popOutOn} activeClassName="activeNav">
+                  <IndexLinkContainer
+                    to="/Events"
+                    onClick={this.popOutOn}
+                    activeClassName="activeNav"
+                  >
                     <MenuItem eventKey={4.1}>אירועים</MenuItem>
                   </IndexLinkContainer>
-                  <IndexLinkContainer to="/Amit" onClick={this.popOutOn} activeClassName="activeNav">
+                  <IndexLinkContainer
+                    to="/Amit"
+                    onClick={this.popOutOn}
+                    activeClassName="activeNav"
+                  >
                     <MenuItem eventKey={4.2}>עמית מכלוף</MenuItem>
                   </IndexLinkContainer>
-                  <IndexLinkContainer to="/Tom" onClick={this.popOutOn} activeClassName="activeNav">
+                  <IndexLinkContainer
+                    to="/Tom"
+                    onClick={this.popOutOn}
+                    activeClassName="activeNav"
+                  >
                     <MenuItem eventKey={4.3}>תם אלוש</MenuItem>
                   </IndexLinkContainer>
-                  <IndexLinkContainer to="/Hadar" onClick={this.popOutOn} activeClassName="activeNav">
+                  <IndexLinkContainer
+                    to="/Hadar"
+                    onClick={this.popOutOn}
+                    activeClassName="activeNav"
+                  >
                     <MenuItem eventKey={4.4}>הדר נוי</MenuItem>
                   </IndexLinkContainer>
                 </NavDropdown>
@@ -183,7 +209,6 @@ class Header extends React.Component {
                 >
                   <NavItem eventKey={1}>דף הבית</NavItem>
                 </IndexLinkContainer>
-
                 <IndexLinkContainer
                   to="/AboutUs"
                   onClick={this.popOutOn}
@@ -204,16 +229,32 @@ class Header extends React.Component {
                   id="basic-nav-dropdown"
                   activeClassName="activeNav"
                 >
-                  <IndexLinkContainer to="/Events" onClick={this.popOutOn} activeClassName="activeNav">
+                  <IndexLinkContainer
+                    to="/Events"
+                    onClick={this.popOutOn}
+                    activeClassName="activeNav"
+                  >
                     <MenuItem eventKey={4.1}>אירועים</MenuItem>
                   </IndexLinkContainer>
-                  <IndexLinkContainer to="/Amit" onClick={this.popOutOn} activeClassName="activeNav">
+                  <IndexLinkContainer
+                    to="/Amit"
+                    onClick={this.popOutOn}
+                    activeClassName="activeNav"
+                  >
                     <MenuItem eventKey={4.2}>עמית מכלוף</MenuItem>
                   </IndexLinkContainer>
-                  <IndexLinkContainer to="/Tom" onClick={this.popOutOn} activeClassName="activeNav">
+                  <IndexLinkContainer
+                    to="/Tom"
+                    onClick={this.popOutOn}
+                    activeClassName="activeNav"
+                  >
                     <MenuItem eventKey={4.3}>תם אלוש</MenuItem>
                   </IndexLinkContainer>
-                  <IndexLinkContainer to="/Hadar" onClick={this.popOutOn} activeClassName="activeNav">
+                  <IndexLinkContainer
+                    to="/Hadar"
+                    onClick={this.popOutOn}
+                    activeClassName="activeNav"
+                  >
                     <MenuItem eventKey={4.4}>הדר נוי</MenuItem>
                   </IndexLinkContainer>
                 </NavDropdown>
