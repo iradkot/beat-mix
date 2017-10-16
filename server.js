@@ -18,9 +18,9 @@ app.use(
 
 //* cloudinary config
 cloudinary.config({
-  cloud_name: "moshmosh",
-  api_key: "548194842669224",
-  api_secret: "DPa8_cX1E7mnVxv_0Y0rpbuFZxY"
+  cloud_name: "beat-mix",
+  api_key: "181499712398512",
+  api_secret: "J5RdCrPSRdpeywaVflEWbWTPDHY"
 });
 
 //* nodemailer Email
@@ -38,7 +38,7 @@ var transporter = nodemailer.createTransport({
 app.get("/getFromCloudinary/:folder", function(req, res) {
   let folder = req.params.folder;
   cloudinary.v2.api.resources(
-    { type: "upload", prefix: `${folder}/`, max_results: 100 },
+    { type: "upload", prefix: `${folder}/`, max_results: 1000 },
     function(error, result) {
       res.send(result);
     }

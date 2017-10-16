@@ -17,7 +17,7 @@ export default class Footer extends React.Component {
       <Grid fluid={true}>
         <Row>
           <Col lg={12} md={12} sm={12} xs={12} style={style}>
-            <Col lg={2} md={2} smHidden xsHidden />
+            <Col lg={2} md={2} sm={1} xs={1} />
             <Col lg={1} md={1} smHidden xsHidden>
               <Image
                 id="test"
@@ -25,9 +25,9 @@ export default class Footer extends React.Component {
                 src="https://res.cloudinary.com/moshmosh/image/upload/v1504511510/beatmix/PRO_FACE.png"
               />
             </Col>
-            <Col lg={2} md={2} sm={12} xs={12}>
+            <Col lg={2} md={2} sm={10} xs={10}>
               <Row className="hideOnMobile" style={{ height: "8.75px" }} />
-              <Col lg={6} md={6} sm={4} xs={4}>
+              <Col lg={6} md={6} sm={3} xs={3}>
                 <a target="_blank" href="https://soundcloud.com/beatmixdjs">
                   <Image
                     id="test"
@@ -36,7 +36,7 @@ export default class Footer extends React.Component {
                   />
                 </a>
               </Col>
-              <Col lg={6} md={6} sm={4} xs={4}>
+              <Col lg={6} md={6} sm={3} xs={3}>
                 <a target="_blank" href="https://www.facebook.com/beatmixdjs">
                   <Image
                     id="test"
@@ -45,7 +45,7 @@ export default class Footer extends React.Component {
                   />
                 </a>
               </Col>
-              <Col lgHidden mdHidden sm={4} xs={4}>
+              <Col lgHidden mdHidden sm={3} xs={3}>
                 <a
                   className="mobileNum"
                   href="tel:050-690-7817"
@@ -58,15 +58,30 @@ export default class Footer extends React.Component {
                   />
                 </a>
               </Col>
+              <Col lgHidden mdHidden sm={3} xs={3}>
+                <a className="geo" href="geo:31.678167,34.586274">
+                  <Image
+                    id="test"
+                    style={{ height: "55px" }}
+                    src="https://cdn2.iconfinder.com/data/icons/location-3/128/Location-01-512.png"
+                  />
+                </a>
+              </Col>
             </Col>
             <Col lg={2} md={2} smHidden xsHidden style={{ color: "#4080FF" }}>
-              <Row className="hideOnMobile" style={{ height: "20.625px" }} />
+              <Row className="hideOnMobile" style={{ height: "8.25px" }} />
               <a
                 className="mobileNum"
                 href="tel:050-690-7817"
-                style={{ fontSize: "27.5px", fontWeight: "bold", fontFamily: 'Suez One' }}
+                style={{
+                  fontSize: "20px",
+                  fontWeight: "bold",
+                  fontFamily: "Suez One"
+                }}
               >
-                0506907817
+                תם אלוש - 0506907817
+                <br />
+                עמית מכלוף - 0507967960
               </a>
             </Col>
             <Col lg={2} smHidden xsHidden>

@@ -13,7 +13,8 @@ class Events extends React.Component {
       pictures: [],
       photoIndex: 0,
       isOpen: false,
-      width: -1
+      width: -1,
+      folder: window.location.pathname
     };
     this.getFromCloud = this.getFromCloud.bind(this);
     this.openLightbox = this.openLightbox.bind(this);
@@ -22,16 +23,23 @@ class Events extends React.Component {
   getFromCloud() {
     let temp = this.state;
     let self = this;
+    // let folder = window.location.pathname;
+    // let folder = '/Events';
     axios
-      .get("/getFromCloudinary/beatmix")
+      .get(`/getFromCloudinary${this.state.folder}`)
       .then(function (res) {
         let pictures = res.data.resources;
         let new_random = [];
-        for (let i = 0; i < 20; i++) {
-          let randomNum = Math.floor(Math.random() * pictures.length);
-          let chosen = pictures[randomNum];
-          pictures.splice(randomNum, 1);
-          new_random.push(chosen);
+        if (pictures.length > 20) {
+          for (let i = 0; i < 20; i++) {
+            let randomNum = Math.floor(Math.random() * pictures.length);
+            let chosen = pictures[randomNum];
+            pictures.splice(randomNum, 1);
+            new_random.push(chosen);
+          }
+        }
+        else {
+          new_random = pictures;
         }
         let picArranged = new_random.map(
           (picture, index) =>
@@ -51,6 +59,10 @@ class Events extends React.Component {
   }
 
   render() {
+    if (this.state.folder != window.location.pathname) {
+      this.setState({ folder: window.location.pathname })
+      this.getFromCloud();      
+    }
     const { photoIndex, isOpen } = this.state;
     const tempState = this.state.pictures;
     const width = this.state.width;
