@@ -39120,15 +39120,15 @@ var navbarStyle = {
 };
 
 var navbarBrandImgStyle = {
-  height: "82px",
-  width: "229px",
+  height: "78px",
+  width: "208px",
   position: "fixed",
-  left: "50px"
+  left: "33px"
 };
 
 var navStyle = {
   marginRight: "10px",
-  fontSize: "25px",
+  fontSize: "1.5vw",
   paddingTop: "35px",
   paddingBottom: "0px",
   lineHeight: "80px"
@@ -39232,8 +39232,8 @@ var Header = function (_React$Component) {
               ),
               _react2.default.createElement("iframe", {
                 className: "hideOnMobile",
-                style: { border: "1px solid black" },
-                width: "260",
+                style: { border: "1px solid black", marginLeft: '138px' },
+                width: "228",
                 height: "94",
                 scrolling: "yes",
                 frameborder: "no",
@@ -55657,7 +55657,7 @@ var Footer = function (_React$Component) {
                   className: "mobileNum",
                   href: "tel:050-690-7817",
                   style: {
-                    fontSize: "20px",
+                    fontSize: "1.2vw",
                     fontWeight: "bold",
                     fontFamily: "Suez One"
                   }
