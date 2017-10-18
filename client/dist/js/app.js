@@ -39121,7 +39121,7 @@ var navbarStyle = {
 
 var navbarBrandImgStyle = {
   height: "78px",
-  width: "200px",
+  width: "208px",
   position: "fixed",
   left: "33px"
 };
@@ -39233,7 +39233,7 @@ var Header = function (_React$Component) {
               _react2.default.createElement("iframe", {
                 className: "hideOnMobile",
                 style: { border: "1px solid black", marginLeft: '138px' },
-                width: "228",
+                width: "208",
                 height: "94",
                 scrolling: "yes",
                 frameborder: "no",

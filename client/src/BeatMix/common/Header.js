@@ -11,7 +11,7 @@ const navbarStyle = {
 
 const navbarBrandImgStyle = {
   height: "78px",
-  width: "200px",
+  width: "208px",
   position: "fixed",
   left: "33px"
 };
@@ -101,7 +101,7 @@ class Header extends React.Component {
               <iframe
                 className="hideOnMobile"
                 style={{ border: "1px solid black", marginLeft: '138px' }}
-                width="228"
+                width="208"
                 height="94"
                 scrolling="yes"
                 frameborder="no"
