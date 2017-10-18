@@ -11,7 +11,7 @@ const navbarStyle = {
 
 const navbarBrandImgStyle = {
   height: "78px",
-  width: "208px",
+  width: "200px",
   position: "fixed",
   left: "33px"
 };
