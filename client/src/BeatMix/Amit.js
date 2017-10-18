@@ -90,7 +90,7 @@ class Amit extends React.Component {
                 </Row>
                 <Row>
                   <Col lg={6} md={6} xs={12} sm={12} lgOffset={5} mdOffset={5}>
-                    <h1 className="pageHeaders text-right" style={{ textShadow: '1px 1px black', fontFamily: 'Suez One' }}>אירועים</h1>
+                    <h1 className="pageHeaders text-right" style={{ textShadow: '1px 1px black', fontFamily: 'Suez One' }}>עמית מכלוף</h1>
                     <hr />
                   </Col>
                   <Col lg={1} md={1} smHidden xsHidden />

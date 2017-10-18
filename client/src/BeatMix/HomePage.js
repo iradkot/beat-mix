@@ -22,7 +22,7 @@ class HomePage extends React.Component {
     let introStyle = {
       background: `url("https://www.walldevil.com/wallpapers/a95/abstract-backgrounds-black-cool-wallpapers-dark.jpg") no-repear center center fixed`,
       color: "white",
-      backgroundSize: "cover",
+      backgroundSize: "100%",
       marginBottom: "22px"
     };
 

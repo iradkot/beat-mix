@@ -51523,7 +51523,7 @@ var HomePage = function (_React$Component) {
       var introStyle = {
         background: "url(\"https://www.walldevil.com/wallpapers/a95/abstract-backgrounds-black-cool-wallpapers-dark.jpg\") no-repear center center fixed",
         color: "white",
-        backgroundSize: "cover",
+        backgroundSize: "100%",
         marginBottom: "22px"
       };
 
@@ -55366,7 +55366,7 @@ var Tom = function (_React$Component) {
                   _react2.default.createElement(
                     "h1",
                     { className: "pageHeaders text-right", style: { textShadow: '1px 1px black', fontFamily: 'Suez One' } },
-                    "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
+                    "\u05EA\u05DD \u05D0\u05DC\u05D5\u05E9"
                   ),
                   _react2.default.createElement("hr", null)
                 ),
@@ -55572,7 +55572,7 @@ var Amit = function (_React$Component) {
                   _react2.default.createElement(
                     "h1",
                     { className: "pageHeaders text-right", style: { textShadow: '1px 1px black', fontFamily: 'Suez One' } },
-                    "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
+                    "\u05E2\u05DE\u05D9\u05EA \u05DE\u05DB\u05DC\u05D5\u05E3"
                   ),
                   _react2.default.createElement("hr", null)
                 ),
@@ -55778,7 +55778,7 @@ var Hadar = function (_React$Component) {
                   _react2.default.createElement(
                     "h1",
                     { className: "pageHeaders text-right", style: { textShadow: '1px 1px black', fontFamily: 'Suez One' } },
-                    "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
+                    "\u05D4\u05D3\u05E8 \u05E0\u05D5\u05D9"
                   ),
                   _react2.default.createElement("hr", null)
                 ),

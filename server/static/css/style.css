@@ -163,7 +163,7 @@ input[type="email"].focus,
 }
 
 .parraSlider {
-  background-size: cover !important;
+  background-size: 100vw !important;
   z-index: -1;
 }
 .intro-image {
@@ -178,7 +178,7 @@ input[type="email"].focus,
 }
 .intro-talk > p{
   font-size: 21px;
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Secular One', serif;
 }
 
 .intro {
