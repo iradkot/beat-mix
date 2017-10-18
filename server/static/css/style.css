@@ -273,6 +273,11 @@ body {
 .logo {
   height: 100px;
 }
+@media only screen and (min-width: 769px) {
+  .navbar {
+    font-size: 1.5vw;
+  }
+}
 @media only screen and (max-width: 768px) {
   .popOut-div,
   .popOut,
@@ -283,7 +288,11 @@ body {
   .mobileNum {
     font-size: 20px !important;
   }
+  .navbar {
+    font-size: 25px;
+  }
 }
+
  .popOut {
   width: 244px;
   height: 71px;
@@ -418,7 +427,6 @@ body {
     padding-left: 12%;
   }
 
-
 }
 
 .carousel-row {
@@ -496,14 +504,14 @@ body {
 
 .b {
   transform: rotateY(120deg) translateZ(250px);
-  background: url("http://res.cloudinary.com/beat-mix/image/upload/v1507033621/hadar_wc5dn1.png")
+  background: url("http://res.cloudinary.com/beat-mix/image/upload/v1507033621/Artists/hadar_wc5dn1.png")
     no-repeat center center;
   background-size: contain;
 }
 
 .c {
   transform: rotateY(240deg) translateZ(250px);
-  background: url("http://res.cloudinary.com/beat-mix/image/upload/v1507033628/amit_k29bsl.png")
+  background: url("http://res.cloudinary.com/beat-mix/image/upload/v1507033628/Artists/amit_k29bsl.png")
     no-repeat center center;
   background-size: contain;
 }

@@ -18,7 +18,6 @@ const navbarBrandImgStyle = {
 
 const navStyle = {
   marginRight: "10px",
-  fontSize: "1.5vw",
   paddingTop: "35px",
   paddingBottom: "0px",
   lineHeight: "80px"

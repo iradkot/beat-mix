@@ -39128,7 +39128,6 @@ var navbarBrandImgStyle = {
 
 var navStyle = {
   marginRight: "10px",
-  fontSize: "1.5vw",
   paddingTop: "35px",
   paddingBottom: "0px",
   lineHeight: "80px"
@@ -52811,7 +52810,7 @@ var WhyBeatMix = function (_React$Component) {
             _react2.default.createElement(
               "h1",
               { className: "pageHeaders text-right", style: { textShadow: '1px 1px black', fontFamily: 'Suez One' } },
-              "\u05DC\u05DE\u05D4 \u05D3\u05D0\u05D1\u05DC \u05D3\u05D9\u05D2'\u05D9\u05D9\u05D6"
+              "?\u05D0\u05D6 \u05DC\u05DE\u05D4 \u05D1\u05D9\u05D8\u05DE\u05D9\u05E7\u05E1"
             ),
             _react2.default.createElement("hr", null)
           ),
