@@ -53088,17 +53088,17 @@ var Artists = function (_React$Component) {
           _react2.default.createElement(
             _reactBootstrap.Row,
             { className: "mobile-artists", style: { display: "none" } },
+            _react2.default.createElement("img", { className: "tom responsive", src: "http://res.cloudinary.com/beat-mix/image/upload/v1507033628/Artists/amit_k29bsl.png" })
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            { className: "mobile-artists", style: { display: "none" } },
             _react2.default.createElement("img", { className: "tom responsive", src: "http://res.cloudinary.com/beat-mix/image/upload/v1507033627/tom_yfcnbs.png" })
           ),
           _react2.default.createElement(
             _reactBootstrap.Row,
             { className: "mobile-artists", style: { display: "none" } },
-            _react2.default.createElement("img", { className: "tom responsive", src: "http://res.cloudinary.com/beat-mix/image/upload/v1507033621/hadar_wc5dn1.png" })
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Row,
-            { className: "mobile-artists", style: { display: "none" } },
-            _react2.default.createElement("img", { className: "tom responsive", src: "http://res.cloudinary.com/beat-mix/image/upload/v1507033628/amit_k29bsl.png" })
+            _react2.default.createElement("img", { className: "tom responsive", src: "http://res.cloudinary.com/beat-mix/image/upload/v1507033621/Artists/hadar_wc5dn1.png" })
           )
         )
       );

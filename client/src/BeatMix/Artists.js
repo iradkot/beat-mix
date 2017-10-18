@@ -92,13 +92,13 @@ class Artists extends React.Component {
           </Row>
           {/* mobile vesrion */}
           <Row className="mobile-artists" style={{display: "none"}}>
+            <img className="tom responsive" src="http://res.cloudinary.com/beat-mix/image/upload/v1507033628/Artists/amit_k29bsl.png"/>
+            </Row>
+            <Row className="mobile-artists" style={{display: "none"}}>
             <img className="tom responsive" src="http://res.cloudinary.com/beat-mix/image/upload/v1507033627/tom_yfcnbs.png"/>
             </Row>
             <Row className="mobile-artists" style={{display: "none"}}>
-            <img className="tom responsive" src="http://res.cloudinary.com/beat-mix/image/upload/v1507033621/hadar_wc5dn1.png"/>
-            </Row>
-            <Row className="mobile-artists" style={{display: "none"}}>
-            <img className="tom responsive" src="http://res.cloudinary.com/beat-mix/image/upload/v1507033628/amit_k29bsl.png"/>
+            <img className="tom responsive" src="http://res.cloudinary.com/beat-mix/image/upload/v1507033621/Artists/hadar_wc5dn1.png"/>
             </Row>
         </Grid>
       </div>
