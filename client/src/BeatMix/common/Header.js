@@ -10,15 +10,15 @@ const navbarStyle = {
 };
 
 const navbarBrandImgStyle = {
-  height: "82px",
-  width: "229px",
+  height: "78px",
+  width: "208px",
   position: "fixed",
-  left: "50px"
+  left: "33px"
 };
 
 const navStyle = {
   marginRight: "10px",
-  fontSize: "25px",
+  fontSize: "1.5vw",
   paddingTop: "35px",
   paddingBottom: "0px",
   lineHeight: "80px"
@@ -100,8 +100,8 @@ class Header extends React.Component {
               </Navbar.Brand>
               <iframe
                 className="hideOnMobile"
-                style={{ border: "1px solid black" }}
-                width="260"
+                style={{ border: "1px solid black", marginLeft: '138px' }}
+                width="228"
                 height="94"
                 scrolling="yes"
                 frameborder="no"

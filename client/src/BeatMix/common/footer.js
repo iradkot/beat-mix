@@ -74,7 +74,7 @@ export default class Footer extends React.Component {
                 className="mobileNum"
                 href="tel:050-690-7817"
                 style={{
-                  fontSize: "20px",
+                  fontSize: "1.2vw",
                   fontWeight: "bold",
                   fontFamily: "Suez One"
                 }}
