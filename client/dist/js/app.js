@@ -55930,12 +55930,12 @@ var ContactUs = function (_React$Component) {
               _react2.default.createElement(
                 "h3",
                 null,
-                " \u05EA\u05DD \u05D0\u05DC\u05D5\u05E9 - 0506907817 "
+                " \u05EA\u05DD \u05D0\u05DC\u05D5\u05E9 - 050-690-7817 "
               ),
               _react2.default.createElement(
                 "h3",
                 null,
-                " \u05E2\u05DE\u05D9\u05EA \u05DE\u05DB\u05DC\u05D5\u05E3 - 0507967960 "
+                " \u05E2\u05DE\u05D9\u05EA \u05DE\u05DB\u05DC\u05D5\u05E3 - 050-796-7960 "
               )
             )
           ),
