@@ -34,7 +34,6 @@ class Artists extends React.Component {
     });
   }
   showInfo() {
-    console.log(this.state.currDeg);
     switch (this.state.currDeg % 360) {
       case 120:
         <h2> tom alush </h2>;

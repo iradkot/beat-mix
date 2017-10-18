@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Grid, Row, Col, Image } from "react-bootstrap";
+import PageBanner from "./PageBanner";
 
 //style objects:0
 const djBox = {
@@ -31,12 +32,15 @@ class About extends React.Component {
   render() {
     return (
       <Grid fluid={true} className="aboutusPage">
-        <Row>
-          <Col lg={12} className="pageBanner" />
-        </Row>
+        <PageBanner />
         <Row>
           <Col lg={6} lgOffset={5}>
-            <h1 className="pageHeaders text-right" style={{ textShadow: '1px 1px black', fontFamily: 'Suez One' }}>נבחרת הדיג'יים</h1>
+            <h1
+              className="pageHeaders text-right"
+              style={{ textShadow: "1px 1px black", fontFamily: "Suez One" }}
+            >
+              נבחרת הדיג'יים
+            </h1>
             <hr />
           </Col>
           <Col lg={1} />

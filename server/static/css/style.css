@@ -53,12 +53,6 @@
   content: none;
 }
 
-.pageBanner {
-  width: 100%;
-  height: 295px;
-  background-image: url("http://res.cloudinary.com/moshmosh/image/upload/v1504600903/beatmix/825.jpg");
-}
-
 .googlemaps {
   border-radius: 0;
 }
