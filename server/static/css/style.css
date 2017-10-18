@@ -163,7 +163,7 @@ input[type="email"].focus,
 }
 
 .parraSlider {
-  background-size: 100vw !important;
+  background-size: 100% !important;
   z-index: -1;
 }
 .intro-image {
@@ -290,6 +290,13 @@ body {
   }
   .navbar {
     font-size: 25px;
+  }
+  .parraSlider {
+    background: url("http://res.cloudinary.com/moshmosh/image/upload/v1503559675/beatmix/IMG_3443_sg0943.jpg") center no-repeat fixed !important;
+    background-size: 100% !important;
+    z-index: -1;
+    height: 137px !important;
+    
   }
 }
 
