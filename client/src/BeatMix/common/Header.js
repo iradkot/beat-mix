@@ -100,8 +100,8 @@ class Header extends React.Component {
               </Navbar.Brand>
               <iframe
                 className="hideOnMobile"
-                style={{ border: "1px solid black", marginLeft: '138px' }}
-                width="208"
+                style={{ border: "1px solid black", marginLeft: '126px' }}
+                width="195"
                 height="94"
                 scrolling="yes"
                 frameborder="no"
