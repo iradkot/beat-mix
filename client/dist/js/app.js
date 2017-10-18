@@ -51407,6 +51407,18 @@ var _Events = __webpack_require__(545);
 
 var _Events2 = _interopRequireDefault(_Events);
 
+var _Amit = __webpack_require__(566);
+
+var _Amit2 = _interopRequireDefault(_Amit);
+
+var _Tom = __webpack_require__(565);
+
+var _Tom2 = _interopRequireDefault(_Tom);
+
+var _Hadar = __webpack_require__(567);
+
+var _Hadar2 = _interopRequireDefault(_Hadar);
+
 var _ContactUs = __webpack_require__(568);
 
 var _ContactUs2 = _interopRequireDefault(_ContactUs);
@@ -51440,9 +51452,9 @@ var AppRoutes = function AppRoutes() {
       }),
       _react2.default.createElement(_reactRouterDom.Route, { name: "Artists", exact: true, path: "/Artists", component: _AboutUs2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { name: "Events", exact: true, path: "/Events", component: _Events2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { name: "Amit", exact: true, path: "/Amit", component: _Events2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { name: "Tom", exact: true, path: "/Tom", component: _Events2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { name: "Hadar", exact: true, path: "/Hadar", component: _Events2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { name: "Amit", exact: true, path: "/Amit", component: _Amit2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { name: "Tom", exact: true, path: "/Tom", component: _Tom2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { name: "Hadar", exact: true, path: "/Hadar", component: _Hadar2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { name: "ContactUs", exact: true, path: "/ContactUs", component: _ContactUs2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { name: "Admin", exact: true, path: "/Admin", component: _Admin2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { path: "*", component: _2.default })
@@ -55203,9 +55215,624 @@ exports.default = getContentRect;
 module.exports = exports['default'];
 
 /***/ }),
-/* 565 */,
-/* 566 */,
-/* 567 */,
+/* 565 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactBootstrap = __webpack_require__(24);
+
+var _reactPhotoGallery = __webpack_require__(89);
+
+var _reactPhotoGallery2 = _interopRequireDefault(_reactPhotoGallery);
+
+var _reactImageLightbox = __webpack_require__(90);
+
+var _reactImageLightbox2 = _interopRequireDefault(_reactImageLightbox);
+
+var _reactMeasure = __webpack_require__(91);
+
+var _reactMeasure2 = _interopRequireDefault(_reactMeasure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var axios = __webpack_require__(56);
+
+var Tom = function (_React$Component) {
+  _inherits(Tom, _React$Component);
+
+  function Tom(props) {
+    _classCallCheck(this, Tom);
+
+    var _this = _possibleConstructorReturn(this, (Tom.__proto__ || Object.getPrototypeOf(Tom)).call(this, props));
+
+    _this.state = {
+      pictures: [],
+      photoIndex: 0,
+      isOpen: false,
+      width: -1,
+      folder: window.location.pathname
+    };
+    _this.getFromCloud = _this.getFromCloud.bind(_this);
+    _this.openLightbox = _this.openLightbox.bind(_this);
+    _this.getFromCloud();
+    return _this;
+  }
+
+  _createClass(Tom, [{
+    key: "getFromCloud",
+    value: function getFromCloud() {
+      var temp = this.state;
+      var self = this;
+      // let folder = window.location.pathname;
+      // let folder = '/Events';
+      axios.get("/getFromCloudinary" + this.state.folder).then(function (res) {
+        var pictures = res.data.resources;
+        var new_random = [];
+        if (pictures.length > 20) {
+          for (var i = 0; i < 20; i++) {
+            var randomNum = Math.floor(Math.random() * pictures.length);
+            var chosen = pictures[randomNum];
+            pictures.splice(randomNum, 1);
+            new_random.push(chosen);
+          }
+        } else {
+          new_random = pictures;
+        }
+        var picArranged = new_random.map(function (picture, index) {
+          return picture = {
+            src: picture.secure_url,
+            width: picture.width,
+            height: picture.height
+          };
+        });
+        self.setState({ pictures: picArranged });
+      }).catch(function (error) {});
+    }
+  }, {
+    key: "openLightbox",
+    value: function openLightbox(index) {
+      this.setState({ isOpen: true, photoIndex: index });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      if (this.state.folder != window.location.pathname) {
+        this.setState({ folder: window.location.pathname });
+        this.getFromCloud();
+      }
+      var _state = this.state,
+          photoIndex = _state.photoIndex,
+          isOpen = _state.isOpen;
+
+      var tempState = this.state.pictures;
+      var width = this.state.width;
+      return _react2.default.createElement(
+        _reactMeasure2.default,
+        { bounds: true, onResize: function onResize(contentRect) {
+            return _this2.setState({ width: contentRect.bounds.width });
+          } },
+        function (_ref) {
+          var measureRef = _ref.measureRef;
+
+          if (width < 1) {
+            return _react2.default.createElement("div", { ref: measureRef });
+          }
+          var columns = 2;
+          if (width >= 480) {
+            columns = 3;
+          }
+          if (width >= 1024) {
+            columns = 4;
+          }
+          if (width >= 1824) {
+            columns = 5;
+          }
+          return _react2.default.createElement(
+            "div",
+            { ref: measureRef, className: "App" },
+            _react2.default.createElement(
+              _reactBootstrap.Grid,
+              { fluid: true, className: "eventsPage" },
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(_reactBootstrap.Col, { lg: 12, md: 12, xs: 12, sm: 12, className: "pageBanner" })
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { lg: 6, md: 6, xs: 12, sm: 12, lgOffset: 5, mdOffset: 5 },
+                  _react2.default.createElement(
+                    "h1",
+                    { className: "pageHeaders text-right", style: { textShadow: '1px 1px black', fontFamily: 'Suez One' } },
+                    "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
+                  ),
+                  _react2.default.createElement("hr", null)
+                ),
+                _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, smHidden: true, xsHidden: true })
+              ),
+              _react2.default.createElement(
+                "div",
+                null,
+                isOpen && _react2.default.createElement(_reactImageLightbox2.default, {
+                  mainSrc: tempState[photoIndex].src,
+                  nextSrc: tempState[(photoIndex + 1) % tempState.length].src,
+                  prevSrc: tempState[(photoIndex + tempState.length - 1) % tempState.length].src,
+                  onCloseRequest: function onCloseRequest() {
+                    return _this2.setState({ isOpen: false });
+                  },
+                  onMovePrevRequest: function onMovePrevRequest() {
+                    return _this2.setState({
+                      photoIndex: (photoIndex + tempState.length - 1) % tempState.length
+                    });
+                  },
+                  onMoveNextRequest: function onMoveNextRequest() {
+                    return _this2.setState({
+                      photoIndex: (photoIndex + 1) % tempState.length
+                    });
+                  }
+                })
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { lg: 12, md: 12, sm: 12, xs: 12 },
+                  _react2.default.createElement(_reactPhotoGallery2.default, {
+                    photos: tempState,
+                    cols: columns,
+                    onClickPhoto: _this2.openLightbox
+                  })
+                )
+              )
+            )
+          );
+        }
+      );
+    }
+  }]);
+
+  return Tom;
+}(_react2.default.Component);
+
+exports.default = Tom;
+
+/***/ }),
+/* 566 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactBootstrap = __webpack_require__(24);
+
+var _reactPhotoGallery = __webpack_require__(89);
+
+var _reactPhotoGallery2 = _interopRequireDefault(_reactPhotoGallery);
+
+var _reactImageLightbox = __webpack_require__(90);
+
+var _reactImageLightbox2 = _interopRequireDefault(_reactImageLightbox);
+
+var _reactMeasure = __webpack_require__(91);
+
+var _reactMeasure2 = _interopRequireDefault(_reactMeasure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var axios = __webpack_require__(56);
+
+var Amit = function (_React$Component) {
+  _inherits(Amit, _React$Component);
+
+  function Amit(props) {
+    _classCallCheck(this, Amit);
+
+    var _this = _possibleConstructorReturn(this, (Amit.__proto__ || Object.getPrototypeOf(Amit)).call(this, props));
+
+    _this.state = {
+      pictures: [],
+      photoIndex: 0,
+      isOpen: false,
+      width: -1,
+      folder: window.location.pathname
+    };
+    _this.getFromCloud = _this.getFromCloud.bind(_this);
+    _this.openLightbox = _this.openLightbox.bind(_this);
+    _this.getFromCloud();
+    return _this;
+  }
+
+  _createClass(Amit, [{
+    key: "getFromCloud",
+    value: function getFromCloud() {
+      var temp = this.state;
+      var self = this;
+      // let folder = window.location.pathname;
+      // let folder = '/Events';
+      axios.get("/getFromCloudinary" + this.state.folder).then(function (res) {
+        var pictures = res.data.resources;
+        var new_random = [];
+        if (pictures.length > 20) {
+          for (var i = 0; i < 20; i++) {
+            var randomNum = Math.floor(Math.random() * pictures.length);
+            var chosen = pictures[randomNum];
+            pictures.splice(randomNum, 1);
+            new_random.push(chosen);
+          }
+        } else {
+          new_random = pictures;
+        }
+        var picArranged = new_random.map(function (picture, index) {
+          return picture = {
+            src: picture.secure_url,
+            width: picture.width,
+            height: picture.height
+          };
+        });
+        self.setState({ pictures: picArranged });
+      }).catch(function (error) {});
+    }
+  }, {
+    key: "openLightbox",
+    value: function openLightbox(index) {
+      this.setState({ isOpen: true, photoIndex: index });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      if (this.state.folder != window.location.pathname) {
+        this.setState({ folder: window.location.pathname });
+        this.getFromCloud();
+      }
+      var _state = this.state,
+          photoIndex = _state.photoIndex,
+          isOpen = _state.isOpen;
+
+      var tempState = this.state.pictures;
+      var width = this.state.width;
+      return _react2.default.createElement(
+        _reactMeasure2.default,
+        { bounds: true, onResize: function onResize(contentRect) {
+            return _this2.setState({ width: contentRect.bounds.width });
+          } },
+        function (_ref) {
+          var measureRef = _ref.measureRef;
+
+          if (width < 1) {
+            return _react2.default.createElement("div", { ref: measureRef });
+          }
+          var columns = 2;
+          if (width >= 480) {
+            columns = 3;
+          }
+          if (width >= 1024) {
+            columns = 4;
+          }
+          if (width >= 1824) {
+            columns = 5;
+          }
+          return _react2.default.createElement(
+            "div",
+            { ref: measureRef, className: "App" },
+            _react2.default.createElement(
+              _reactBootstrap.Grid,
+              { fluid: true, className: "eventsPage" },
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(_reactBootstrap.Col, { lg: 12, md: 12, xs: 12, sm: 12, className: "pageBanner" })
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { lg: 6, md: 6, xs: 12, sm: 12, lgOffset: 5, mdOffset: 5 },
+                  _react2.default.createElement(
+                    "h1",
+                    { className: "pageHeaders text-right", style: { textShadow: '1px 1px black', fontFamily: 'Suez One' } },
+                    "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
+                  ),
+                  _react2.default.createElement("hr", null)
+                ),
+                _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, smHidden: true, xsHidden: true })
+              ),
+              _react2.default.createElement(
+                "div",
+                null,
+                isOpen && _react2.default.createElement(_reactImageLightbox2.default, {
+                  mainSrc: tempState[photoIndex].src,
+                  nextSrc: tempState[(photoIndex + 1) % tempState.length].src,
+                  prevSrc: tempState[(photoIndex + tempState.length - 1) % tempState.length].src,
+                  onCloseRequest: function onCloseRequest() {
+                    return _this2.setState({ isOpen: false });
+                  },
+                  onMovePrevRequest: function onMovePrevRequest() {
+                    return _this2.setState({
+                      photoIndex: (photoIndex + tempState.length - 1) % tempState.length
+                    });
+                  },
+                  onMoveNextRequest: function onMoveNextRequest() {
+                    return _this2.setState({
+                      photoIndex: (photoIndex + 1) % tempState.length
+                    });
+                  }
+                })
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { lg: 12, md: 12, sm: 12, xs: 12 },
+                  _react2.default.createElement(_reactPhotoGallery2.default, {
+                    photos: tempState,
+                    cols: columns,
+                    onClickPhoto: _this2.openLightbox
+                  })
+                )
+              )
+            )
+          );
+        }
+      );
+    }
+  }]);
+
+  return Amit;
+}(_react2.default.Component);
+
+exports.default = Amit;
+
+/***/ }),
+/* 567 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactBootstrap = __webpack_require__(24);
+
+var _reactPhotoGallery = __webpack_require__(89);
+
+var _reactPhotoGallery2 = _interopRequireDefault(_reactPhotoGallery);
+
+var _reactImageLightbox = __webpack_require__(90);
+
+var _reactImageLightbox2 = _interopRequireDefault(_reactImageLightbox);
+
+var _reactMeasure = __webpack_require__(91);
+
+var _reactMeasure2 = _interopRequireDefault(_reactMeasure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var axios = __webpack_require__(56);
+
+var Hadar = function (_React$Component) {
+  _inherits(Hadar, _React$Component);
+
+  function Hadar(props) {
+    _classCallCheck(this, Hadar);
+
+    var _this = _possibleConstructorReturn(this, (Hadar.__proto__ || Object.getPrototypeOf(Hadar)).call(this, props));
+
+    _this.state = {
+      pictures: [],
+      photoIndex: 0,
+      isOpen: false,
+      width: -1,
+      folder: window.location.pathname
+    };
+    _this.getFromCloud = _this.getFromCloud.bind(_this);
+    _this.openLightbox = _this.openLightbox.bind(_this);
+    _this.getFromCloud();
+    return _this;
+  }
+
+  _createClass(Hadar, [{
+    key: "getFromCloud",
+    value: function getFromCloud() {
+      var temp = this.state;
+      var self = this;
+      // let folder = window.location.pathname;
+      // let folder = '/Events';
+      axios.get("/getFromCloudinary" + this.state.folder).then(function (res) {
+        var pictures = res.data.resources;
+        var new_random = [];
+        if (pictures.length > 20) {
+          for (var i = 0; i < 20; i++) {
+            var randomNum = Math.floor(Math.random() * pictures.length);
+            var chosen = pictures[randomNum];
+            pictures.splice(randomNum, 1);
+            new_random.push(chosen);
+          }
+        } else {
+          new_random = pictures;
+        }
+        var picArranged = new_random.map(function (picture, index) {
+          return picture = {
+            src: picture.secure_url,
+            width: picture.width,
+            height: picture.height
+          };
+        });
+        self.setState({ pictures: picArranged });
+      }).catch(function (error) {});
+    }
+  }, {
+    key: "openLightbox",
+    value: function openLightbox(index) {
+      this.setState({ isOpen: true, photoIndex: index });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      if (this.state.folder != window.location.pathname) {
+        this.setState({ folder: window.location.pathname });
+        this.getFromCloud();
+      }
+      var _state = this.state,
+          photoIndex = _state.photoIndex,
+          isOpen = _state.isOpen;
+
+      var tempState = this.state.pictures;
+      var width = this.state.width;
+      return _react2.default.createElement(
+        _reactMeasure2.default,
+        { bounds: true, onResize: function onResize(contentRect) {
+            return _this2.setState({ width: contentRect.bounds.width });
+          } },
+        function (_ref) {
+          var measureRef = _ref.measureRef;
+
+          if (width < 1) {
+            return _react2.default.createElement("div", { ref: measureRef });
+          }
+          var columns = 2;
+          if (width >= 480) {
+            columns = 3;
+          }
+          if (width >= 1024) {
+            columns = 4;
+          }
+          if (width >= 1824) {
+            columns = 5;
+          }
+          return _react2.default.createElement(
+            "div",
+            { ref: measureRef, className: "App" },
+            _react2.default.createElement(
+              _reactBootstrap.Grid,
+              { fluid: true, className: "eventsPage" },
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(_reactBootstrap.Col, { lg: 12, md: 12, xs: 12, sm: 12, className: "pageBanner" })
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { lg: 6, md: 6, xs: 12, sm: 12, lgOffset: 5, mdOffset: 5 },
+                  _react2.default.createElement(
+                    "h1",
+                    { className: "pageHeaders text-right", style: { textShadow: '1px 1px black', fontFamily: 'Suez One' } },
+                    "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
+                  ),
+                  _react2.default.createElement("hr", null)
+                ),
+                _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, smHidden: true, xsHidden: true })
+              ),
+              _react2.default.createElement(
+                "div",
+                null,
+                isOpen && _react2.default.createElement(_reactImageLightbox2.default, {
+                  mainSrc: tempState[photoIndex].src,
+                  nextSrc: tempState[(photoIndex + 1) % tempState.length].src,
+                  prevSrc: tempState[(photoIndex + tempState.length - 1) % tempState.length].src,
+                  onCloseRequest: function onCloseRequest() {
+                    return _this2.setState({ isOpen: false });
+                  },
+                  onMovePrevRequest: function onMovePrevRequest() {
+                    return _this2.setState({
+                      photoIndex: (photoIndex + tempState.length - 1) % tempState.length
+                    });
+                  },
+                  onMoveNextRequest: function onMoveNextRequest() {
+                    return _this2.setState({
+                      photoIndex: (photoIndex + 1) % tempState.length
+                    });
+                  }
+                })
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { lg: 12, md: 12, sm: 12, xs: 12 },
+                  _react2.default.createElement(_reactPhotoGallery2.default, {
+                    photos: tempState,
+                    cols: columns,
+                    onClickPhoto: _this2.openLightbox
+                  })
+                )
+              )
+            )
+          );
+        }
+      );
+    }
+  }]);
+
+  return Hadar;
+}(_react2.default.Component);
+
+exports.default = Hadar;
+
+/***/ }),
 /* 568 */
 /***/ (function(module, exports, __webpack_require__) {
 
