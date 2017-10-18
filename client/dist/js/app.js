@@ -36210,18 +36210,15 @@ var navbarStyle = {
 };
 
 var navbarBrandImgStyle = {
-  height: "82px",
-  width: "229px",
-  position: "fixed",
-  left: "50px"
+  height: "5vw"
 };
 
 var navStyle = {
   marginRight: "10px",
-  fontSize: "25px",
-  paddingTop: "35px",
-  paddingBottom: "0px",
-  lineHeight: "80px"
+  fontSize: "1.5vw",
+  paddingTop: "6.5vh"
+  // paddingBottom: "0px",
+  // lineHeight: "80px"
 };
 
 var popOutStat = window.location.pathname === "/ContactUs" ? false : true;
@@ -36304,7 +36301,13 @@ var Header = function (_React$Component) {
           null,
           _react2.default.createElement(
             _reactBootstrap.Navbar,
-            { style: navbarStyle, collapseOnSelect: true, inverse: true, fixedTop: true },
+            {
+              style: navbarStyle,
+              collapseOnSelect: true,
+              inverse: true,
+              fixedTop: true,
+              fluid: true
+            },
             _react2.default.createElement(
               _reactBootstrap.Navbar.Header,
               null,
@@ -36322,9 +36325,12 @@ var Header = function (_React$Component) {
               ),
               _react2.default.createElement("iframe", {
                 className: "hideOnMobile",
-                style: { border: "1px solid black" },
-                width: "260",
-                height: "94",
+                style: {
+                  border: "1px solid black",
+                  height: "21.5vh",
+                  width: "12.5vw",
+                  paddingTop: "1vh"
+                },
                 scrolling: "yes",
                 frameborder: "no",
                 src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/333600809&color=%23be1e55&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"

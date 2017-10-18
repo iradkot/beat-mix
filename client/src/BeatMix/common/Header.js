@@ -10,18 +10,15 @@ const navbarStyle = {
 };
 
 const navbarBrandImgStyle = {
-  height: "82px",
-  width: "229px",
-  position: "fixed",
-  left: "50px"
+  height: "5vw"
 };
 
 const navStyle = {
   marginRight: "10px",
-  fontSize: "25px",
-  paddingTop: "35px",
-  paddingBottom: "0px",
-  lineHeight: "80px"
+  fontSize: "1.5vw",
+  paddingTop: "6.5vh",
+  // paddingBottom: "0px",
+  // lineHeight: "80px"
 };
 
 let popOutStat = window.location.pathname === "/ContactUs" ? false : true;
@@ -88,7 +85,13 @@ class Header extends React.Component {
     if (window.outerWidth > 768) {
       return (
         <div>
-          <Navbar style={navbarStyle} collapseOnSelect inverse fixedTop>
+          <Navbar
+            style={navbarStyle}
+            collapseOnSelect
+            inverse
+            fixedTop
+            fluid={true}
+          >
             <Navbar.Header>
               <Navbar.Brand>
                 <Link to="/">
@@ -100,9 +103,12 @@ class Header extends React.Component {
               </Navbar.Brand>
               <iframe
                 className="hideOnMobile"
-                style={{ border: "1px solid black" }}
-                width="260"
-                height="94"
+                style={{
+                  border: "1px solid black",
+                  height: "21.5vh",
+                  width: "12.5vw",
+                  paddingTop: "1vh"
+                }}
                 scrolling="yes"
                 frameborder="no"
                 src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/333600809&amp;color=%23be1e55&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"

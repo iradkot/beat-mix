@@ -43,7 +43,7 @@
   border-left: 2px solid #be1e55;
   border-right: 2px solid #be1e55;
   text-shadow: 1px 1px rgb(182, 182, 182);
-  
+
   animation: activeNav 0.8s 1;
 }
 
@@ -172,13 +172,13 @@ input[type="email"].focus,
 }
 
 .intro-talk {
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: right;
-  font-family: 'Suez One', serif;
+  font-family: "Suez One", serif;
 }
-.intro-talk > p{
+.intro-talk > p {
   font-size: 21px;
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: "Frank Ruhl Libre", serif;
 }
 
 .intro {
@@ -261,6 +261,7 @@ body {
   background: url("https://wallpapercave.com/wp/LRxGqsU.jpg") center;
   padding-top: 100px;
   font-family: Arimo;
+  box-sizing: border-box;
 }
 
 .popup {
@@ -284,7 +285,7 @@ body {
     font-size: 20px !important;
   }
 }
- .popOut {
+.popOut {
   width: 244px;
   height: 71px;
   border-radius: 100px;
@@ -405,20 +406,18 @@ body {
   .item {
     display: none;
   }
-  .newNextImg, .newPrevImg {
+  .newNextImg,
+  .newPrevImg {
     display: none;
   }
   .mobile-artists {
     display: inline-block !important;
-    
   }
   .tom {
     height: 439px;
     padding: 20px;
     padding-left: 12%;
   }
-
-
 }
 
 .carousel-row {
@@ -442,17 +441,19 @@ body {
   left: 16vw;
   cursor: pointer;
 }
-.newPrevImg:hover, .newNextImg:hover {
+.newPrevImg:hover,
+.newNextImg:hover {
   margin-top: -3px;
   transition: 0.3s;
   -webkit-filter: drop-shadow(7px 5px 5px rgb(255, 255, 255));
-  filter:         drop-shadow(7px 5px 5px rgb(255, 255, 255));
+  filter: drop-shadow(7px 5px 5px rgb(255, 255, 255));
 }
-.newPrevImg:active, .newNextImg:active {
+.newPrevImg:active,
+.newNextImg:active {
   margin-top: 1px;
   transition: 0.2s;
   -webkit-filter: drop-shadow(7px 5px 5px rgb(137, 137, 137));
-  filter:         drop-shadow(7px 5px 5px rgb(137, 137, 137));
+  filter: drop-shadow(7px 5px 5px rgb(137, 137, 137));
 }
 .artists-carousel-container {
   padding-top: 120px;
