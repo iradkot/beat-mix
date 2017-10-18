@@ -17,7 +17,7 @@ export default class Footer extends React.Component {
       <Grid fluid={true}>
         <Row>
           <Col lg={12} md={12} sm={12} xs={12} style={style}>
-            <Col lg={2} md={2} sm={1} xs={1} />
+            <Col lg={2} md={2} sm={0} xs={0} />
             <Col lg={1} md={1} smHidden xsHidden>
               <Image
                 id="test"

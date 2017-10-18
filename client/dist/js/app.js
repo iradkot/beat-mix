@@ -56202,7 +56202,7 @@ var Footer = function (_React$Component) {
           _react2.default.createElement(
             _reactBootstrap.Col,
             { lg: 12, md: 12, sm: 12, xs: 12, style: style },
-            _react2.default.createElement(_reactBootstrap.Col, { lg: 2, md: 2, sm: 1, xs: 1 }),
+            _react2.default.createElement(_reactBootstrap.Col, { lg: 2, md: 2, sm: 0, xs: 0 }),
             _react2.default.createElement(
               _reactBootstrap.Col,
               { lg: 1, md: 1, smHidden: true, xsHidden: true },
