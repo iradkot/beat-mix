@@ -75,31 +75,27 @@ class Artists extends React.Component {
             <Col lg={1} />
           </Row>
           {/* pc version */}
-          <Row className="carousel-row">
-            <div className="artists-carousel-container">
-              <div className="artists-carousel" style={carouselStyle}>
-                <div className="item a" />
-                <div className="item b" />
-                <div className="item c" />
-              </div>
+          <Row className="row-artists">
+            <div className="rowArtistsDiv">
+              <img src="http://res.cloudinary.com/beat-mix/image/upload/v1507033628/Artists/amit_k29bsl.png" />
             </div>
-            <div className="newNext" onClick={this.rotateNext}>
-              <img className="newNextImg" src="http://res.cloudinary.com/iradkot/image/upload/a_0/v1505818360/112886-glowing-purple-neon-icon-arrows-arrow-thick-right_k97xsc.png"/>
+            <div className="rowArtistsDiv">
+              <img src="http://res.cloudinary.com/beat-mix/image/upload/v1507033627/tom_yfcnbs.png" />
             </div>
-            <div className="newPrev" onClick={this.rotatePrev}>
-            <img className="newPrevImg" src="http://res.cloudinary.com/iradkot/image/upload/a_180/v1505818360/112886-glowing-purple-neon-icon-arrows-arrow-thick-right_k97xsc.png"/>
+            <div className="rowArtistsDiv">
+              <img src="http://res.cloudinary.com/beat-mix/image/upload/v1507033621/Artists/hadar_wc5dn1.png" />
             </div>
           </Row>
           {/* mobile vesrion */}
-          <Row className="mobile-artists" style={{display: "none"}}>
-            <img className="tom responsive" src="http://res.cloudinary.com/beat-mix/image/upload/v1507033628/Artists/amit_k29bsl.png"/>
-            </Row>
-            <Row className="mobile-artists" style={{display: "none"}}>
-            <img className="tom responsive" src="http://res.cloudinary.com/beat-mix/image/upload/v1507033627/tom_yfcnbs.png"/>
-            </Row>
-            <Row className="mobile-artists" style={{display: "none"}}>
-            <img className="tom responsive" src="http://res.cloudinary.com/beat-mix/image/upload/v1507033621/Artists/hadar_wc5dn1.png"/>
-            </Row>
+          <Row className="mobile-artists" style={{ display: "none" }}>
+            <img className="tom responsive" src="http://res.cloudinary.com/beat-mix/image/upload/v1507033628/Artists/amit_k29bsl.png" />
+          </Row>
+          <Row className="mobile-artists" style={{ display: "none" }}>
+            <img className="tom responsive" src="http://res.cloudinary.com/beat-mix/image/upload/v1507033627/tom_yfcnbs.png" />
+          </Row>
+          <Row className="mobile-artists" style={{ display: "none" }}>
+            <img className="tom responsive" src="http://res.cloudinary.com/beat-mix/image/upload/v1507033621/Artists/hadar_wc5dn1.png" />
+          </Row>
         </Grid>
       </div>
     );

@@ -522,3 +522,10 @@ body {
     no-repeat center center;
   background-size: contain;
 }
+
+.rowArtistsDiv > img {
+    width: 60vw;
+    margin-top: 3vw;
+    margin-left: 20vw;
+
+}

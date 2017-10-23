@@ -51406,11 +51406,11 @@ var _Events = __webpack_require__(545);
 
 var _Events2 = _interopRequireDefault(_Events);
 
-var _Amit = __webpack_require__(566);
+var _Amit = __webpack_require__(565);
 
 var _Amit2 = _interopRequireDefault(_Amit);
 
-var _Tom = __webpack_require__(565);
+var _Tom = __webpack_require__(566);
 
 var _Tom2 = _interopRequireDefault(_Tom);
 
@@ -52831,7 +52831,7 @@ var WhyBeatMix = function (_React$Component) {
             _react2.default.createElement(
               "h4",
               null,
-              "\u05DB\u05D0\u05E9\u05E8 2 \u05D4\u05D3\u05D9'\u05D2'\u05D9\u05D9\u05DD \u05E9\u05DC\u05E0\u05D5 \u05E2\u05DC \u05DE\u05E9\u05EA\u05D5\u05DC\u05DC\u05D9\u05DD \u05E2\u05DC \u05D4\u05E2\u05DE\u05D3\u05D4 \u05D0\u05D9\u05DF \u05D0\u05D5\u05E8\u05D7 \u05E9\u05D9\u05D5\u05DB\u05DC \u05DC\u05D4\u05E9\u05D0\u05E8 \u05D0\u05D3\u05D9\u05E9 \u05DC\u05D8\u05D9\u05E8\u05D5\u05E3",
+              "\u05DB\u05E9\u05D4\u05D3\u05D9\u05D2\u05F3\u05D9\u05D9\u05DD \u05E9\u05DC\u05E0\u05D5 \u05DE\u05E9\u05EA\u05D5\u05DC\u05DC\u05D9\u05DD \u05E2\u05DC \u05D4\u05E2\u05DE\u05D3\u05D4 \u05D0\u05D9\u05DF \u05D0\u05D5\u05E8\u05D7 \u05E9\u05D9\u05D5\u05DB\u05DC \u05DC\u05D4\u05E9\u05D0\u05E8 \u05D0\u05D3\u05D9\u05E9 \u05DC\u05D0\u05E0\u05E8\u05D2\u05D9\u05D5\u05EA \u05D5\u05DC\u05D8\u05D9\u05E8\u05D5\u05E3",
               " "
             )
           ),
@@ -52862,7 +52862,7 @@ var WhyBeatMix = function (_React$Component) {
             _react2.default.createElement(
               "h4",
               null,
-              "\u05D0\u05E6\u05DC\u05E0\u05D5 \u05D0\u05E0\u05D5 \u05D3\u05D5\u05D0\u05D2\u05D9\u05DD \u05EA\u05DE\u05D9\u05D3 \u05DC\u05D4\u05DB\u05D9\u05E8 \u05D5\u05DC\u05DC\u05DE\u05D5\u05D3 \u05D0\u05EA \u05DB\u05DC \u05E1\u05D2\u05E0\u05D5\u05E0\u05D5\u05EA \u05D4\u05DE\u05D5\u05D6\u05D9\u05E7\u05D4 \u05D4\u05E9\u05D5\u05E0\u05D9\u05DD, 2 \u05D4\u05D3\u05D2'\u05D9\u05D9\u05DD \u05E2\u05D5\u05D3 \u05DC\u05E4\u05E0\u05D9 \u05D4\u05D0\u05D9\u05E8\u05D5\u05E2 \u05D3\u05D5\u05D0\u05D2\u05D9\u05DD \u05E9\u05DB\u05DC \u05D0\u05D7\u05D3 \u05DE\u05DB\u05E1\u05D4 \u05D7\u05E6\u05D9 \u05DE\u05D4\u05E1\u05D2\u05E0\u05D5\u05E0\u05D5\u05EA \u05D4\u05DE\u05EA\u05D0\u05D9\u05DE\u05D9\u05DD \u05DC\u05D0\u05D9\u05E8\u05D5\u05E2 \u05D5\u05D4\u05DE\u05D5\u05D6\u05D9\u05E7\u05D4 \u05EA\u05DE\u05D9\u05D3 \u05D8\u05D5\u05D1\u05D4 \u05D5\u05EA\u05DE\u05D9\u05D3 \u05DE\u05D2\u05D5\u05D5\u05E0\u05EA!"
+              "\u05D0\u05E0\u05D5 \u05D3\u05D5\u05D0\u05D2\u05D9\u05DD \u05EA\u05DE\u05D9\u05D3 \u05DC\u05D4\u05DB\u05D9\u05E8 \u05D5\u05DC\u05DC\u05DE\u05D5\u05D3 \u05D0\u05EA \u05DB\u05DC \u05E1\u05D2\u05E0\u05D5\u05E0\u05D5\u05EA \u05D4\u05DE\u05D5\u05D6\u05D9\u05E7\u05D4 \u05D4\u05E9\u05D5\u05E0\u05D9\u05DD, \u05D4\u05D3\u05D2'\u05D9\u05D9\u05DD \u05E9\u05DC\u05E0\u05D5 \u05DE\u05DB\u05D9\u05E0\u05D9\u05DD \u05E4\u05DC\u05D9\u05D9\u05DC\u05D9\u05E1\u05D8 \u05D9\u05D9\u05D7\u05D5\u05D3\u05D9 \u05D5\u05DE\u05D5\u05E9\u05DC\u05DD \u05D4\u05DE\u05EA\u05D0\u05D9\u05DD \u05D1\u05D3\u05D9\u05D5\u05E7 \u05DC\u05D0\u05D9\u05E8\u05D5\u05E2 \u05E9\u05DC\u05DB\u05DD \u05EA\u05D5\u05DA \u05DB\u05D3\u05D9 \u05D4\u05EA\u05D7\u05E9\u05D1\u05D5\u05EA \u05D1\u05E8\u05E6\u05D5\u05E0\u05D5\u05EA \u05E9\u05DC\u05DB\u05DD \u05D5\u05D1\u05D0\u05D5\u05D5\u05D9\u05E8\u05EA \u05D4\u05D0\u05D9\u05E8\u05D5\u05E2."
             )
           ),
           _react2.default.createElement(
@@ -53062,27 +53062,21 @@ var Artists = function (_React$Component) {
           ),
           _react2.default.createElement(
             _reactBootstrap.Row,
-            { className: "carousel-row" },
+            { className: "row-artists" },
             _react2.default.createElement(
               "div",
-              { className: "artists-carousel-container" },
-              _react2.default.createElement(
-                "div",
-                { className: "artists-carousel", style: carouselStyle },
-                _react2.default.createElement("div", { className: "item a" }),
-                _react2.default.createElement("div", { className: "item b" }),
-                _react2.default.createElement("div", { className: "item c" })
-              )
+              { className: "rowArtistsDiv" },
+              _react2.default.createElement("img", { src: "http://res.cloudinary.com/beat-mix/image/upload/v1507033628/Artists/amit_k29bsl.png" })
             ),
             _react2.default.createElement(
               "div",
-              { className: "newNext", onClick: this.rotateNext },
-              _react2.default.createElement("img", { className: "newNextImg", src: "http://res.cloudinary.com/iradkot/image/upload/a_0/v1505818360/112886-glowing-purple-neon-icon-arrows-arrow-thick-right_k97xsc.png" })
+              { className: "rowArtistsDiv" },
+              _react2.default.createElement("img", { src: "http://res.cloudinary.com/beat-mix/image/upload/v1507033627/tom_yfcnbs.png" })
             ),
             _react2.default.createElement(
               "div",
-              { className: "newPrev", onClick: this.rotatePrev },
-              _react2.default.createElement("img", { className: "newPrevImg", src: "http://res.cloudinary.com/iradkot/image/upload/a_180/v1505818360/112886-glowing-purple-neon-icon-arrows-arrow-thick-right_k97xsc.png" })
+              { className: "rowArtistsDiv" },
+              _react2.default.createElement("img", { src: "http://res.cloudinary.com/beat-mix/image/upload/v1507033621/Artists/hadar_wc5dn1.png" })
             )
           ),
           _react2.default.createElement(
@@ -55254,212 +55248,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var axios = __webpack_require__(56);
 
-var Tom = function (_React$Component) {
-  _inherits(Tom, _React$Component);
-
-  function Tom(props) {
-    _classCallCheck(this, Tom);
-
-    var _this = _possibleConstructorReturn(this, (Tom.__proto__ || Object.getPrototypeOf(Tom)).call(this, props));
-
-    _this.state = {
-      pictures: [],
-      photoIndex: 0,
-      isOpen: false,
-      width: -1,
-      folder: window.location.pathname
-    };
-    _this.getFromCloud = _this.getFromCloud.bind(_this);
-    _this.openLightbox = _this.openLightbox.bind(_this);
-    _this.getFromCloud();
-    return _this;
-  }
-
-  _createClass(Tom, [{
-    key: "getFromCloud",
-    value: function getFromCloud() {
-      var temp = this.state;
-      var self = this;
-      // let folder = window.location.pathname;
-      // let folder = '/Events';
-      axios.get("/getFromCloudinary" + this.state.folder).then(function (res) {
-        var pictures = res.data.resources;
-        var new_random = [];
-        if (pictures.length > 20) {
-          for (var i = 0; i < 20; i++) {
-            var randomNum = Math.floor(Math.random() * pictures.length);
-            var chosen = pictures[randomNum];
-            pictures.splice(randomNum, 1);
-            new_random.push(chosen);
-          }
-        } else {
-          new_random = pictures;
-        }
-        var picArranged = new_random.map(function (picture, index) {
-          return picture = {
-            src: picture.secure_url,
-            width: picture.width,
-            height: picture.height
-          };
-        });
-        self.setState({ pictures: picArranged });
-      }).catch(function (error) {});
-    }
-  }, {
-    key: "openLightbox",
-    value: function openLightbox(index) {
-      this.setState({ isOpen: true, photoIndex: index });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      if (this.state.folder != window.location.pathname) {
-        this.setState({ folder: window.location.pathname });
-        this.getFromCloud();
-      }
-      var _state = this.state,
-          photoIndex = _state.photoIndex,
-          isOpen = _state.isOpen;
-
-      var tempState = this.state.pictures;
-      var width = this.state.width;
-      return _react2.default.createElement(
-        _reactMeasure2.default,
-        { bounds: true, onResize: function onResize(contentRect) {
-            return _this2.setState({ width: contentRect.bounds.width });
-          } },
-        function (_ref) {
-          var measureRef = _ref.measureRef;
-
-          if (width < 1) {
-            return _react2.default.createElement("div", { ref: measureRef });
-          }
-          var columns = 2;
-          if (width >= 480) {
-            columns = 3;
-          }
-          if (width >= 1024) {
-            columns = 4;
-          }
-          if (width >= 1824) {
-            columns = 5;
-          }
-          return _react2.default.createElement(
-            "div",
-            { ref: measureRef, className: "App" },
-            _react2.default.createElement(
-              _reactBootstrap.Grid,
-              { fluid: true, className: "eventsPage" },
-              _react2.default.createElement(
-                _reactBootstrap.Row,
-                null,
-                _react2.default.createElement(_reactBootstrap.Col, { lg: 12, md: 12, xs: 12, sm: 12, className: "pageBanner" })
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.Row,
-                null,
-                _react2.default.createElement(
-                  _reactBootstrap.Col,
-                  { lg: 6, md: 6, xs: 12, sm: 12, lgOffset: 5, mdOffset: 5 },
-                  _react2.default.createElement(
-                    "h1",
-                    { className: "pageHeaders text-right", style: { textShadow: '1px 1px black', fontFamily: 'Suez One' } },
-                    "\u05EA\u05DD \u05D0\u05DC\u05D5\u05E9"
-                  ),
-                  _react2.default.createElement("hr", null)
-                ),
-                _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, smHidden: true, xsHidden: true })
-              ),
-              _react2.default.createElement(
-                "div",
-                null,
-                isOpen && _react2.default.createElement(_reactImageLightbox2.default, {
-                  mainSrc: tempState[photoIndex].src,
-                  nextSrc: tempState[(photoIndex + 1) % tempState.length].src,
-                  prevSrc: tempState[(photoIndex + tempState.length - 1) % tempState.length].src,
-                  onCloseRequest: function onCloseRequest() {
-                    return _this2.setState({ isOpen: false });
-                  },
-                  onMovePrevRequest: function onMovePrevRequest() {
-                    return _this2.setState({
-                      photoIndex: (photoIndex + tempState.length - 1) % tempState.length
-                    });
-                  },
-                  onMoveNextRequest: function onMoveNextRequest() {
-                    return _this2.setState({
-                      photoIndex: (photoIndex + 1) % tempState.length
-                    });
-                  }
-                })
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.Row,
-                null,
-                _react2.default.createElement(
-                  _reactBootstrap.Col,
-                  { lg: 12, md: 12, sm: 12, xs: 12 },
-                  _react2.default.createElement(_reactPhotoGallery2.default, {
-                    photos: tempState,
-                    cols: columns,
-                    onClickPhoto: _this2.openLightbox
-                  })
-                )
-              )
-            )
-          );
-        }
-      );
-    }
-  }]);
-
-  return Tom;
-}(_react2.default.Component);
-
-exports.default = Tom;
-
-/***/ }),
-/* 566 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactBootstrap = __webpack_require__(24);
-
-var _reactPhotoGallery = __webpack_require__(89);
-
-var _reactPhotoGallery2 = _interopRequireDefault(_reactPhotoGallery);
-
-var _reactImageLightbox = __webpack_require__(90);
-
-var _reactImageLightbox2 = _interopRequireDefault(_reactImageLightbox);
-
-var _reactMeasure = __webpack_require__(91);
-
-var _reactMeasure2 = _interopRequireDefault(_reactMeasure);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var axios = __webpack_require__(56);
-
 var Amit = function (_React$Component) {
   _inherits(Amit, _React$Component);
 
@@ -55624,6 +55412,212 @@ var Amit = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Amit;
+
+/***/ }),
+/* 566 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactBootstrap = __webpack_require__(24);
+
+var _reactPhotoGallery = __webpack_require__(89);
+
+var _reactPhotoGallery2 = _interopRequireDefault(_reactPhotoGallery);
+
+var _reactImageLightbox = __webpack_require__(90);
+
+var _reactImageLightbox2 = _interopRequireDefault(_reactImageLightbox);
+
+var _reactMeasure = __webpack_require__(91);
+
+var _reactMeasure2 = _interopRequireDefault(_reactMeasure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var axios = __webpack_require__(56);
+
+var Tom = function (_React$Component) {
+  _inherits(Tom, _React$Component);
+
+  function Tom(props) {
+    _classCallCheck(this, Tom);
+
+    var _this = _possibleConstructorReturn(this, (Tom.__proto__ || Object.getPrototypeOf(Tom)).call(this, props));
+
+    _this.state = {
+      pictures: [],
+      photoIndex: 0,
+      isOpen: false,
+      width: -1,
+      folder: window.location.pathname
+    };
+    _this.getFromCloud = _this.getFromCloud.bind(_this);
+    _this.openLightbox = _this.openLightbox.bind(_this);
+    _this.getFromCloud();
+    return _this;
+  }
+
+  _createClass(Tom, [{
+    key: "getFromCloud",
+    value: function getFromCloud() {
+      var temp = this.state;
+      var self = this;
+      // let folder = window.location.pathname;
+      // let folder = '/Events';
+      axios.get("/getFromCloudinary" + this.state.folder).then(function (res) {
+        var pictures = res.data.resources;
+        var new_random = [];
+        if (pictures.length > 20) {
+          for (var i = 0; i < 20; i++) {
+            var randomNum = Math.floor(Math.random() * pictures.length);
+            var chosen = pictures[randomNum];
+            pictures.splice(randomNum, 1);
+            new_random.push(chosen);
+          }
+        } else {
+          new_random = pictures;
+        }
+        var picArranged = new_random.map(function (picture, index) {
+          return picture = {
+            src: picture.secure_url,
+            width: picture.width,
+            height: picture.height
+          };
+        });
+        self.setState({ pictures: picArranged });
+      }).catch(function (error) {});
+    }
+  }, {
+    key: "openLightbox",
+    value: function openLightbox(index) {
+      this.setState({ isOpen: true, photoIndex: index });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      if (this.state.folder != window.location.pathname) {
+        this.setState({ folder: window.location.pathname });
+        this.getFromCloud();
+      }
+      var _state = this.state,
+          photoIndex = _state.photoIndex,
+          isOpen = _state.isOpen;
+
+      var tempState = this.state.pictures;
+      var width = this.state.width;
+      return _react2.default.createElement(
+        _reactMeasure2.default,
+        { bounds: true, onResize: function onResize(contentRect) {
+            return _this2.setState({ width: contentRect.bounds.width });
+          } },
+        function (_ref) {
+          var measureRef = _ref.measureRef;
+
+          if (width < 1) {
+            return _react2.default.createElement("div", { ref: measureRef });
+          }
+          var columns = 2;
+          if (width >= 480) {
+            columns = 3;
+          }
+          if (width >= 1024) {
+            columns = 4;
+          }
+          if (width >= 1824) {
+            columns = 5;
+          }
+          return _react2.default.createElement(
+            "div",
+            { ref: measureRef, className: "App" },
+            _react2.default.createElement(
+              _reactBootstrap.Grid,
+              { fluid: true, className: "eventsPage" },
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(_reactBootstrap.Col, { lg: 12, md: 12, xs: 12, sm: 12, className: "pageBanner" })
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { lg: 6, md: 6, xs: 12, sm: 12, lgOffset: 5, mdOffset: 5 },
+                  _react2.default.createElement(
+                    "h1",
+                    { className: "pageHeaders text-right", style: { textShadow: '1px 1px black', fontFamily: 'Suez One' } },
+                    "\u05EA\u05DD \u05D0\u05DC\u05D5\u05E9"
+                  ),
+                  _react2.default.createElement("hr", null)
+                ),
+                _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, smHidden: true, xsHidden: true })
+              ),
+              _react2.default.createElement(
+                "div",
+                null,
+                isOpen && _react2.default.createElement(_reactImageLightbox2.default, {
+                  mainSrc: tempState[photoIndex].src,
+                  nextSrc: tempState[(photoIndex + 1) % tempState.length].src,
+                  prevSrc: tempState[(photoIndex + tempState.length - 1) % tempState.length].src,
+                  onCloseRequest: function onCloseRequest() {
+                    return _this2.setState({ isOpen: false });
+                  },
+                  onMovePrevRequest: function onMovePrevRequest() {
+                    return _this2.setState({
+                      photoIndex: (photoIndex + tempState.length - 1) % tempState.length
+                    });
+                  },
+                  onMoveNextRequest: function onMoveNextRequest() {
+                    return _this2.setState({
+                      photoIndex: (photoIndex + 1) % tempState.length
+                    });
+                  }
+                })
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { lg: 12, md: 12, sm: 12, xs: 12 },
+                  _react2.default.createElement(_reactPhotoGallery2.default, {
+                    photos: tempState,
+                    cols: columns,
+                    onClickPhoto: _this2.openLightbox
+                  })
+                )
+              )
+            )
+          );
+        }
+      );
+    }
+  }]);
+
+  return Tom;
+}(_react2.default.Component);
+
+exports.default = Tom;
 
 /***/ }),
 /* 567 */
