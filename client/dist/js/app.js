@@ -39120,8 +39120,8 @@ var navbarStyle = {
 };
 
 var navbarBrandImgStyle = {
-  height: "6vw",
-  marginLeft: "-147px"
+  // height: "-5.5vw",
+  // marginLeft: "-10vw"
 
   // width: "208px",
   // position: "fixed",
@@ -39225,7 +39225,7 @@ var Header = function (_React$Component) {
                 _react2.default.createElement(
                   _reactRouterDom.Link,
                   { to: "/" },
-                  _react2.default.createElement("img", {
+                  _react2.default.createElement("img", { className: "navbarBrandImgStyle",
                     style: navbarBrandImgStyle,
                     src: "http://beatmix.mitchatnim.co.il/img/0239/799.png"
                   })
@@ -53080,21 +53080,6 @@ var Artists = function (_React$Component) {
               { className: "rowArtistsDiv" },
               _react2.default.createElement("img", { src: "http://res.cloudinary.com/beat-mix/image/upload/v1507033621/Artists/hadar_wc5dn1.png" })
             )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Row,
-            { className: "mobile-artists", style: { display: "none" } },
-            _react2.default.createElement("img", { className: "tom responsive", src: "http://res.cloudinary.com/beat-mix/image/upload/v1507033628/Artists/amit_k29bsl.png" })
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Row,
-            { className: "mobile-artists", style: { display: "none" } },
-            _react2.default.createElement("img", { className: "tom responsive", src: "http://res.cloudinary.com/beat-mix/image/upload/v1507033627/tom_yfcnbs.png" })
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Row,
-            { className: "mobile-artists", style: { display: "none" } },
-            _react2.default.createElement("img", { className: "tom responsive", src: "http://res.cloudinary.com/beat-mix/image/upload/v1507033621/Artists/hadar_wc5dn1.png" })
           )
         )
       );
@@ -55926,12 +55911,12 @@ var ContactUs = function (_React$Component) {
               _react2.default.createElement(
                 "h3",
                 null,
-                " \u05EA\u05DD \u05D0\u05DC\u05D5\u05E9 - 050-690-7817 "
+                " \u05E2\u05DE\u05D9\u05EA \u05DE\u05DB\u05DC\u05D5\u05E3 - 050-796-7960 "
               ),
               _react2.default.createElement(
                 "h3",
                 null,
-                " \u05E2\u05DE\u05D9\u05EA \u05DE\u05DB\u05DC\u05D5\u05E3 - 050-796-7960 "
+                " \u05EA\u05DD \u05D0\u05DC\u05D5\u05E9 - 050-690-7817 "
               )
             )
           ),

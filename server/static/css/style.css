@@ -278,11 +278,19 @@ body {
     font-size: 1.5vw;
   }
 }
+.navbarBrandImgStyle {
+  height: 5.5vw;
+  margin-left: -10vw;
+}
 @media only screen and (max-width: 768px) {
   .popOut-div,
   .popOut,
   .hideOnMobile {
     display: none;
+  }
+  .navbarBrandImgStyle {
+    height: 73px;
+    margin-left: 20vw;
   }
 
   .mobileNum {

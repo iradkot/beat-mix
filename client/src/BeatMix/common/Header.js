@@ -10,8 +10,8 @@ const navbarStyle = {
 };
 
 const navbarBrandImgStyle = {
-  height: "6vw",
-  marginLeft: "-147px"
+  // height: "-5.5vw",
+  // marginLeft: "-10vw"
   
   // width: "208px",
   // position: "fixed",
@@ -93,7 +93,7 @@ class Header extends React.Component {
             <Navbar.Header>
               <Navbar.Brand>
                 <Link to="/">
-                  <img
+                  <img className="navbarBrandImgStyle"
                     style={navbarBrandImgStyle}
                     src="http://beatmix.mitchatnim.co.il/img/0239/799.png"
                   />
