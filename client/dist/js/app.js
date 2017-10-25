@@ -39120,10 +39120,12 @@ var navbarStyle = {
 };
 
 var navbarBrandImgStyle = {
-  height: "78px",
-  width: "208px",
-  position: "fixed",
-  left: "33px"
+  height: "6vw",
+  marginLeft: "-2vw"
+
+  // width: "208px",
+  // position: "fixed",
+  // left: "33px"
 };
 
 var navStyle = {
@@ -39231,7 +39233,7 @@ var Header = function (_React$Component) {
               ),
               _react2.default.createElement("iframe", {
                 className: "hideOnMobile",
-                style: { border: "1px solid black", marginLeft: '126px' },
+                style: { border: "1px solid black", marginLeft: '2vw' },
                 width: "195",
                 height: "94",
                 scrolling: "yes",
