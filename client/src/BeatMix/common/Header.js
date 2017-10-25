@@ -11,7 +11,7 @@ const navbarStyle = {
 
 const navbarBrandImgStyle = {
   height: "6vw",
-  marginLeft: "-2vw"
+  marginLeft: "-38px"
   
   // width: "208px",
   // position: "fixed",
