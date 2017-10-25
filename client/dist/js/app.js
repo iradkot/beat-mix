@@ -39121,7 +39121,7 @@ var navbarStyle = {
 
 var navbarBrandImgStyle = {
   height: "6vw",
-  marginLeft: "-38px"
+  marginLeft: "-147px"
 
   // width: "208px",
   // position: "fixed",
