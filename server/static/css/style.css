@@ -288,9 +288,13 @@ body {
   .hideOnMobile {
     display: none;
   }
+  .navbar-brand>img {
+    height: 76px;
+    margin-left: 20px;
+  }
   .navbarBrandImgStyle {
     height: 73px;
-    margin-left: 20vw;
+    margin-left: 25px;
   }
 
   .mobileNum {
