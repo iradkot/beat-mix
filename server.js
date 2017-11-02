@@ -50,7 +50,7 @@ app.post("/contactus/email", function(req, res) {
   let data = req.body;
   let mailOptions1 = {
     from: "elevationmosh@gmail.com",
-    to: "mosh7890@gmail.com",
+    to: "beatmixdjs@gmail.com",
     subject: `${data.name} - ${data.email} - ${data.number}`,
     text: data.content
   };

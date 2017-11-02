@@ -80,7 +80,7 @@ class Artists extends React.Component {
               <img src="http://res.cloudinary.com/beat-mix/image/upload/v1507033628/Artists/amit_k29bsl.png" />
             </div>
             <div className="rowArtistsDiv">
-              <img src="http://res.cloudinary.com/beat-mix/image/upload/v1507033627/tom_yfcnbs.png" />
+              <img src="http://res.cloudinary.com/beat-mix/image/upload/v1507033627/Artists/tom_yfcnbs.png" />
             </div>
             <div className="rowArtistsDiv">
               <img src="http://res.cloudinary.com/beat-mix/image/upload/v1507033621/Artists/hadar_wc5dn1.png" />
