@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import PageBanner from "./PageBanner";
+
 class Admin extends React.Component {
   constructor(props) {
     super(props);

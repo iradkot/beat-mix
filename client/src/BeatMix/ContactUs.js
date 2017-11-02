@@ -4,6 +4,8 @@ import { Grid, Row, Col, ResponsiveEmbed } from "react-bootstrap";
 import GoogleMap from "./GoogleMap";
 import ContactUsForm from "./ContactUs-Form";
 
+import PageBanner from "./PageBanner";
+
 class ContactUs extends React.Component {
   constructor(props) {
     super(props);
@@ -14,9 +16,7 @@ class ContactUs extends React.Component {
   render() {
     return (
       <Grid fluid={true} className="contactUsPage" >
-        <Row>
-          <Col lg={12} md={12} xs={12} sm={12} className="pageBanner" />
-        </Row>
+        <PageBanner />
         <Row>
           <Col lg={6} md={6} xs={12} sm={12} lgOffset={5} mdOffset={5}>
             <h1 className="pageHeaders text-right" style={{ textShadow: '1px 1px black', fontFamily: 'Suez One' }}>צור-קשר</h1>

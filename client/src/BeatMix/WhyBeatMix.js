@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Grid, Row, Col } from "react-bootstrap";
 
+import PageBanner from "./PageBanner";
+
 class WhyBeatMix extends React.Component {
   render() {
     return (
@@ -10,9 +12,7 @@ class WhyBeatMix extends React.Component {
         className="whyPage"
         style={{ textAlign: "right", color: "white" }}
       >
-        <Row>
-          <Col lg={12} className="pageBanner" />
-        </Row>
+      <PageBanner />
         <Row>
           <Col lg={6} lgOffset={5}>
             <h1 className="pageHeaders text-right" style={{ textShadow: '1px 1px black', fontFamily: 'Suez One' }}>?אז למה ביטמיקס</h1>

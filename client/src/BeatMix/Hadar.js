@@ -4,6 +4,8 @@ import Gallery from "react-photo-gallery";
 import Lightbox from "react-image-lightbox";
 import Measure from 'react-measure';
 
+import PageBanner from "./PageBanner";
+
 const axios = require("axios");
 
 class Hadar extends React.Component {
@@ -85,9 +87,7 @@ class Hadar extends React.Component {
             }
             return <div ref={measureRef} className="App">
               <Grid fluid={true} className="eventsPage">
-                <Row>
-                  <Col lg={12} md={12} xs={12} sm={12} className="pageBanner" />
-                </Row>
+              <PageBanner />
                 <Row>
                   <Col lg={6} md={6} xs={12} sm={12} lgOffset={5} mdOffset={5}>
                     <h1 className="pageHeaders text-right" style={{ textShadow: '1px 1px black', fontFamily: 'Suez One' }}>הדר נוי</h1>

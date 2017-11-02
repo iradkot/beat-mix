@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Grid, Row, Col } from "react-bootstrap";
 
+import PageBanner from "./PageBanner";
+
 class Artists extends React.Component {
   constructor(props) {
     super(props);
@@ -64,9 +66,7 @@ class Artists extends React.Component {
     return (
       <div>
         <Grid fluid={true} className="artistPage">
-          <Row>
-            <Col lg={12} className="pageBanner" />
-          </Row>
+        <PageBanner />
           <Row>
             <Col lg={6} lgOffset={5}>
               <h1 className="pageHeaders text-right" style={{ textShadow: '1px 1px black', fontFamily: 'Suez One' }}>אמנים</h1>
