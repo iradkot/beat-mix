@@ -9,8 +9,6 @@ import FbPlugins from "./FbPlugins";
 
 var image_arr = [
   "http://res.cloudinary.com/moshmosh/image/upload/v1503559675/beatmix/IMG_3443_sg0943.jpg"
-  // "http://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg",
-  // "http://res.cloudinary.com/moshmosh/image/upload/v1503559714/beatmix/IMG_3530_mklqvr.jpg"
 ];
 
 class HomePage extends React.Component {
@@ -29,39 +27,39 @@ class HomePage extends React.Component {
     return (
       <Grid fluid={true} className="intro">
         <Row>
-          {/* <Col lg={12}> */}
           <ParralaxImageSlider height={613} image_arr={image_arr} />
-          {/* </Col> */}
         </Row>
         <Row className="show-grid" style={introStyle}>
-          <Col lg={2} />
-          <Col lg={4}>
+          <Col lg={2} md={2} sm={0} xs={0} />
+          <Col lg={4} md={4} sm={12} xs={12}>
             <Image
               src="https://res.cloudinary.com/moshmosh/image/upload/v1504511466/beatmix/13731600_10154326354283965_8252077073868369476_n.jpg"
               responsive
             />
           </Col>
-          <Col lg={5} className=" intro-talk">
-            <Row>
+          <Col lgHidden mdHidden sm={1} xs={1} />
+          <Col lg={5} md={5} sm={10} xs={10} className=" intro-talk text-center">
+            <Row className="hideOnNotMobile">
+              <h1> - Beat Mix </h1>
+              <h1> !כולם זזים לפי הקצב שלנו</h1>
+            </Row>
+            <Row className="hideOnMobile">
               <h1> !כולם זזים לפי הקצב שלנו - Beat Mix </h1>
+            </Row>
+            <Row>
               <h3>
-              {" "}
                 אנחנו תם אלוש ועמית מכלוף - חברי ילדות שנושמים מוזיקה מאז שאנחנו
-              זוכרים את עצמנו. כשנעלה על עמדת ה-דיג'יי בחתונה שלכם, האורחים
-              יתעוררו לחיים והקצב יעלה הכי גבוה שאפשר, בדיוק כמו שחלמתם שיקרה.
-              {" "}
+                זוכרים את עצמנו. כשנעלה על עמדת ה-דיג'יי בחתונה שלכם, האורחים
+                יתעוררו לחיים והקצב יעלה הכי גבוה שאפשר, בדיוק כמו שחלמתם שיקרה.
               </h3>
             </Row>
             <Row>
               <h4>
-              {" "}
-                זו ההזדמנות שלכם לחסוך הרבה התלבטויות וזמן, ולשריין אותנו לאירוע הקרב ובא
-              {" "}
-              
-            </h4>
+                זו ההזדמנות שלכם לחסוך הרבה זמן והתלבטויות ולשריין אותנו כבר עכשיו לאירוע הקרב***
+              </h4>
             </Row>
           </Col>
-          <Col lg={1}> </Col>
+          <Col lg={1} md={1} sm={1} xs={1} />
         </Row>
         <Row>
           <Col lg={2} />

@@ -137,7 +137,7 @@ class Header extends React.Component {
                   >
                     <MenuItem eventKey={4.1}>אירועים</MenuItem>
                   </IndexLinkContainer>
-                  <IndexLinkContainer
+                  {/* <IndexLinkContainer
                     to="/Amit"
                     onClick={this.popOutOn}
                     activeClassName="activeNav"
@@ -157,7 +157,7 @@ class Header extends React.Component {
                     activeClassName="activeNav"
                   >
                     <MenuItem eventKey={4.4}>הדר נוי</MenuItem>
-                  </IndexLinkContainer>
+                  </IndexLinkContainer> */}
                 </NavDropdown>
                 <IndexLinkContainer
                   to="/WhyBeatMix"
@@ -237,7 +237,7 @@ class Header extends React.Component {
                   >
                     <MenuItem eventKey={4.1}>אירועים</MenuItem>
                   </IndexLinkContainer>
-                  <IndexLinkContainer
+                  {/* <IndexLinkContainer
                     to="/Amit"
                     onClick={this.popOutOn}
                     activeClassName="activeNav"
@@ -257,7 +257,7 @@ class Header extends React.Component {
                     activeClassName="activeNav"
                   >
                     <MenuItem eventKey={4.4}>הדר נוי</MenuItem>
-                  </IndexLinkContainer>
+                  </IndexLinkContainer> */}
                 </NavDropdown>
                 <IndexLinkContainer
                   to="/ContactUs"

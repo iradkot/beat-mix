@@ -3586,9 +3586,11 @@ var PageBanner = function (_React$Component) {
           sm: 12,
           className: "pageBanner",
           style: {
-            width: "100%",
-            height: "295px",
-            backgroundImage: "url(" + this.state.image + ")"
+            height: '30vw',
+            // background: 'fixed',            
+            backgroundSize: 'cover',
+            backgroundImage: "url(" + this.state.image + ")",
+            backgroundPosition: 'top center'
           }
         })
       );
@@ -39376,45 +39378,6 @@ var Header = function (_React$Component) {
                       { eventKey: 4.1 },
                       "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
                     )
-                  ),
-                  _react2.default.createElement(
-                    _reactRouterBootstrap.IndexLinkContainer,
-                    {
-                      to: "/Amit",
-                      onClick: this.popOutOn,
-                      activeClassName: "activeNav"
-                    },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: 4.2 },
-                      "\u05E2\u05DE\u05D9\u05EA \u05DE\u05DB\u05DC\u05D5\u05E3"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    _reactRouterBootstrap.IndexLinkContainer,
-                    {
-                      to: "/Tom",
-                      onClick: this.popOutOn,
-                      activeClassName: "activeNav"
-                    },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: 4.3 },
-                      "\u05EA\u05DD \u05D0\u05DC\u05D5\u05E9"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    _reactRouterBootstrap.IndexLinkContainer,
-                    {
-                      to: "/Hadar",
-                      onClick: this.popOutOn,
-                      activeClassName: "activeNav"
-                    },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: 4.4 },
-                      "\u05D4\u05D3\u05E8 \u05E0\u05D5\u05D9"
-                    )
                   )
                 ),
                 _react2.default.createElement(
@@ -39553,45 +39516,6 @@ var Header = function (_React$Component) {
                       _reactBootstrap.MenuItem,
                       { eventKey: 4.1 },
                       "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    _reactRouterBootstrap.IndexLinkContainer,
-                    {
-                      to: "/Amit",
-                      onClick: this.popOutOn,
-                      activeClassName: "activeNav"
-                    },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: 4.2 },
-                      "\u05E2\u05DE\u05D9\u05EA \u05DE\u05DB\u05DC\u05D5\u05E3"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    _reactRouterBootstrap.IndexLinkContainer,
-                    {
-                      to: "/Tom",
-                      onClick: this.popOutOn,
-                      activeClassName: "activeNav"
-                    },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: 4.3 },
-                      "\u05EA\u05DD \u05D0\u05DC\u05D5\u05E9"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    _reactRouterBootstrap.IndexLinkContainer,
-                    {
-                      to: "/Hadar",
-                      onClick: this.popOutOn,
-                      activeClassName: "activeNav"
-                    },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: 4.4 },
-                      "\u05D4\u05D3\u05E8 \u05E0\u05D5\u05D9"
                     )
                   )
                 ),
@@ -51591,10 +51515,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 // var scrollToElement = require("scroll-to-element");
 
-var image_arr = ["http://res.cloudinary.com/moshmosh/image/upload/v1503559675/beatmix/IMG_3443_sg0943.jpg"
-// "http://res.cloudinary.com/moshmosh/image/upload/v1503559692/beatmix/IMG_3483_ctlzls.jpg",
-// "http://res.cloudinary.com/moshmosh/image/upload/v1503559714/beatmix/IMG_3530_mklqvr.jpg"
-];
+var image_arr = ["http://res.cloudinary.com/moshmosh/image/upload/v1503559675/beatmix/IMG_3443_sg0943.jpg"];
 
 var HomePage = function (_React$Component) {
   _inherits(HomePage, _React$Component);
@@ -51626,32 +51547,49 @@ var HomePage = function (_React$Component) {
         _react2.default.createElement(
           _reactBootstrap.Row,
           { className: "show-grid", style: introStyle },
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 2, md: 2, sm: 0, xs: 0 }),
           _react2.default.createElement(
             _reactBootstrap.Col,
-            { lg: 4 },
+            { lg: 4, md: 4, sm: 12, xs: 12 },
             _react2.default.createElement(_reactBootstrap.Image, {
               src: "https://res.cloudinary.com/moshmosh/image/upload/v1504511466/beatmix/13731600_10154326354283965_8252077073868369476_n.jpg",
               responsive: true
             })
           ),
+          _react2.default.createElement(_reactBootstrap.Col, { lgHidden: true, mdHidden: true, sm: 1, xs: 1 }),
           _react2.default.createElement(
             _reactBootstrap.Col,
-            { lg: 5, className: " intro-talk" },
+            { lg: 5, md: 5, sm: 10, xs: 10, className: " intro-talk text-center" },
             _react2.default.createElement(
               _reactBootstrap.Row,
-              null,
+              { className: "hideOnNotMobile" },
+              _react2.default.createElement(
+                "h1",
+                null,
+                " - Beat Mix "
+              ),
+              _react2.default.createElement(
+                "h1",
+                null,
+                " !\u05DB\u05D5\u05DC\u05DD \u05D6\u05D6\u05D9\u05DD \u05DC\u05E4\u05D9 \u05D4\u05E7\u05E6\u05D1 \u05E9\u05DC\u05E0\u05D5"
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Row,
+              { className: "hideOnMobile" },
               _react2.default.createElement(
                 "h1",
                 null,
                 " !\u05DB\u05D5\u05DC\u05DD \u05D6\u05D6\u05D9\u05DD \u05DC\u05E4\u05D9 \u05D4\u05E7\u05E6\u05D1 \u05E9\u05DC\u05E0\u05D5 - Beat Mix "
-              ),
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Row,
+              null,
               _react2.default.createElement(
                 "h3",
                 null,
-                " ",
-                "\u05D0\u05E0\u05D7\u05E0\u05D5 \u05EA\u05DD \u05D0\u05DC\u05D5\u05E9 \u05D5\u05E2\u05DE\u05D9\u05EA \u05DE\u05DB\u05DC\u05D5\u05E3 - \u05D7\u05D1\u05E8\u05D9 \u05D9\u05DC\u05D3\u05D5\u05EA \u05E9\u05E0\u05D5\u05E9\u05DE\u05D9\u05DD \u05DE\u05D5\u05D6\u05D9\u05E7\u05D4 \u05DE\u05D0\u05D6 \u05E9\u05D0\u05E0\u05D7\u05E0\u05D5 \u05D6\u05D5\u05DB\u05E8\u05D9\u05DD \u05D0\u05EA \u05E2\u05E6\u05DE\u05E0\u05D5. \u05DB\u05E9\u05E0\u05E2\u05DC\u05D4 \u05E2\u05DC \u05E2\u05DE\u05D3\u05EA \u05D4-\u05D3\u05D9\u05D2'\u05D9\u05D9 \u05D1\u05D7\u05EA\u05D5\u05E0\u05D4 \u05E9\u05DC\u05DB\u05DD, \u05D4\u05D0\u05D5\u05E8\u05D7\u05D9\u05DD \u05D9\u05EA\u05E2\u05D5\u05E8\u05E8\u05D5 \u05DC\u05D7\u05D9\u05D9\u05DD \u05D5\u05D4\u05E7\u05E6\u05D1 \u05D9\u05E2\u05DC\u05D4 \u05D4\u05DB\u05D9 \u05D2\u05D1\u05D5\u05D4 \u05E9\u05D0\u05E4\u05E9\u05E8, \u05D1\u05D3\u05D9\u05D5\u05E7 \u05DB\u05DE\u05D5 \u05E9\u05D7\u05DC\u05DE\u05EA\u05DD \u05E9\u05D9\u05E7\u05E8\u05D4.",
-                " "
+                "\u05D0\u05E0\u05D7\u05E0\u05D5 \u05EA\u05DD \u05D0\u05DC\u05D5\u05E9 \u05D5\u05E2\u05DE\u05D9\u05EA \u05DE\u05DB\u05DC\u05D5\u05E3 - \u05D7\u05D1\u05E8\u05D9 \u05D9\u05DC\u05D3\u05D5\u05EA \u05E9\u05E0\u05D5\u05E9\u05DE\u05D9\u05DD \u05DE\u05D5\u05D6\u05D9\u05E7\u05D4 \u05DE\u05D0\u05D6 \u05E9\u05D0\u05E0\u05D7\u05E0\u05D5 \u05D6\u05D5\u05DB\u05E8\u05D9\u05DD \u05D0\u05EA \u05E2\u05E6\u05DE\u05E0\u05D5. \u05DB\u05E9\u05E0\u05E2\u05DC\u05D4 \u05E2\u05DC \u05E2\u05DE\u05D3\u05EA \u05D4-\u05D3\u05D9\u05D2'\u05D9\u05D9 \u05D1\u05D7\u05EA\u05D5\u05E0\u05D4 \u05E9\u05DC\u05DB\u05DD, \u05D4\u05D0\u05D5\u05E8\u05D7\u05D9\u05DD \u05D9\u05EA\u05E2\u05D5\u05E8\u05E8\u05D5 \u05DC\u05D7\u05D9\u05D9\u05DD \u05D5\u05D4\u05E7\u05E6\u05D1 \u05D9\u05E2\u05DC\u05D4 \u05D4\u05DB\u05D9 \u05D2\u05D1\u05D5\u05D4 \u05E9\u05D0\u05E4\u05E9\u05E8, \u05D1\u05D3\u05D9\u05D5\u05E7 \u05DB\u05DE\u05D5 \u05E9\u05D7\u05DC\u05DE\u05EA\u05DD \u05E9\u05D9\u05E7\u05E8\u05D4."
               )
             ),
             _react2.default.createElement(
@@ -51660,17 +51598,11 @@ var HomePage = function (_React$Component) {
               _react2.default.createElement(
                 "h4",
                 null,
-                " ",
-                "\u05D6\u05D5 \u05D4\u05D4\u05D6\u05D3\u05DE\u05E0\u05D5\u05EA \u05E9\u05DC\u05DB\u05DD \u05DC\u05D7\u05E1\u05D5\u05DA \u05D4\u05E8\u05D1\u05D4 \u05D4\u05EA\u05DC\u05D1\u05D8\u05D5\u05D9\u05D5\u05EA \u05D5\u05D6\u05DE\u05DF, \u05D5\u05DC\u05E9\u05E8\u05D9\u05D9\u05DF \u05D0\u05D5\u05EA\u05E0\u05D5 \u05DC\u05D0\u05D9\u05E8\u05D5\u05E2 \u05D4\u05E7\u05E8\u05D1 \u05D5\u05D1\u05D0",
-                " "
+                "\u05D6\u05D5 \u05D4\u05D4\u05D6\u05D3\u05DE\u05E0\u05D5\u05EA \u05E9\u05DC\u05DB\u05DD \u05DC\u05D7\u05E1\u05D5\u05DA \u05D4\u05E8\u05D1\u05D4 \u05D6\u05DE\u05DF \u05D5\u05D4\u05EA\u05DC\u05D1\u05D8\u05D5\u05D9\u05D5\u05EA \u05D5\u05DC\u05E9\u05E8\u05D9\u05D9\u05DF \u05D0\u05D5\u05EA\u05E0\u05D5 \u05DB\u05D1\u05E8 \u05E2\u05DB\u05E9\u05D9\u05D5 \u05DC\u05D0\u05D9\u05E8\u05D5\u05E2 \u05D4\u05E7\u05E8\u05D1***"
               )
             )
           ),
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { lg: 1 },
-            " "
-          )
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 1, md: 1, sm: 1, xs: 1 })
         ),
         _react2.default.createElement(
           _reactBootstrap.Row,
@@ -52922,87 +52854,16 @@ var WhyBeatMix = function (_React$Component) {
         _react2.default.createElement(
           _reactBootstrap.Row,
           null,
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
+          _react2.default.createElement(_reactBootstrap.Col, { lg: 1 }),
           _react2.default.createElement(
             _reactBootstrap.Col,
-            { lg: 8 },
-            _react2.default.createElement(
-              "h2",
-              null,
-              "\u05D3\u05D0\u05D1\u05DC \u05E9\u05D5\u05D0\u05D5"
-            ),
+            { lg: 10 },
             _react2.default.createElement(
               "h4",
               null,
-              "\u05DB\u05E9\u05D4\u05D3\u05D9\u05D2\u05F3\u05D9\u05D9\u05DD \u05E9\u05DC\u05E0\u05D5 \u05DE\u05E9\u05EA\u05D5\u05DC\u05DC\u05D9\u05DD \u05E2\u05DC \u05D4\u05E2\u05DE\u05D3\u05D4 \u05D0\u05D9\u05DF \u05D0\u05D5\u05E8\u05D7 \u05E9\u05D9\u05D5\u05DB\u05DC \u05DC\u05D4\u05E9\u05D0\u05E8 \u05D0\u05D3\u05D9\u05E9 \u05DC\u05D0\u05E0\u05E8\u05D2\u05D9\u05D5\u05EA \u05D5\u05DC\u05D8\u05D9\u05E8\u05D5\u05E3",
+              "\u05DC\u05D0 \u05E0\u05E8\u05D1\u05D4 \u05D1\u05DE\u05D9\u05DC\u05D9\u05DD \u05D0\u05DC\u05D0 \u05D0\u05DD \u05DB\u05DF \u05DE\u05D3\u05D5\u05D1\u05E8 \u05D1\u05E6\u05DC\u05D9\u05DC\u05D9\u05DD. \u05D7\u05D1\u05E8\u05EA \u05D1\u05D9\u05D8\u05DE\u05D9\u05E7\u05E1 - \u05D4\u05D7\u05D1\u05E8\u05D4 \u05DC\u05DE\u05D5\u05D6\u05D9\u05E7\u05D4 \u05D5\u05D4\u05E4\u05E7\u05EA \u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD \u05D1\u05E2\u05DC\u05EA 10 \u05E9\u05E0\u05D5\u05EA \u05E9\u05DE\u05D7\u05D4 \u05D5\u05E0\u05D9\u05E1\u05D9\u05D5\u05DF \u05D1\u05E9\u05D8\u05D7 \u05D1\u05DB\u05DC \u05E1\u05D5\u05D2\u05D9 \u05D4\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD, \u05DE\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD \u05E7\u05D8\u05E0\u05D9\u05DD \u05E4\u05E8\u05D8\u05D9\u05D9\u05DD \u05D5\u05DE\u05E1\u05D9\u05D1\u05D5\u05EA \u05D1\u05DE\u05D5\u05E2\u05D3\u05D5\u05E0\u05D9\u05DD \u05D5\u05E2\u05D3 \u05D0\u05D9\u05E8\u05D5\u05E2\u05D9 \u05E2\u05E0\u05E7 \u05D5\u05DB\u05DE\u05D5\u05D1\u05DF, \u05D7\u05EA\u05D5\u05E0\u05D5\u05EA. \u05D9\u05EA\u05E8\u05D5\u05DF \u05D1\u05D5\u05DC\u05D8 \u05D1\u05D1\u05D9\u05D8\u05DE\u05D9\u05E7\u05E1 \u05D4\u05D5\u05D0 \u05D4\u05E4\u05E7\u05D4 \u05D5\u05D4\u05D5\u05D1\u05DC\u05EA \u05D4\u05D0\u05D9\u05E8\u05D5\u05E2 \u05DE\u05EA\u05D7\u05D9\u05DC\u05EA\u05D5 \u05D5\u05E2\u05D3 \u05E1\u05D5\u05E4\u05D5 \u05D1\u05D3\u05D2\u05E9 \u05DC\u05D9\u05D7\u05E1 \u05D0\u05D9\u05E9\u05D9, \u05D0\u05DB\u05E4\u05EA\u05D9, \u05DE\u05E7\u05E6\u05D5\u05E2\u05D9 \u05D5\u05E1\u05D1\u05DC\u05E0\u05D9 \u05E2\u05DD \u05E6\u05DE\u05D3 \u05D3\u05D9 \u05D2'\u05D9\u05D9\u05D6 \u05E9\u05D1\u05D5 \u05DB\u05DC \u05D0\u05D7\u05D3 \u05DE\u05D1\u05D9\u05D0 \u05D0\u05EA \u05D4\u05D8\u05D0\u05E5' \u05D4\u05D0\u05D9\u05E9\u05D9 \u05E9\u05DC\u05D5. \u05D4\u05DE\u05D8\u05E8\u05D4 \u05D4\u05E2\u05D9\u05E7\u05E8\u05D9\u05EA \u05E9\u05DC\u05E0\u05D5 \u05D4\u05D9\u05D0 \u05E9\u05D4\u05E8\u05D7\u05D1\u05D4 \u05E9\u05DC\u05DB\u05DD \u05EA\u05D4\u05D9\u05D4 \u05DE\u05DC\u05D0\u05D4 \u05D1\u05DB\u05DC \u05E8\u05D2\u05E2 \u05D5\u05DC\u05D3\u05E2\u05EA \u05DC\u05E7\u05E8\u05D5\u05D0 \u05D0\u05EA \u05D4\u05E7\u05D4\u05DC \u05D6\u05D4 \u05D1\u05D2\u05D3\u05E8 \u05D7\u05D5\u05D1\u05D4. \u05D1\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD \u05E9\u05DC \u05D1\u05D9\u05D8\u05DE\u05D9\u05E7\u05E1 \u05D0\u05D9\u05DF \u05E4\u05E9\u05E8\u05D5\u05EA. \u05E6\u05D9\u05D5\u05D3 \u05D0\u05D9\u05DB\u05D5\u05EA\u05D9 \u05D5\u05D7\u05D6\u05E7, \u05D0\u05E0\u05E8\u05D2\u05D9\u05D5\u05EA \u05E9\u05D9\u05D0, \u05DB\u05E9\u05E8\u05D5\u05DF \u05DE\u05D5\u05DC\u05D3 \u05D5\u05D0\u05D4\u05D1\u05D4 \u05D1\u05DC\u05EA\u05D9 \u05DE\u05EA\u05E4\u05E9\u05E8\u05EA \u05DC\u05DE\u05E7\u05E6\u05D5\u05E2. \u05DE\u05D1\u05D7\u05D9\u05E0\u05EA\u05E0\u05D5 \u05DB\u05DC \u05D0\u05D9\u05E8\u05D5\u05E2 \u05D4\u05D5\u05D0 \u05D4-\u05D0\u05D9\u05E8\u05D5\u05E2!",
               " "
             )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { lg: 1 },
-            _react2.default.createElement(
-              "h1",
-              null,
-              "*"
-            ),
-            " "
-          ),
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 1 })
-        ),
-        _react2.default.createElement(
-          _reactBootstrap.Row,
-          null,
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { lg: 8 },
-            _react2.default.createElement(
-              "h2",
-              null,
-              "\u05D3\u05D0\u05D1\u05DC \u05DE\u05D2\u05D5\u05D5\u05DF"
-            ),
-            _react2.default.createElement(
-              "h4",
-              null,
-              "\u05D0\u05E0\u05D5 \u05D3\u05D5\u05D0\u05D2\u05D9\u05DD \u05EA\u05DE\u05D9\u05D3 \u05DC\u05D4\u05DB\u05D9\u05E8 \u05D5\u05DC\u05DC\u05DE\u05D5\u05D3 \u05D0\u05EA \u05DB\u05DC \u05E1\u05D2\u05E0\u05D5\u05E0\u05D5\u05EA \u05D4\u05DE\u05D5\u05D6\u05D9\u05E7\u05D4 \u05D4\u05E9\u05D5\u05E0\u05D9\u05DD, \u05D4\u05D3\u05D2'\u05D9\u05D9\u05DD \u05E9\u05DC\u05E0\u05D5 \u05DE\u05DB\u05D9\u05E0\u05D9\u05DD \u05E4\u05DC\u05D9\u05D9\u05DC\u05D9\u05E1\u05D8 \u05D9\u05D9\u05D7\u05D5\u05D3\u05D9 \u05D5\u05DE\u05D5\u05E9\u05DC\u05DD \u05D4\u05DE\u05EA\u05D0\u05D9\u05DD \u05D1\u05D3\u05D9\u05D5\u05E7 \u05DC\u05D0\u05D9\u05E8\u05D5\u05E2 \u05E9\u05DC\u05DB\u05DD \u05EA\u05D5\u05DA \u05DB\u05D3\u05D9 \u05D4\u05EA\u05D7\u05E9\u05D1\u05D5\u05EA \u05D1\u05E8\u05E6\u05D5\u05E0\u05D5\u05EA \u05E9\u05DC\u05DB\u05DD \u05D5\u05D1\u05D0\u05D5\u05D5\u05D9\u05E8\u05EA \u05D4\u05D0\u05D9\u05E8\u05D5\u05E2."
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { lg: 1 },
-            _react2.default.createElement(
-              "h1",
-              null,
-              "*"
-            ),
-            " "
-          ),
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 1 })
-        ),
-        _react2.default.createElement(
-          _reactBootstrap.Row,
-          null,
-          _react2.default.createElement(_reactBootstrap.Col, { lg: 2 }),
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { lg: 8 },
-            _react2.default.createElement(
-              "h2",
-              null,
-              "\u05D3\u05D0\u05D1\u05DC \u05E8\u05D9\u05DB\u05D5\u05D6"
-            ),
-            _react2.default.createElement("h4", null)
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { lg: 1 },
-            _react2.default.createElement(
-              "h1",
-              null,
-              "*"
-            ),
-            " "
           ),
           _react2.default.createElement(_reactBootstrap.Col, { lg: 1 })
         )

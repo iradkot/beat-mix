@@ -37,9 +37,11 @@ class PageBanner extends React.Component {
           sm={12}
           className="pageBanner"
           style={{
-            width: "100%",
-            height: "295px",
-            backgroundImage: `url(${this.state.image})`
+            height: '30vw',
+            // background: 'fixed',            
+            backgroundSize: 'cover',
+            backgroundImage: `url(${this.state.image})`,
+            backgroundPosition: 'top center'
           }}
         />
       </Row>
