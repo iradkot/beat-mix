@@ -124,6 +124,13 @@ class Header extends React.Component {
                 >
                   <NavItem eventKey={5}>צור-קשר</NavItem>
                 </IndexLinkContainer>
+                <IndexLinkContainer
+                  to="/Events"
+                  onClick={this.popOutOff}
+                  activeClassName="activeNav"
+                >
+                  <NavItem eventKey={4}>גלריות</NavItem>
+                </IndexLinkContainer>
                 {/* <NavDropdown
                   eventKey={4}
                   title="גלריות"
@@ -136,15 +143,29 @@ class Header extends React.Component {
                     activeClassName="activeNav"
                   >
                     <MenuItem eventKey={4.1}>אירועים</MenuItem>
+                  </IndexLinkContainer> */}
+                  {/* <IndexLinkContainer
+                    to="/Amit"
+                    onClick={this.popOutOn}
+                    activeClassName="activeNav"
+                  >
+                    <MenuItem eventKey={4.2}>עמית מכלוף</MenuItem>
                   </IndexLinkContainer>
-                </NavDropdown> */}
-                <IndexLinkContainer
-                  to="/Events"
-                  onClick={this.popOutOn}
-                  activeClassName="activeNav"
-                >
-                  <NavItem eventKey={2}>אירועים</NavItem>
-                </IndexLinkContainer>
+                  <IndexLinkContainer
+                    to="/Tom"
+                    onClick={this.popOutOn}
+                    activeClassName="activeNav"
+                  >
+                    <MenuItem eventKey={4.3}>תם אלוש</MenuItem>
+                  </IndexLinkContainer>
+                  <IndexLinkContainer
+                    to="/Hadar"
+                    onClick={this.popOutOn}
+                    activeClassName="activeNav"
+                  >
+                    <MenuItem eventKey={4.4}>הדר נוי</MenuItem>
+                  </IndexLinkContainer> */}
+                {/* </NavDropdown> */}
                 <IndexLinkContainer
                   to="/WhyBeatMix"
                   onClick={this.popOutOn}

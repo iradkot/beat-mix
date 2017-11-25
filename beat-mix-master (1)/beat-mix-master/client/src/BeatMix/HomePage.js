@@ -8,7 +8,7 @@ import { IndexLinkContainer } from "react-router-bootstrap";
 import FbPlugins from "./FbPlugins";
 
 var image_arr = [
-  "http://res.cloudinary.com/moshmosh/image/upload/q_auto/v1503559675/beatmix/IMG_3443_sg0943.jpg"
+  "http://res.cloudinary.com/moshmosh/image/upload/v1503559675/beatmix/IMG_3443_sg0943.jpg"
 ];
 
 class HomePage extends React.Component {
@@ -33,7 +33,7 @@ class HomePage extends React.Component {
           <Col lg={2} md={2} sm={0} xs={0} />
           <Col lg={4} md={4} sm={12} xs={12}>
             <Image
-              src="https://res.cloudinary.com/moshmosh/image/upload/q_auto/v1504511466/beatmix/13731600_10154326354283965_8252077073868369476_n.jpg"
+              src="https://res.cloudinary.com/moshmosh/image/upload/v1504511466/beatmix/13731600_10154326354283965_8252077073868369476_n.jpg"
               responsive
             />
           </Col>
@@ -85,7 +85,7 @@ class HomePage extends React.Component {
               <Link to="/AboutUs">
                 <Image
                   className="intro-image"
-                  src="http://res.cloudinary.com/moshmosh/image/upload/q_auto/v1504516544/tomAndAmitEquip_yk0ryb.jpg"
+                  src="http://res.cloudinary.com/moshmosh/image/upload/v1504516544/tomAndAmitEquip_yk0ryb.jpg"
                   responsive
                 />
               </Link>
@@ -101,7 +101,7 @@ class HomePage extends React.Component {
               <Link to="/Events">
                 <Image
                   className="intro-image"
-                  src="http://res.cloudinary.com/moshmosh/image/upload/q_auto/c_scale,w_700/v1503559677/beatmix/IMG_3497_k2xykm.jpg"
+                  src="http://res.cloudinary.com/moshmosh/image/upload/c_scale,w_700/v1503559677/beatmix/IMG_3497_k2xykm.jpg"
                   responsive
                 />
               </Link>
