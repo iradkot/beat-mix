@@ -143,7 +143,7 @@ class Header extends React.Component {
                   onClick={this.popOutOn}
                   activeClassName="activeNav"
                 >
-                  <NavItem eventKey={2}>אירועים</NavItem>
+                  <NavItem eventKey={2}>גלריה</NavItem>
                 </IndexLinkContainer>
                 <IndexLinkContainer
                   to="/WhyBeatMix"

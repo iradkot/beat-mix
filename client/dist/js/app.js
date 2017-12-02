@@ -39368,7 +39368,7 @@ var Header = function (_React$Component) {
                   _react2.default.createElement(
                     _reactBootstrap.NavItem,
                     { eventKey: 2 },
-                    "\u05D0\u05D9\u05E8\u05D5\u05E2\u05D9\u05DD"
+                    "\u05D2\u05DC\u05E8\u05D9\u05D4"
                   )
                 ),
                 _react2.default.createElement(
