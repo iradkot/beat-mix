@@ -8,6 +8,25 @@ import PageBanner from "./PageBanner";
 
 const axios = require("axios");
 
+
+// add clodinary auto compress to  a pick
+var addQ_autoToPicks = function(str) {
+  newStr = '';
+  findMe = "/upload/"
+  andAddAfter = 'q_auto'
+  andAddAfterLnegth = andAddAfter.length
+  findmeLength = findMe.length;
+  for(var i=0; i<(str.length-findMe.length); i++){
+    if (str.slice(i, findmeLength+i)===findMe){
+      let newstr = str.split('');
+      newstr = str.slice(0, i) + findMe + andAddAfter + str.slice(i+andAddAfterLnegth+1, str.length);
+      return newstr;
+    }
+    
+  }
+}
+
+
 class Events extends React.Component {
   constructor(props) {
     super(props);
@@ -37,12 +56,20 @@ class Events extends React.Component {
             let randomNum = Math.floor(Math.random() * pictures.length);
             let chosen = pictures[randomNum];
             pictures.splice(randomNum, 1);
+            // console.log('testtttt');
+            // console.log(chosen);
+            // chosen['secure_url'] = addQ_autoToPicks(chosen.secure_url); 
+            // console.log('testtttt'); 
+            // console.log(chosen);          
             new_random.push(chosen);
           }
         }
         else {
           new_random = pictures;
         }
+        let PicsWithQ_Auto = [];
+        // console.log(new_random);
+        // console.log(new_random[0].secure_url);
         let picArranged = new_random.map(
           (picture, index) =>
             (picture = {

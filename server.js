@@ -29,33 +29,39 @@ var transporter = nodemailer.createTransport({
   port: 465,
   secure: true, //! secure:true for port 465, secure:false for port 587
   auth: {
+    type: 'OAuth2',
     user: "elevationmosh@gmail.com",
-    pass: "Elevation358"
+    clientId: "265491403004-21btgq97uh78shfc7adeldkll2v3okka.apps.googleusercontent.com",
+    clientSecret: "HZ0_4VY0RW9xjn6i90P8Ptvt",
+    refreshToken: "1/CbRgegePWC7z-ezLKSYaHSnaCtRO31LwWnEDtxpLel8",
+    accessToken: "GlsdBSmkSAsrfTsHjDsZHgwOH5j5zAVOFVsS",
+    expires: 3599
   }
 });
 
 //* cloudinary route
-app.get("/getFromCloudinary/:folder", function(req, res) {
+app.get("/getFromCloudinary/:folder", function (req, res) {
   let folder = req.params.folder;
   cloudinary.v2.api.resources(
     { type: "upload", prefix: `${folder}/`, max_results: 1000 },
-    function(error, result) {
+    function (error, result) {
       res.send(result);
     }
   );
 });
 
 //* email route
-app.post("/contactus/email", function(req, res) {
+app.post("/contactus/email", function (req, res) {
   let data = req.body;
   let mailOptions1 = {
     from: "elevationmosh@gmail.com",
-    to: "beatmixdjs@gmail.com",
+    // to: "beatmixdjs@gmail.com",
+    to: "irad16@gmail.com",
     subject: `${data.name} - ${data.email} - ${data.number}`,
     text: data.content
   };
 
-  transporter.sendMail(mailOptions1, function(error, info) {
+  transporter.sendMail(mailOptions1, function (error, info) {
     if (error) {
       console.log(error);
     } else {
@@ -66,7 +72,7 @@ app.post("/contactus/email", function(req, res) {
 });
 
 //handle facebook chatbot webhook
-app.get("/webhook", function(req, res) {
+app.get("/webhook", function (req, res) {
   if (req.query["hub.verify_token"] === "my_verify_token_here") {
     res.send(req.query["hub.challenge"]);
   } else {
